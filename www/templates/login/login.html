@@ -1,0 +1,37 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录的初始界面
+Updated by WangYong 2016-08-05
+-->
+
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">登录</h1>
+    </ion-header-bar>
+	<ion-view >
+    <ion-content>
+		<div class="" style="margin: 0.4rem;background:#f3f3f3;">
+		
+		  <label class="item item-input font-28" >
+		    <img ng-src="img/phone@{{myImgSize}}x.png" />
+		    <input class="font-28" type="number" maxlength="11"  placeholder="输入已经注册的手机号"  ng-blur="phonenumCountBlur()" ng-model="user.phonenum" >
+		  </label>
+		
+		  <label class="item item-input font-28" style="margin-top: 0.2667rem" >
+		    <img ng-src="img/password@{{myImgSize}}x.png" />
+		    <input class="font-28"  type="password"  placeholder="输入密码" ng-model="user.password"  >
+		  </label>
+		
+			<button class="button button-block button-red font-30" ng-click="login(user);" ng-disabled="!(isPhonenum && isPassword)" >
+			  登录
+			</button>
+	
+			<a ui-sref="register" class="register font-26" style = "color:#494949">注册</a>
+			<a ui-sref="resetpassword" class="forget font-26" style = "color:#494949">忘记密码？</a>
+			
+			<div class="error-note font-20">{{error_note}}</div>
+		</div>
+	</ion-content>
+	</ion-view>

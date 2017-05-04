@@ -1,0 +1,47 @@
+<!-- 
+File-Name:change-personal-info.html
+Date:2016-08-03
+Author:WangYong
+Function:更改个人信息
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">编辑资料</h1>
+      <button class="button font-28" style="color:4a4e58;" ng-click="done()">保存</button>
+    </ion-header-bar>
+<ion-view>
+	<ion-content class="" style="background:#fff;">
+    	  <div class="" style="margin:0rem;padding-left:0.4rem;padding-right:0.4rem;">
+		
+		  <label class="item font-28 item-input" style="border:none;min-height:1.44rem;border-radius:0;border:none;border-bottom:1px #ededed solid;" >
+			<div class="font-28" style="color:#888991;">头像</div>
+		    <img class="" on-tap="showSheet()" style="margin-left:0.5867rem;height:1.0667rem;width:1.0667rem;border-radius:1.0667rem;border:none;" ng-src="{{userInfo.avatar}}"/>
+		  </label>
+		  <!--<label class="item font-28" style="background:#f3f3f3;text-align: center;margin-top: -0.4rem;border:none;" >
+		    <span on-tap="showSheet()">上传头像</span>
+		  </label>-->
+		  <label class="item item-input font-28" style="margin-top:0.1rem;min-height:1.44rem;border-radius:0;border:none;border-bottom:1px #ededed solid;" >
+		    <!--<img ng-src="img/me_unchecked@{{myImgSize}}x.png" />-->
+			  <div class="font-28" style="color:#888991;">昵称</div>
+		    <input class="font-28"  style="margin-left:0.5867rem;" type="text"  placeholder="请输入昵称" ng-model="userInfo.nick_name"  >
+		  </label>
+		  <label class="item item-input font-28" style="margin-top:0.1rem;min-height:2.8rem;border-radius:0;border:none;border-bottom:1px #ededed solid;" >
+		    <!--<img ng-src="img/me_unchecked@{{myImgSize}}x.png" />-->
+			  <div class="font-28" style="margin-top:-1.85rem;color:#888991;">签名</div>
+			  <div style="margin-top:0.45rem;margin-left:0.5867rem;min-height:2.7rem;width:83%;">
+		    	<textarea class="font-28" style="min-height:2.7rem;width:100%;" type="text"  placeholder="请输入签名" ng-model="userInfo.signature"  >
+				</textarea>
+			  </div>
+		  </label>
+		 <!--<label class="item font-20" style="color:#b7b7b7;text-align: center;margin-top:rem;border:none;" >
+		    <span>&nbsp;</span>
+		  </label>-->
+		<!--<button ng-click="done()" style="margin-top: -0.1rem" class="button button-block button-red font-30" ng-disabled="false" >
+		  提交
+		</button>-->
+
+		<div class="error-note font-20">{{error_note}} </div>
+		</div>  
+	</ion-content>
+</ion-view>
+

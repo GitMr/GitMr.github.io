@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'afuicon';
+  src:
+    url('fonts/afuicon.ttf?xbjksj') format('truetype'),
+    url('fonts/afuicon.woff?xbjksj') format('woff'),
+    url('fonts/afuicon.svg?xbjksj#afuicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'afuicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.afu-home:before {
+  content: "\e904";
+}
+.afu-me:before {
+  content: "\e905";
+}
+.afu-heart:before {
+  content: "\e906";
+}
+.afu-feedback:before {
+  content: "\e900";
+}
+.afu-about:before {
+  content: "\e901";
+}
+.afu-check-update:before {
+  content: "\e902";
+}
+.afu-setting:before {
+  content: "\e903";
+}
+.afu-certification:before {
+  content: "\e907";
+}
+.afu-location:before {
+  content: "\e908";
+}
+.afu-my-fabu:before {
+  content: "\e909";
+}
+.afu-heart2:before {
+  content: "\e90a";
+}
+
+.color-no{
+    color:#8c8d95;
+    font-size:18px;
+}
+
+.color-yes{
+    color:#f3434b;
+    font-size:18px;
+}
+
+/*
+.tab-item .icon {
+  display: block;
+  margin: 0 auto;
+  height: 32px;
+  font-size: 32px; }*/

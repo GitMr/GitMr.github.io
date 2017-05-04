@@ -1,0 +1,33 @@
+<!-- 
+File-Name:w-kinds.html
+Date:2016-08-06
+Author:yangxiaoyu
+Function:物品类别选择
+-->
+<!-- 
+  -->
+<ion-modal-view style="background: rgba(0,0,0,.70);height:100%;width:100%;">
+    
+    <ion-content style="background: rgba(0,0,0,.70);height:100%;width:100%;">
+    
+    </ion-content>   
+    <div class="bar bar-footer" style="min-height: 7.2rem; padding:0px;">
+ 
+	 	<ion-header-bar align-title="center" class="bar-stable" style="min-height:1.2rem;">
+		  <div class="buttons">
+		    <button class="button font-28" ng-click="cancelSex()">取消</button>
+		  </div>
+		  <h1 class="title font-32">性别</h1>
+		  <div class="buttons">
+		    <button class="button font-28"  ng-click="doneSex()">确定</button>
+		  </div>
+		</ion-header-bar>
+	    <ion-scroll zooming="true" direction="y" style="width:100%; height: 6rem;margin-top:1.2rem;">
+		 	<ion-radio class="font-26" ng-repeat="sex in sexs" on-tap="chooseSex(sex)" ng-model="tempGender.value" ng-checked="sex.selected" ng-value="sex.value">{{sex.name}}</ion-radio>
+	  		
+        </ion-scroll>
+	</div>
+
+  </ion-modal-view>
+<!--  </body>
+</html>  -->

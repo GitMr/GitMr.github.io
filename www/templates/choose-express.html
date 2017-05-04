@@ -1,0 +1,29 @@
+<!-- 
+File-Name:choose-express.html
+Date:2016-08-06
+Author:Wangyong
+Function:选择快递
+-->
+<ion-header-bar align-title="center" class="bar-afu">
+ 	<a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+	<div class="h1 title">选择快递方式</div>	   
+</ion-header-bar>
+<ion-view>  
+   <ion-content style="background:#fff;height:100%;width:100%;">
+   		<div style="background:#fff;height:35%;width:100%;text-align: center;margin-top: 2rem;">
+   			<img ng-src="img/choose_express@{{myImgSize}}x.png" height="100%" width="45%"/>
+   		</div>
+   		<div  style="background:#fff;height:20%;width:100%;text-align: center;margin-top: 1rem;">
+   			<p class="font-32" style="color: #494949">选择适合您的的快递方式</p>
+   			<p class="font-24" style="color: #b7b7b7">选择适合您的的快递方式</p>
+   		</div>
+   		<div class="row font-24 footer-bar" style="margin-top:1rem;min-height:1.2rem;padding:0;bottom:0;text-align:center;height:100%;width:100%;border-bottom-radius:5px;">
+		 	<div ng-click="selfExpress()" class="col col-30" style="border:solid 1px #f00;border-radius:5px;margin-left:0.5rem;margin-right:0.5rem;background: #f3434b;"><span class="font-32" style="color: #ffffff;line-height: 1.2rem;">自行邮寄</span></div>
+		 	<div ng-click="stoneExpress();" class="col col-30" style="border-radius:5px;margin-left:0.5rem;margin-right:0.5rem;background: #e1e2e6;" >
+				<span class="font-32" style="color: #ffffff;line-height: 1.2rem;">申通快递</span>
+				<span class="font-20" style="color: #b7b7b7;line-height:0.5rem;"></span>
+			</div>
+
+		</div>
+   </ion-content>   
+</ion-view>

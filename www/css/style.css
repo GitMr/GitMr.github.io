@@ -1,0 +1,917 @@
+/* Empty. Add your own CSS if you like */
+body{
+	font-family : 微软雅黑;
+	font: normal 100% Helvetica, Arial, sans-serif;
+}
+ion-content{
+	background-color: #f3f3f3;
+}
+ion-header-bar{
+	background-color: #ffffff;
+}
+
+/**加载动画大小**/
+.spinner svg {
+      width: 0.6rem !important;
+      height: 0.5rem !important;
+    }
+    
+    
+.gone{
+	display:none;
+}
+
+/**
+*Todo 物品类别的字体颜色
+*Author WangYong
+*Date 2016-08-01
+**/
+.bar-subheader  {
+	color:#b7b7b7;
+	border-color: #fff;
+	font-size : 1em;
+	height:1.1467rem;}
+.bar-subheader .row {
+
+	color:#b7b7b7;
+	text-align:center;
+	padding:0.03rem;
+	}
+
+
+/**
+*Todo 首页最上方的“捐助信息、求捐信息”bar
+*Author WangYong
+*Date 2016-08-01
+*/
+.topbar{
+	text-align:center;
+	position: fixed;
+	left:0 px;
+	top: 0px;
+	bottom:0px;
+	right:0px;
+	padding:5px;
+	height:100%;
+
+}
+
+/**header**/
+  @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .bar {
+      border: none;
+      background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
+      background-position: bottom;
+      background-size: 100% 1px;
+      background-repeat: no-repeat; } }
+.bar.bar-afu {
+    border-color: #f3f3f3;
+    background-color: #ffffff;
+    background-image: linear-gradient(0deg, #ebebeb, #ebebeb 50%, transparent 50%);
+    color: #fff; }
+    .bar.bar-afu .title {
+      color: #4a4e58; }
+    .bar.bar-afu.bar-footer {
+      background-image: linear-gradient(180deg, #ebebeb, #ebebeb 50%, transparent 50%); }
+
+.bar-afu .button {
+  border-color: #fff;
+  border-width:0.0267;
+  background-color: #fff;
+  color: #5a5e58;
+  }
+  .bar-afu .button:hover {
+    color: #5a5e58;
+    text-decoration: none; }
+  .bar-afu .button.active, .bar-afu .button.activated {
+    border-color: #eee;
+    background-color: #eee;
+    color: #4a4e58;
+    box-shadow: none; }
+  .bar-afu .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 17px; }
+  .bar-afu .button.button-icon {
+    border-color: transparent;
+    background: none; }
+    
+    .button.juan-cancel {
+    
+    border-color: #fff;
+    border-width:0px;
+    background-color: #fffff;
+    color: #4a4e58;
+  }
+   .button.juan-submit {
+
+    border-color: #fff;
+    border-width:0.0133rem;
+    border-radius:0.1rem;
+    background-color: #fff;
+    color: #F63840; 
+    margin-right:0.2rem;
+  }
+   /**
+toDO 首页列表元素
+**/ 
+
+    .item-avatar,
+.item-avatar .item-content,
+.item-avatar-left,
+.item-avatar-left .item-content {
+  padding-left: 3.2rem; /*首页item中的文字左偏移*/ 
+  min-height: 2.453rem; 
+  max-height: 2.453rem; 
+  background-color:#fff;/*首页item中背景色*/
+   
+  }
+  .title-content {
+	  position: absolute;
+	  left: 3.2rem;  /*item中右下角的文字偏右量*/
+	  top: 0.32rem;
+	  right:0.32rem;
+	  color:#494949;
+	  /* font-size:0.2rem; 
+	  line-hight:0.3rem;
+	  height:0.92rem;*/
+	  overflow:hidden;
+  }
+/*首页的img改为div的background-image */
+      .item-avatar .back-img
+      {
+        position: absolute;
+        top: 0.28rem;
+        left: 0.4rem;
+        max-width: 2.4rem;
+        max-height: 1.813rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        }
+
+  
+  .item-avatar > img:first-child,
+  .item-avatar .item-image,
+  .item-avatar .item-content > img:first-child,
+  .item-avatar .item-content .item-image,
+  .item-avatar-left > img:first-child,
+  .item-avatar-left .item-image,
+  .item-avatar-left .item-content > img:first-child,
+  .item-avatar-left .item-content .item-image {
+    position: absolute;
+    top: 0.28rem;
+    left: 0.4rem;
+    max-width: 2.4rem;
+    max-height: 1.813rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; 
+    }
+
+
+
+.item-avatar-right,
+.item-avatar-right .item-content {
+  padding-right: 0.32rem;/*首页item中的文字又偏移*/
+  min-height: 60px; }
+  .item-avatar-right > img:first-child,
+  .item-avatar-right .item-image,
+  .item-avatar-right .item-content > img:first-child,
+  .item-avatar-right .item-content .item-image {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0; }
+ .red-line{
+    margin:0rem;
+    border:none;
+    padding:0rem;
+    padding-top:0.02rem;
+    line-height:0.5867rem;
+    color:#8c8d95;
+}   
+.red-line.active{
+	color:white;
+	padding:0rem;
+	padding-top:0.02rem;
+	border:none;
+	line-height:5867rem;
+	margin:0rem;
+	background:#5c5f68;
+	border-radius:0.293rem;
+}
+.dark-line.active i{
+	
+}   
+ .dark-line{
+color:#8c8d95;
+}
+.dark-line.active{
+	color:#5c5f68;
+}
+.dark-line.active i{
+
+}
+/**
+首页右下角的按钮
+**/
+.div_home_create {
+	z-index:999;
+	width:2.134rem;
+	height:1.067rem;
+	position:fixed;
+	bottom:1.6rem;
+	right:0.4rem;
+	
+}
+/**
+首页右下角的按钮图片
+**/
+ .div_home_create img{
+    width:2.134rem;
+    height:1.067rem;
+	
+} 
+
+#div_home_create_choice {	
+	width:1rem;
+	height:1rem;
+	position:fixed;
+	bottom:2.5rem;
+	right:4.334rem;
+}
+#div_home_create_choice img{
+	width:0.666rem;
+	height:0.666rem;
+
+} 
+.bar-afu .label-search{
+	background-color:#fff;
+	margin-left:0.5333rem;
+	height:0.8rem;
+}
+.bar-afu img{	
+	width:0.3867rem;
+	height:0.3867rem;
+	margin-right:0.56rem;
+	margin-left:0.29rem;
+}
+
+/**Modal 动画**/
+.slide-in-down {
+  -webkit-transform: translateY(-100%);
+   transform: translateY(100%);   }
+
+.slide-in-down.ng-enter,
+.slide-in-down > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-down.ng-enter-active,
+.slide-in-down > .ng-enter-active {
+ 
+   -webkit-transform: translateY(0);
+   transform: translateY(0); }
+
+.slide-in-down.ng-leave,
+.slide-in-down > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+  
+  .slide-in-right {
+   -webkit-transform: translateX(-100%);
+   transform: translateX(100%); 
+}
+.slide-in-right.ng-enter, .slide-in-right > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+   transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}      
+.slide-in-right.ng-enter-active, .slide-in-right > .ng-enter-active {
+   -webkit-transform: translateX(0);
+   transform: translateX(0); 
+} 
+.slide-in-right.ng-leave, .slide-in-right > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+   transition: all ease-in-out 250ms; 
+}
+.slide-in-left {
+   -webkit-transform: translateX(-100%);
+   transform: translateX(100%); 
+}
+.slide-in-left.ng-enter, .slide-in-left > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+   transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}      
+.slide-in-left.ng-enter-active, .slide-in-left > .ng-enter-active {
+   -webkit-transform: translateX(0);
+   transform: translateX(0); 
+} 
+.slide-in-left.ng-leave, .slide-in-left > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+   transition: all ease-in-out 250ms; 
+}
+/**Modal 动画 End**/
+
+ion-radio{
+	height:1.2rem;
+}
+  /**
+ * Radio Button Inputs
+ * --------------------------------------------------
+ */
+.item-radio {
+  padding: 0; }
+  .item-radio:hover {
+    cursor: pointer; }
+
+.item-radio .item-content {
+  /* give some room to the right for the checkmark icon */
+  padding-right: 40px; }
+
+.item-radio .radio-icon {
+  /* checkmark icon will be hidden by default */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  color:#fff;
+  visibility: visible;
+  padding: 8px;
+  height: 100%;
+  font-size: 24px; }
+
+.item-radio .radio-icon .inner-icon{
+  color:#b7b7b7;
+  visibility: hidden;
+  margin-left:-0.6rem;
+ }
+
+.item-radio input {
+  /* hide any radio button inputs elements (the ugly circles) */
+  position: absolute;
+  left: -9999px; }
+  .item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background: #f7f7f7; }
+  .item-radio input:checked + .radio-content .radio-icon {
+    /* show the checkmark icon when its checked */
+    visibility: hidden; }
+.item-radio input:checked + .radio-content .radio-icon .inner-icon{
+    /* show the checkmark icon when its checked */
+    visibility: visible; }
+    
+  .item-input span {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 220px;
+    -moz-box-flex: 1;
+    -moz-flex: 1 220px;
+    -ms-flex: 1 220px;
+    flex: 1 220px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding-right: 24px;
+    background-color: transparent; }
+/*popup style**/ 
+.er-popup{
+	
+}
+/*隐藏头*/
+.er-popup .popup-head{
+    display: none;
+}
+/*圆角*/
+.er-popup .popup{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    background:#ffffff;
+
+	width:6.667rem;
+	height:6.667rem;
+}  
+.popup_bottom_menu{
+	position:absolute;
+	bottom:0;
+}
+/* 彩蛋 popup style**/
+.surprise-er-popup{
+
+}
+/*隐藏头*/
+.surprise-er-popup .popup-head{
+    display:none;
+}
+/*圆角 margin-top:-40%;*/
+.surprise-er-popup .popup{
+    margin-top:-3.3rem;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    background:rgba(0,0,0,.00);
+    width:6.667rem;
+    height:9.8rem;
+}
+
+
+
+.div_bottom{
+	
+	width:100%; 
+	height:1.5rem;
+	position:absolute;
+	bottom:0rem;
+
+}
+
+.button.button-progroess {
+    border-color: #4a4e58;
+    background-color: #4a4e59;
+    color: #fff; }
+    .button.button-progroess:hover {
+      color: #fff;
+      text-decoration: none; }
+    .button.button-progroess.active, .button.button-assertive.activated {
+      border-color: #5a5e58;
+      background-color: #5a5e58;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+    .button.button-progroess.button-clear {
+      border-color: transparent;
+      background: none;
+      box-shadow: none;
+      color: #ef473a; }
+    .button.button-progroess.button-icon {
+      border-color: transparent;
+      background: none; }
+    .button.button-progroess.button-outline {
+      border-color: #ef473a;
+      background: transparent;
+      color: #ef473a; }
+      .button.button-progroess.button-outline.active, .button.button-progroess.button-outline.activated {
+        background-color: #ef473a;
+        box-shadow: none;
+        color: #fff; }
+    .button:hover {
+        opacity: .7; }
+        
+<!--爱心进展-->
+       
+  .nopic-title-content-div {
+	  position: absolute;
+	  left: 0.2rem;  /*item中右下角的文字偏右量*/
+	  top: 0rem;
+	  right:0.32rem;
+	  color:#494949;
+	  /* font-size:0.2rem; */
+	  line-hight:0.3rem;
+	  height:0.92rem;
+	  overflow:hidden;
+  }
+   .nopic-title-content-mid {
+	  position: absolute;
+	  left: 0.2rem;  /*item中右下角的文字偏右量*/
+	  top: 0.3rem;
+	  right:0.32rem;
+	  color:#494949;
+	  /* font-size:0.2rem; */
+	  line-hight:0.3rem;
+	  height:0.92rem;
+	  overflow:hidden;
+  }
+   .nopic-title-content-bottom {
+	  position: absolute;
+	  left: 0.2rem;  /*item中右下角的文字偏右量*/
+	  bottom: 0rem;
+	  right:0.32rem;
+	  color:#494949;
+	  /* font-size:0.2rem; */
+	  line-hight:0.3rem;
+	  height:0.92rem;
+	  overflow:hidden;
+  }
+  
+  .item-div-list{
+  	position: absolute;
+	  left: 0rem;  /*item中右下角的文字偏右量*/
+	  top: 0rem;
+	  right:0rem;
+	  color:#494949;
+	  overflow:hidden;}
+/****action sheet style for android platform****/
+/**
+ * Action Sheets for Android
+ * --------------------------------------------------
+ */
+.platform-android .action-sheet-backdrop {
+    -webkit-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.platform-android .action-sheet-backdrop.active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.platform-android .action-sheet-wrapper {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+    transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.platform-android .action-sheet-up {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.platform-android .action-sheet {
+    margin-left: 8px;
+    margin-right: 8px;
+    width: auto;
+    z-index: 11;
+    overflow: hidden;
+}
+
+.platform-android .action-sheet .button {
+    display: block;
+    padding: 1px;
+    width: 100%;
+    border-radius: 0;
+    border-color: #d1d3d6;
+    background-color: transparent;
+    color: #007aff;
+    font-size: 21px;
+}
+
+.platform-android .action-sheet .button:hover {
+    color: #007aff;
+}
+
+.platform-android .action-sheet .button.destructive {
+    color: #ff3b30;
+}
+
+.platform-android .action-sheet .button.destructive:hover {
+    color: #ff3b30;
+}
+
+.platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+    box-shadow: none;
+    border-color: #d1d3d6;
+    color: #007aff;
+    background: #e4e5e7;
+}
+
+.platform-android .action-sheet-has-icons .icon {
+    position: absolute;
+    left: 16px;
+}
+
+.platform-android .action-sheet-title {
+    padding: 16px;
+    color: #8f8f8f;
+    text-align: center;
+    font-size: 13px;
+}
+
+.platform-android .action-sheet-group {
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.platform-android .action-sheet-group .button {
+    border-width: 1px 0px 0px 0px;
+}
+
+.platform-android .action-sheet-group .button:first-child:last-child {
+    border-width: 0;
+}
+
+.platform-android .action-sheet-options {
+    background: #f1f2f3;
+}
+
+.platform-android .action-sheet-cancel .button {
+    font-weight: 500;
+}
+
+.platform-android .action-sheet-open {
+    pointer-events: none;
+}
+
+.platform-android .action-sheet-open.modal-open .modal {
+    pointer-events: none;
+}
+
+.platform-android .action-sheet-open .action-sheet-backdrop {
+    pointer-events: auto;
+}
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+    text-align: center;
+}
+
+.platform-android .action-sheet-cancel {
+    display: block;
+}
+
+/**color**/
+.f3{
+	color:#f3f3f3;
+}
+.b7{
+	color:#b7b7b7;
+}
+.49{
+	color:#494949;
+}
+
+/**thanks letter**/
+.thanks-box{ position:relative; height:100%; width:100%; display:block;}
+.thanks-box-left{z-index:999;width:0.5rem; height:0.5rem;position:absolute; left:0.65rem;top:0.5rem;border-left:1px solid #b7b7b7;border-top:1px solid #b7b7b7;}
+.thanks-box-right{ z-index:999;width:0.5rem; height:0.5rem;position:absolute; right:0.65rem;top:0.5rem;border-right:1px solid #b7b7b7;border-top:1px solid #b7b7b7;}
+.thanks-box-left-bottom{ z-index:999;width:0.5rem; height:0.5rem;position:absolute; left:0.65rem; bottom:1.8rem;border-left:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;}
+.thanks-box-right-bottom{ z-index:999;width:0.5rem; height:0.5rem;position:absolute; right:0.65rem; bottom:1.8rem;border-right:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;}
+.thanks-box-left-bottom-view{ z-index:999;width:0.5rem; height:0.5rem;position:absolute; left:0.65rem; bottom:0.5rem;border-left:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;}
+.thanks-box-right-bottom-view{ z-index:999;width:0.5rem; height:0.5rem;position:absolute; right:0.65rem; bottom:0.5rem;border-right:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;}
+.thanks-box-top-center{ position:absolute; left:0rem;top:1.5rem;width:100%;text-align:center;}
+.new-thanks-box-left-bottom{width:0.5rem; height:0.5rem;border-left:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;float:left;margin-left:0.65rem;};
+.new-thanks-box-right-bottom{width:0.5rem; height:0.5rem;border-right:1px solid #b7b7b7;border-bottom:1px solid #b7b7b7;float:right;margin-right:0.65rem;};
+
+a{
+text-decoration:none;
+}
+
+a:link{
+text-decoration:none;
+}
+a:visited{
+text-decoration:none;
+}
+a:hover{
+text-decoration:none;
+}
+a:active{
+text-decoration:none;
+}
+
+/***/
+.div_share {	
+	width:100%;
+	height:6rem;
+	position:fixed;
+	bottom:0rem;	
+}
+
+.vertical-container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+          align-items: center;
+    -webkit-justify-content: center;
+          justify-content: center;
+    }
+/*redpoint*/
+.tab-progress-red-point:after,
+.tab-personal-red-point:after,
+.progress-middle-red-point:after,
+.progress-right-red-point:after,
+.red-point:after{
+position: absolute;
+content: '';
+height:8px;
+width:8px;
+border-radius: 4px;
+background-color: red;
+
+}
+
+.tab-progress-red-point:after{
+top:7px;
+right:44%;
+}
+
+.tab-personal-red-point:after{
+top:7px;
+right:11%;
+}
+.progress-middle-red-point:after{
+    top:12px;
+    right:36%;
+}
+
+.red-point:after{
+top: 10px;
+right: 35%;
+}
+
+/****/
+.multi-line{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+}
+
+.multi-line-two{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;
+}
+
+.rj-push-left {
+    position: absolute;
+    bottom: 0.2rem;
+    color: #494949;
+   }
+.red-background{
+    color:#ffffff;
+    background-color:#5c5f68;
+    height:1.1467rem;
+ }
+ .normal-background{
+    color:#888991;
+    background-color:#f1f2f5;
+    height:1.1467rem;
+ }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/***下方的tab***/
+
+.tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: horizontal;
+    flex-direction: horizontal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    border-color: #ededed;
+    background-color: #ffffff;
+    background-image: linear-gradient(0deg, #E8E8E8, #E8E8E8 50%, transparent 50%);
+    color: #444;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: 49px;
+    border-style: solid;
+    border-top-width: 0.5px;
+    background-size: 0;
+    line-height: 49px; }
+
+.tabs-striped .tabs {
+  background-color: white;
+  background-image: none;
+  border: none;
+  border-top: 1px solid #ededed;
+  border-bottom: none;
+  padding-top: 0; }
+  /***下方的tab字体***/
+.tabs-icon-top > .tabs .tab-item,
+.tabs-icon-top.tabs .tab-item,
+.tabs-icon-bottom > .tabs .tab-item,
+.tabs-icon-bottom.tabs .tab-item {
+  font-size: 10px;
+  line-height: 12px; }
+   /***slides***/
+.slider-pager {
+ position: absolute;
+ bottom: 0.4rem;
+ z-index: 1;
+ width: 100%;
+ height: 15px;
+ text-align: right;
+ right:0.85rem;
+
+ }
+
+.slider-pager .slider-pager-page {
+    display: inline-block;
+    margin: 0 1.5px;
+    width: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.4;
+}
+.slider-pager .slider-pager-page.active {
+   zoom:120%;
+   margin-top:4px;
+  -webkit-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+  opacity: 1; }
+
+.ion-record{
+    font-size:8px;
+     }
+.item{
+
+background:#ffffff;
+ }
+ .logout{
+ background:#ffffff;
+ }
+.image-loader-container {
+    margin-left: 45%;
+    margin-top:30px;
+
+}
+/*上悬浮*/
+.div-top{
+	z-index:999;
+	width:1.44rem;
+	height:0.7rem;
+	position:fixed;
+	top:0.5rem;
+	right:0.5rem;
+	text-align:center;
+}
+/***********************************/
+.list-index {
+  }
+
+.wy-push-right {
+  position: absolute;
+  right: 0rem;  /*item中右下角的文字偏右量*/
+  bottom: 0.4rem;
+  color: #494949;
+ }
+ .time-push-left {
+     position: absolute;
+     bottom: 0.4rem;
+     color: #494949;
+    }
+
+/***index itrem**/
+.item-border{
+border-bottom:none;
+border-top:0.5px solid #f3f3f3;
+border-left:none;
+border-right:none;
+}
+.item-border-none{
+border-bottom:none;
+border-top:0.5px solid #ffffff;
+border-left:none;
+border-right:none;
+}
+
+ .index-red-line{
+    margin:0rem;
+    border:none;
+    padding:0rem;
+    padding-top:0.02rem;
+    line-height:0.5867rem;
+    color:#8c8d95;
+}
+.index-red-line.active{
+	color:white;
+	padding:0rem;
+	padding-top:0.02rem;
+	border:none;
+	line-height:5867rem;
+	margin:0rem;
+	background:#5c5f68;
+	border-radius:0.293rem;
+}

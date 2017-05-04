@@ -1,0 +1,17 @@
+<!-- 
+File-Name:address.html
+Date:2016-08-06
+Author:Wangyong
+Function:地址
+-->
+<ion-header-bar align-title="center" class="bar-afu">
+ 	<a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+	<div class="h1 title">历史地址</div>	   
+</ion-header-bar>
+<ion-view>  
+   <ion-content style="background: rgba(0,0,0,.70);height:100%;width:100%;">
+   	<ion-scroll zooming="true" direction="y" style="width:100%; height: 6rem;margin-top:1.2rem;">
+	 	<ion-radio ng-repeat="wtype in wtypes" on-tap="chooseWtype(wtype)" ng-model="wtype_selected" ng-value="{{wtype.wtype_id">{{wtype.wtype_name}}</ion-radio>	
+       </ion-scroll>
+   </ion-content>   
+</ion-view>

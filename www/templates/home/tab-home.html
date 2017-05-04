@@ -1,0 +1,184 @@
+<ion-header-bar  class="bar-afu row" style="margin:0;padding:0;">
+    <div class="col col-15" style="margin-left:-0.1rem;"><img style="width:1rem;height:0.5867rem;margin-top:0.2rem;" ng-src="img/home_afu@{{myImgSize}}x.png"/></div>
+
+    <!--<div class="col col-70 topbar">
+        <div class="row vertical-container" style="width:4rem;margin:0 auto;height:100%;">
+        <div ng-click="clickJuanOrQiu('juan')" ng-class="{true: 'button button-small bar-afu active', false: 'button button-small bar-afu'}[isJuanActive]" class="vertical-container" style="height:100%;line-height:100%;width:100%;margin-right:-0.5px;border-top-left-radius:4px;border-bottom-left-radius:4px;border-right:0px;border-bottom-right-radius:0px;border-top-right-radius:0px;padding:0;" >
+            <div class="font-26">捐助信息</div>
+        </div>
+        <div ng-click="clickJuanOrQiu('qiu')" ng-class="{true: 'button button-small bar-afu active', false: 'button button-small bar-afu'}[isQiuActive]" class="vertical-container" style="height:100%;line-height:100%;width:100%;border-left:0px;margin-left:-0.5px;border-top-right-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:0px;border-bottom-left-radius:0px;padding:0;" >
+
+            <div class="font-26">求助信息</div>
+        </div>
+       </div>
+    </div>-->
+    <div class="col col-70 topbar" >
+        <div class="row vertical-container" style="width:4.5rem;margin:0 auto;height:100%;">
+            <span on-tap="clickJuanOrQiu('juan')" style="line-height:1.1267rem;margin-right:0.2933rem;" class="dark-line font-28" ng-class="{true: 'active', false: ''}[isJuanActive]">
+                捐助信息
+                <hr ng-if="isJuanActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+            </span>
+            <span on-tap="clickJuanOrQiu('qiu')" style="line-height:1.1267rem;margin-left:0.2933rem;" class="dark-line font-28" ng-class="{true: 'active', false: ''}[isQiuActive]">
+                求助信息
+                <hr ng-if="isQiuActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+            </span>
+        </div>
+    </div>
+    <div class="col-15 topbar" style="margin-right:-0.3rem;" ng-click="openSearchModal()">
+        <img style="width:0.5467rem;height:0.5467rem;margin-top:0.2rem;margin-left:0.5rem;" ng-src="img/home_search@{{myImgSize}}x.png" />
+    </div>
+
+    <div class="bar bar-subheader vertical-container " style="width:100%;margin:0;padding:0;">
+        <!--<div class="row vertical-container font-24" style="height:1.0667rem;">
+            <span on-tap="switchType($index);" ng-repeat="wtype in wtypes track by wtype.wtype_id" style="line-height:1.0267rem;" class="col red-line" ng-class="{true: 'active', false: ''}[wtype.is_select]">
+                {{wtype.wtype_name}}
+                <hr ng-if="wtype.is_select" style="line-height:2px;width:0.4rem;height:0.04rem;background-color:#ff0000;margin:0 auto;border:none;text-align:center;"  align="center" noshade="noshade"/>
+            </span>
+
+
+            <span on-tap="showMoreTypes();"  style="line-height:1.0267rem;" class="col" >
+                <i style='color:#b7b7b7' class='ion-chevron-down' ></i>
+            </span>
+        </div>-->
+        <!--<div class="row font-24" style="height:1.1rem;width:90%;overflow-x:auto;overflow-y:hidden;margin:0 auto;" >
+
+            <span on-tap="switchType($index);" ng-repeat="wtype in wtypes" style="line-height:1.0267rem;min-width:1.3rem;" class="red-line font-28" ng-class="{true: 'active', false: ''}[wtype.is_select]">
+                {{wtype.wtype_name}}
+                <hr ng-if="wtype.is_select" class= "font-26" style="line-height:2px;width:0.4rem;height:0.04rem;background-color:#ff0000;margin:0 auto;border:none;text-align:center;"  align="center" noshade="noshade"/>
+            </span>
+
+        </div>-->
+        <div class="row" id="types_scroll" delegate-handle="types_scroll"  style="height:0.5867rem;width:90%;overflow-x:auto;overflow-y:hidden;margin:0 auto;margin-left:0.2rem;padding:0;" >
+
+            <div on-tap="switchType($index);" ng-repeat="wtype in wtypes" style="min-width:1.25rem;line-height:0.5867rem;" class="index-red-line" ng-class="{true: 'active font-24', false: 'font-28'}[wtype.is_select]">
+                {{wtype.wtype_name}}
+            </div>
+
+        </div>
+        <div ng-click="showMoreTypes();" class="vertical-container font-24" style="height:1.1467rem;width:10%;border:none">
+            <span style="line-height:1.0267rem;"  >
+                <i style='color:#8c8d95;' class='ion-chevron-down' ></i>
+            </span>
+        </div>
+
+    </div>
+</ion-header-bar>
+
+
+<ion-view ng-class="{true: '', false: 'gone'}[isJuanActive]" style="border:none;">
+
+   <!-- <ion-content on-swipe-left="" scroll="false" >-->
+
+        <!-- 首页的轮播图
+        <ion-slide-box style="margin-top:1rem;width:100%; height:2.773rem;" delegate-handle="firstslide" does-continue="true" auto-play="true">
+                <ion-slide ng-repeat="poster in posters"  style="width:100%; height:2.773rem;">
+
+                <div style="width:100%; height:2.773rem;"><img style="width:100%;height:2.773rem;" ng-src="{{basePicUrl+poster}}" /></div>
+            </ion-slide>
+
+        </ion-slide-box> 首页的轮播图 End-->
+
+        <!--捐助 -->
+        <ion-content ng-class="{true: '', false: 'gone'}[isJuanActive]" style="margin-top:1.15rem;border:none;padding:0;" lazy-scroll>
+            <!-- 首页的轮播图    -->
+            <ion-slide-box style="padding:0rem;margin-top:0rem;width:100%; height:3.773rem;" delegate-handle="firstslide" does-continue="{{doesContinue}}" auto-play="true" show-pager="{{isShowDot}}">
+                <ion-slide ng-repeat="poster in posters track by $index" style="width:100%; height:3.773rem;padding:0;">
+
+                    <div ng-click="openLink('{{poster.url}}');" style="width:100%; height:3.773rem;padding-left:0.4rem;padding-right:0.4rem;background:#ffffff;">
+                        <img ion-img-cache style="width:100%;height:3.773rem;border-radius:4px;" ng-src="{{basePicUrl+poster.picture_url}}" /></div>
+                </ion-slide>
+
+            </ion-slide-box> <!--首页的轮播图 End-->
+            <ion-refresher
+                        style="border:none;"
+                    pulling-text="下拉刷新..."
+                    refreshing-text = "请求中..."
+                    on-refresh="doRefreshJuan()">
+            </ion-refresher>
+            <div style="padding-left:0.4rem;padding-right:0.4rem;background-color:#ffffff;">
+            <ion-list rj-close-back-drop style="background-color:#ffffff;" on-swipe-left="onSwipeLeft($event)" on-swipe-right="onSwipeRight($event)" on-drag-left="onDragLeft($event);" on-drag-right="onDragRight($event);">
+                <ion-item class="item-avatar" ng-class="{true: 'item-border-none', false: 'item-border'}[$index == 0]" rj-hold-active ng-repeat="info in infos track by info.xid" ng-click="goToJuanDetail('{{info.xid}}');">
+                    <!--<img ion-img-cache ng-src="{{basePicUrl+info.picture_url}}" style="border-radius:4px;margin-left:-0.4rem;">-->
+                    <div class="back-img" ion-img-cache back-img="{{basePicUrl+info.picture_url}}" style="border-radius:4px;margin-left:-0.4rem;" ></div>
+                   <!-- <span class="color-49 font-32" ng-bind="info.title" style="margin-left:-0.4rem;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></span>-->
+                    <!--<h3 class="title-content" ng-bind="info.title" style="font-weight:bold;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></h3>-->
+                    <span class="multi-line-two font-30"  ng-bind="info.title" style="color:4a4e58;font-weight:bold;height:100%;margin-top:0.15rem;margin-left:-0.4rem;"></span>
+                    <span style="color:#8c8d95;" class="wy-push-right font-24" ng-bind="info.user_name"></span>
+                    <span style="color:#8c8d95;margin-left:-0.4rem;" class="time-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+                </ion-item>
+
+            </ion-list>
+                </div>
+            <p class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note}}</p>
+            <ion-infinite-scroll
+                    delegate-handle="juan"
+                    immediate-check="false"
+                    ng-if="moreJuanDataCanBeLoaded()"
+                    on-infinite="loadMoreJuan()"
+                    distance="1%">
+            </ion-infinite-scroll>
+            <div ng-if="infos.length == 0" class="color-8d" style="text-align: center;margin-top:0rem;" >
+                <img ng-src="img/no_progress@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;" />
+                <p>该条目暂时没有数据，快发布吧</p>
+            </div>
+        </ion-content>
+
+
+    <!-- 首页的右下角的创建按钮 -->
+    <div class="div_home_create" >
+        <img ng-src="img/home_create@{{myImgSize}}x.png"  ng-click="openModal()"/>
+    </div>
+
+</ion-view>
+<ion-view ng-class="{true: '', false: 'gone'}[isQiuActive]">
+
+    <ion-content ng-class="{true: '', false: 'gone'}[isQiuActive]" style="margin-top:1.15rem;padding:0;" lazy-scroll> <!--style="margin-top:3.773rem;" -->
+
+        <ion-refresher
+                pulling-text="下拉刷新..."
+                refreshing-text = "请求中..."
+                on-refresh="doRefreshQiu()">
+        </ion-refresher>
+
+        <ion-slide-box style="margin-top:0rem;width:100%; height:3.773rem;" delegate-handle="secondslide" does-continue="{{doesContinue}}" auto-play="true" show-pager="{{isShowDot}}">
+            <ion-slide ng-repeat="poster in posters"  style="width:100%; height:3.773rem;">
+
+                <div ng-click="openLink('{{poster.url}}');" style="width:100%; height:3.773rem;padding-left:0.4rem;padding-right:0.4rem;background:#ffffff;">
+                    <img ion-img-cache style="width:100%;height:3.773rem;border-radius:4px;" ng-src="{{basePicUrl+poster.picture_url}}"/></div>
+            </ion-slide>
+
+        </ion-slide-box>
+        <div style="padding-left:0.4rem;padding-right:0.4rem;background-color:#ffffff;">
+        <ion-list rj-close-back-drop class="" style="background:#ffffff;" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+
+
+            <ion-item class="item-avatar" ng-class="{true: 'item-border-none', false: 'item-border'}[$index == 0]" rj-hold-active ng-repeat="info in infos_qiu track by info.xid" ng-click="goToQiuDetail('{{info.xid}}');">
+               <!-- <img ion-img-cache ng-src="{{basePicUrl+info.picture_url}}" style="border-radius:4px;margin-left:-0.4rem;">-->
+                <div class="back-img" ion-img-cache back-img="{{basePicUrl+info.picture_url}}" style="border-radius:4px;margin-left:-0.4rem;" ></div>
+                <!--<span class="color-49 font-32" ng-bind="info.title" style="margin-left:-0.4rem;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></span>
+-->
+                <!--<h3 class="title-content" ng-bind="info.title" style="font-weight:bold;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></h3>-->
+                <span class="multi-line-two font-30"  ng-bind="info.title" style="color:4a4e58;font-weight:bold;height:100%;margin-top:0.15rem;rem;margin-left:-0.4rem;"></span>
+                <span style="color:#8c8d95;" class="wy-push-right font-24" ng-bind="info.user_name"></span>
+                <span style="color:#8c8d95;margin-left:-0.4rem;" class="time-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+            </ion-item>
+        </ion-list>
+            </div>
+        <p class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note}}</p>
+        <ion-infinite-scroll
+                delegate-handle="qiu"
+                immediate-check="false"
+                ng-if="moreQiuDataCanBeLoaded()"
+                on-infinite="loadMoreQiu()"
+                distance="1%">
+        </ion-infinite-scroll>
+        <div ng-if="infos_qiu.length == 0" class="color-8d" style="text-align: center;margin-top:0rem;" >
+            <img ng-src="img/no_progress@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;"/>
+            <p>该条目暂时没有数据，快发布吧</p>
+        </div>
+    </ion-content>
+    <!-- 首页的右下角的创建按钮 -->
+    <div class="div_home_create" >
+        <img ng-src="img/home_create@{{myImgSize}}x.png"  ng-click="openModal()"/>
+    </div>
+</ion-view>

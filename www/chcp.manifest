@@ -1,0 +1,1638 @@
+[
+  {
+    "file": "cordova_plugins.js",
+    "hash": "41e5b0338947889be35b852b46b652c8"
+  },
+  {
+    "file": "cordova-js-src/android/nativeapiprovider.js",
+    "hash": "035f17302807fd50b779d529b2fe70e6"
+  },
+  {
+    "file": "cordova-js-src/android/promptbasednativeapi.js",
+    "hash": "f4b029f0e91729c970ff421b8f9bd22e"
+  },
+  {
+    "file": "cordova-js-src/exec.js",
+    "hash": "d5ca6ebdc38c2f0d53e9989293e51c9e"
+  },
+  {
+    "file": "cordova-js-src/platform.js",
+    "hash": "6e1fac8e69e82cb27178bb5a01f1d36c"
+  },
+  {
+    "file": "cordova-js-src/plugin/android/app.js",
+    "hash": "58b79c9693166d44fc65d57979fcdf28"
+  },
+  {
+    "file": "cordova.js",
+    "hash": "3a80db8d9fd2034224dcf438687f6658"
+  },
+  {
+    "file": "css/certification.css",
+    "hash": "8d6904155d688f104a144dcefbd1b10a"
+  },
+  {
+    "file": "css/custom-app.css",
+    "hash": "1f2626e6939eb216e4387e7725af16e5"
+  },
+  {
+    "file": "css/custom-app.min.css",
+    "hash": "8c4ef2e67f2660326d651b1484179727"
+  },
+  {
+    "file": "css/fonts/afuicon.svg",
+    "hash": "a8b7960fa69f9ea137b8a4091ae451bf"
+  },
+  {
+    "file": "css/fonts/afuicon.ttf",
+    "hash": "1bd67939b8aa8dcb3ecfcbd4a0ec3a4c"
+  },
+  {
+    "file": "css/fonts/afuicon.woff",
+    "hash": "7146f3dddac06c515b66dd36da748f26"
+  },
+  {
+    "file": "css/icon_style.css",
+    "hash": "d9644f7b0f6ed16ccfcca394881eec23"
+  },
+  {
+    "file": "css/index.css",
+    "hash": "e46d9a1c456a9c913ca10f3c16d50000"
+  },
+  {
+    "file": "css/ionic.app.css",
+    "hash": "47fe761bd15e199240869593e7e873fc"
+  },
+  {
+    "file": "css/ionic.app.min.css",
+    "hash": "4a2d0f68fa25926278a930123a53b9be"
+  },
+  {
+    "file": "css/login/login.css",
+    "hash": "c8e80cf62c69470c4f606bc7d4d7c28d"
+  },
+  {
+    "file": "css/style.css",
+    "hash": "424db1cae65e3266be4502a7bcfd25e7"
+  },
+  {
+    "file": "icon.png",
+    "hash": "0bcdf9dc10ca25b667f0db8478f01609"
+  },
+  {
+    "file": "img/1080_1920/1.png",
+    "hash": "3769784e8cc0feb4c88c2409c6b95fad"
+  },
+  {
+    "file": "img/1080_1920/2.png",
+    "hash": "3b1f82adf4b2d1741a7208a308bed339"
+  },
+  {
+    "file": "img/1080_1920/3.png",
+    "hash": "c873d58784ee1d552d80e2cf171bad34"
+  },
+  {
+    "file": "img/1242_2208/1.png",
+    "hash": "641997f7eabcc8c54f1477d55c365aa6"
+  },
+  {
+    "file": "img/1242_2208/2.png",
+    "hash": "7536932149cc44f50b56773c1fb148c0"
+  },
+  {
+    "file": "img/1242_2208/3.png",
+    "hash": "360f6d98341abd296282ab16a01ad3d0"
+  },
+  {
+    "file": "img/480_800/1.png",
+    "hash": "9584ffb86ec01f856eed151baeeb40bd"
+  },
+  {
+    "file": "img/480_800/2.png",
+    "hash": "313a747b29a2089c4f4abbf2c87b3adc"
+  },
+  {
+    "file": "img/480_800/3.png",
+    "hash": "d9c45e8f6b97e061def959a0f1bbc676"
+  },
+  {
+    "file": "img/480_854/1.png",
+    "hash": "65ae08600fb56da2b5fa26d1ae2f99d9"
+  },
+  {
+    "file": "img/480_854/2.png",
+    "hash": "fa58de4093c1d6747fcb9628a0a09bfb"
+  },
+  {
+    "file": "img/480_854/3.png",
+    "hash": "4a02923138b09ea5946f6af587bf40c1"
+  },
+  {
+    "file": "img/540_960/1.png",
+    "hash": "cabbac420f0ac44ba8b739abf7c758ad"
+  },
+  {
+    "file": "img/540_960/2.png",
+    "hash": "ce144ed3e2e133e24d5b636472f04a7c"
+  },
+  {
+    "file": "img/540_960/3.png",
+    "hash": "4285626f16dd998fa4023dbad03caa0f"
+  },
+  {
+    "file": "img/640_1136/1.png",
+    "hash": "17183b21add3e66bcc2d9f300d0397f6"
+  },
+  {
+    "file": "img/640_1136/2.png",
+    "hash": "f5aa67f47d86915150cb23e82d9846d5"
+  },
+  {
+    "file": "img/640_1136/3.png",
+    "hash": "e420266ff5e840cda3f8ff6b13fd4169"
+  },
+  {
+    "file": "img/640_960/1.png",
+    "hash": "3defd298aec15c7b5fe38b94834651f9"
+  },
+  {
+    "file": "img/640_960/2.png",
+    "hash": "7b3ca5bf69c2d63b4c93b4116237b2b9"
+  },
+  {
+    "file": "img/640_960/3.png",
+    "hash": "24306835ba126a7bf35ab6090c48b0b7"
+  },
+  {
+    "file": "img/720_1280/1.png",
+    "hash": "1f9f9b7cd8e3a8702fd7fad367fad500"
+  },
+  {
+    "file": "img/720_1280/2.png",
+    "hash": "b0726e537f041fa5c677761732cce89e"
+  },
+  {
+    "file": "img/720_1280/3.png",
+    "hash": "9e9476e579293bbe190caecb7e0b2596"
+  },
+  {
+    "file": "img/750_1334/1.png",
+    "hash": "4c1710d1d1b1d5fa31533b807c0b5cf4"
+  },
+  {
+    "file": "img/750_1334/2.png",
+    "hash": "21a60e1a2b6d635362e71ca3da9186c8"
+  },
+  {
+    "file": "img/750_1334/3.png",
+    "hash": "5d255a0295623911d831b647958c0f73"
+  },
+  {
+    "file": "img/about_logo@2x.png",
+    "hash": "4660f66253f8b41b6b7c87fe2a9ecee9"
+  },
+  {
+    "file": "img/about_logo@3x.png",
+    "hash": "61c2ff4acdac655e514444298b2beaac"
+  },
+  {
+    "file": "img/about@2x.png",
+    "hash": "e3943d1b59bcf791b49ac328b1134b9f"
+  },
+  {
+    "file": "img/about@3x.png",
+    "hash": "48c2f266982b97a426b5b6874074b168"
+  },
+  {
+    "file": "img/addHead@2x.png",
+    "hash": "cd349c73cada81fe178dcb98d9e511b8"
+  },
+  {
+    "file": "img/addHead@3x.png",
+    "hash": "61f65fe203530910444e9b0689048f8c"
+  },
+  {
+    "file": "img/be_rejected_surprise@2x.png",
+    "hash": "f42d42f3fd6f99b0ce67a9a7f81d8e64"
+  },
+  {
+    "file": "img/be_rejected_surprise@3x.png",
+    "hash": "1ec687a1e4f470d67e165702d636c8d7"
+  },
+  {
+    "file": "img/camera@2x.png",
+    "hash": "a6d6890c5317ec66b254084e831f70ce"
+  },
+  {
+    "file": "img/camera@3x.png",
+    "hash": "ae0ec4ca187dcbdb54d545315af505fe"
+  },
+  {
+    "file": "img/card.png",
+    "hash": "b55f3c1ad2ac019506dc0d36dcb60c81"
+  },
+  {
+    "file": "img/card@2x.png",
+    "hash": "9b4c4f2ca96a1ac4ce45a9982fc3cf90"
+  },
+  {
+    "file": "img/card@3x.png",
+    "hash": "536da1c9c87147cbb7ab18e83d0d6f45"
+  },
+  {
+    "file": "img/certification_example.png",
+    "hash": "8a553da6753f17396b3572b7472312b1"
+  },
+  {
+    "file": "img/certification_popup@2x.png",
+    "hash": "ca54c1e9d5894811209b2edc2aefcaa6"
+  },
+  {
+    "file": "img/certification_popup@3x.png",
+    "hash": "0b9d76ece876ac8c4a08909cfbd7014c"
+  },
+  {
+    "file": "img/choose_express@2x.png",
+    "hash": "3b78a869d3f4b63347f899344cfebecf"
+  },
+  {
+    "file": "img/choose_express@3x.png",
+    "hash": "c52680fb665fffe1c02fb3619da26aef"
+  },
+  {
+    "file": "img/collection_checked@2x.png",
+    "hash": "4e926c40e628255e414645b12782576d"
+  },
+  {
+    "file": "img/collection_checked@3x.png",
+    "hash": "a489ad2725c5d0bc0512ad7d3141edff"
+  },
+  {
+    "file": "img/collection_unchecked@2x.png",
+    "hash": "9ba6fcf81602c7bcceb438fd7cac72de"
+  },
+  {
+    "file": "img/collection_unchecked@3x.png",
+    "hash": "2b9764d450d7250f005dd9a3404cd7c7"
+  },
+  {
+    "file": "img/confirm_help_surprise@2x.png",
+    "hash": "bc40ab8b04daf6769e09aff9a6ad1c8b"
+  },
+  {
+    "file": "img/confirm_help_surprise@3x.png",
+    "hash": "cbdb2f49f7233361eb9be3b7e161dc86"
+  },
+  {
+    "file": "img/confirm_help@2x.png",
+    "hash": "5e4ab00b18aea2c71b62abe912854594"
+  },
+  {
+    "file": "img/confirm_help@3x.png",
+    "hash": "26045f35a845e958aaabcadab9b355fd"
+  },
+  {
+    "file": "img/confirm_need@2x.png",
+    "hash": "a5a3e03b1f1746f54dc81ca84370b2cd"
+  },
+  {
+    "file": "img/confirm_need@3x.png",
+    "hash": "b57bbade7d83ddf6044fa1bf1fce8738"
+  },
+  {
+    "file": "img/confirm_receive_surprise@2x.png",
+    "hash": "58185589711095f27f9541552c6e9e8e"
+  },
+  {
+    "file": "img/confirm_receive_surprise@3x.png",
+    "hash": "0fa85e8e11168cb4c88ed7b5f6a4e696"
+  },
+  {
+    "file": "img/confirm_sign@2x.png",
+    "hash": "9c8df307569afb1ece86ec6c171a15b2"
+  },
+  {
+    "file": "img/confirm_sign@3x.png",
+    "hash": "2af2f8842f05d528bcc8a5afb0283a87"
+  },
+  {
+    "file": "img/delete_address@2x.png",
+    "hash": "1a6522f7b80d33290727553b951ef1c1"
+  },
+  {
+    "file": "img/delete_address@3x.png",
+    "hash": "ec35cb98189daf7e643113b244e13458"
+  },
+  {
+    "file": "img/donate_success_surprise@2x.png",
+    "hash": "675f92bf85fb42c0351b0cfe7433f759"
+  },
+  {
+    "file": "img/donate_success_surprise@3x.png",
+    "hash": "5958228a20aefc90f5a74dd5dfa7473b"
+  },
+  {
+    "file": "img/edit_avatar@2x.png",
+    "hash": "91990f09ec25fff7a17a804191a25deb"
+  },
+  {
+    "file": "img/edit_avatar@3x.png",
+    "hash": "1cc8305eef3d4747b62c27e0315dc5cb"
+  },
+  {
+    "file": "img/feedback@2x.png",
+    "hash": "80c9f7aecd992e136d496394acc3f5b9"
+  },
+  {
+    "file": "img/feedback@3x.png",
+    "hash": "27300ab3ecbdae62179f81f380aaf7a7"
+  },
+  {
+    "file": "img/heart@2x.png",
+    "hash": "469f4589b41474255bdf66643cca6604"
+  },
+  {
+    "file": "img/heart@3x.png",
+    "hash": "bb38d47dffd43d410a7d52072fcb971f"
+  },
+  {
+    "file": "img/home_afu@2x.png",
+    "hash": "d8ca5584108c86fc7f41b0337df93d11"
+  },
+  {
+    "file": "img/home_afu@3x.png",
+    "hash": "4bbfc011ddf5bd4a375450a7362cac58"
+  },
+  {
+    "file": "img/home_create_close@2x.png",
+    "hash": "7de557716b546a41c2add891c63cf8bc"
+  },
+  {
+    "file": "img/home_create_close@3x.png",
+    "hash": "ec507b17f74d3ccb3bbdafb38d019b75"
+  },
+  {
+    "file": "img/home_create@2x.png",
+    "hash": "0f2227cde8528f971cc17bc78293f6bb"
+  },
+  {
+    "file": "img/home_create@3x.png",
+    "hash": "69fba6c62e6381328376ce866c1fb894"
+  },
+  {
+    "file": "img/home_search@2x.png",
+    "hash": "795ab4dae6f0e5dff22aabd4bf4b515b"
+  },
+  {
+    "file": "img/home_search@3x.png",
+    "hash": "6127167f81f1b433c926e08d42dd6f53"
+  },
+  {
+    "file": "img/icon.png",
+    "hash": "93b8c6d82768f527576d33d4a0fd8b25"
+  },
+  {
+    "file": "img/info@2x.png",
+    "hash": "916b57000b997aa5ff9731bb4343b31f"
+  },
+  {
+    "file": "img/info@3x.png",
+    "hash": "41d71d289b1c5883497a8cf65609f01d"
+  },
+  {
+    "file": "img/left_count@2x.png",
+    "hash": "3c04cb53b0b115acf2ade305f923fb74"
+  },
+  {
+    "file": "img/left_count@3x.png",
+    "hash": "a5ef2612ffb88588a65a8e19ca026151"
+  },
+  {
+    "file": "img/location_icon@2x.png",
+    "hash": "7957469b6eba230216db6de7b451fb50"
+  },
+  {
+    "file": "img/location_icon@3x.png",
+    "hash": "78a4a79aa29dd0d4615f7ea7fc52d878"
+  },
+  {
+    "file": "img/location@2x.png",
+    "hash": "02ffa0525442117308ee3efd70125dc6"
+  },
+  {
+    "file": "img/location@3x.png",
+    "hash": "1e3724f88478410892463da1fc539484"
+  },
+  {
+    "file": "img/me_unchecked@2x.png",
+    "hash": "f7b3dd46eb57241252f40bad835a010b"
+  },
+  {
+    "file": "img/me_unchecked@3x.png",
+    "hash": "5c39425f13de7d922fdfec1a986793a7"
+  },
+  {
+    "file": "img/network_offline@2x.png",
+    "hash": "cde59d52f096eee515f3d2c10764b229"
+  },
+  {
+    "file": "img/network_offline@3x.png",
+    "hash": "3e6a53778b994b6cd2bcb4f09d74e4f2"
+  },
+  {
+    "file": "img/no_address@2x.png",
+    "hash": "8ddaa8730112e33f335c02dfe8eb43df"
+  },
+  {
+    "file": "img/no_address@3x.png",
+    "hash": "ff365d4737cf7e81cf3fde104f7d47db"
+  },
+  {
+    "file": "img/no_collection@2x.png",
+    "hash": "b8d35089b1020d5ccb644e38714eea51"
+  },
+  {
+    "file": "img/no_collection@3x.png",
+    "hash": "5a8eeb1d35f880e7fdff79717b9db671"
+  },
+  {
+    "file": "img/no_progress@2x.png",
+    "hash": "1dec585289571e46b65d5c0140bec51b"
+  },
+  {
+    "file": "img/no_progress@3x.png",
+    "hash": "9dd52de9e0c9793ed8a20865f19993a0"
+  },
+  {
+    "file": "img/no_search@2x.png",
+    "hash": "c29172ebca1e3c742df77523890d9992"
+  },
+  {
+    "file": "img/no_search@3x.png",
+    "hash": "b40ccd8df7a58429f4825e1564194e90"
+  },
+  {
+    "file": "img/other.png",
+    "hash": "155ce8ad56066d6b78d601d020b1316b"
+  },
+  {
+    "file": "img/password@2x.png",
+    "hash": "5096dd5fc02a31a715e14639896603d2"
+  },
+  {
+    "file": "img/password@3x.png",
+    "hash": "2a988549c9c1c7228ee69445c2dab307"
+  },
+  {
+    "file": "img/personal_background@2x.png",
+    "hash": "2fbc590e5a2aa4b4507637323e51b652"
+  },
+  {
+    "file": "img/personal_background@3x.png",
+    "hash": "eee48ea2608e9834c7a0fc8cbec25df0"
+  },
+  {
+    "file": "img/phone@2x.png",
+    "hash": "34ca95171f48d2439f95b09dec341423"
+  },
+  {
+    "file": "img/phone@3x.png",
+    "hash": "9b6713a111b4895900f11ba247cd78f1"
+  },
+  {
+    "file": "img/pick_image_red@2x.png",
+    "hash": "5b8a77b11c07256c8c93447d52ec5b03"
+  },
+  {
+    "file": "img/pick_image_red@3x.png",
+    "hash": "5bdef320676d9258ebc9cea20f6969c2"
+  },
+  {
+    "file": "img/pick_image@2x.png",
+    "hash": "bab248ec035afeb22fcbadcdd788e5fa"
+  },
+  {
+    "file": "img/pick_image@3x.png",
+    "hash": "5cddc451276f56a33a98539e3b264270"
+  },
+  {
+    "file": "img/QQ@2x.png",
+    "hash": "9f3a971063731a654b71d8f4ef874acf"
+  },
+  {
+    "file": "img/QQ@3x.png",
+    "hash": "04bdeea28f175470726d93595800811c"
+  },
+  {
+    "file": "img/Qzone@2x.png",
+    "hash": "a463ab8a7e5fb1dc3187ee71f3fc71df"
+  },
+  {
+    "file": "img/Qzone@3x.png",
+    "hash": "9f83b445f3b14de14592dc96d15ac9b3"
+  },
+  {
+    "file": "img/receive-thanks@2x.png",
+    "hash": "2f3b23daca790adbe9d854f878213f21"
+  },
+  {
+    "file": "img/receive-thanks@3x.png",
+    "hash": "5e45b793ab10500c0da04f9b79d282b1"
+  },
+  {
+    "file": "img/search_close@2x.png",
+    "hash": "110192c5c4b79a3b2717aa76c9ebd3bf"
+  },
+  {
+    "file": "img/search_close@3x.png",
+    "hash": "310ffec1f808fdff65168c6eed19c964"
+  },
+  {
+    "file": "img/send_out@2x.png",
+    "hash": "448c536b36f8b20c753ce5e57c576dd3"
+  },
+  {
+    "file": "img/send_out@3x.png",
+    "hash": "5b767125fc7b9861d9b5011ddc74ebf4"
+  },
+  {
+    "file": "img/send_thanks@2x.png",
+    "hash": "113404935bbf87b3d200032a291a3b1e"
+  },
+  {
+    "file": "img/send_thanks@3x.png",
+    "hash": "dae9970a4ac7826e7bca2b45e46e842f"
+  },
+  {
+    "file": "img/share@2x.png",
+    "hash": "d1f884dd516678a2d3bb4f8e308a9a83"
+  },
+  {
+    "file": "img/share@3x.png",
+    "hash": "d1802ab4d5826293e6522c5f16cf8007"
+  },
+  {
+    "file": "img/sina@2x.png",
+    "hash": "ba6cc36618de1f06246f3b57f2d27215"
+  },
+  {
+    "file": "img/sina@3x.png",
+    "hash": "503af9a7d93c3ed88297ef4739ef6488"
+  },
+  {
+    "file": "img/thanks_logo@2x.png",
+    "hash": "0c60d05b2ae98bccd4e2255498a8b298"
+  },
+  {
+    "file": "img/thanks_logo@3x.png",
+    "hash": "3124e8a4365d0f16afe1add822573649"
+  },
+  {
+    "file": "img/thanks_pick_image.png",
+    "hash": "2fdbe8d4ae3ab5530ee1b87aec7a179f"
+  },
+  {
+    "file": "img/verification@2x.png",
+    "hash": "90ddafeba6051652faf31e05c14a32b6"
+  },
+  {
+    "file": "img/verification@3x.png",
+    "hash": "617b59ebb55187304f375fe312ae6777"
+  },
+  {
+    "file": "img/wechat_session@2x.png",
+    "hash": "8f1cf554405e34860b1f94369877eab2"
+  },
+  {
+    "file": "img/wechat_session@3x.png",
+    "hash": "fd2dd192d4945d5cfa93d9fc51e52947"
+  },
+  {
+    "file": "img/wechat_timeline@2x.png",
+    "hash": "93cc9f7c6e9b8b50e1a4034cb4e46705"
+  },
+  {
+    "file": "img/wechat_timeline@3x.png",
+    "hash": "2172cec42aa1b1cfb22053ae2027a4cb"
+  },
+  {
+    "file": "img/welcome@2x.png",
+    "hash": "d20c9f1ce70828c1959a03414a12cd7b"
+  },
+  {
+    "file": "img/welcome@3x.png",
+    "hash": "def366ee0d2ba90ec85856e9ddf15b7b"
+  },
+  {
+    "file": "index.html",
+    "hash": "e8a60ba14a19895a9790113e390665b9"
+  },
+  {
+    "file": "js/app.js",
+    "hash": "3f863bc3654f50530750b06d011c2b98"
+  },
+  {
+    "file": "js/controllers/address-controllers.js",
+    "hash": "42feae02d16b47a4f74e6fb68e140500"
+  },
+  {
+    "file": "js/controllers/auth-controllers.js",
+    "hash": "4153b7e041813720b68b5bcba5d0e8f2"
+  },
+  {
+    "file": "js/controllers/certification-controller.js",
+    "hash": "f9c7e7edceefd80e067a43abe7e70651"
+  },
+  {
+    "file": "js/controllers/choose-help-who-controllers.js",
+    "hash": "942a4992be3371c302a816b246bcde61"
+  },
+  {
+    "file": "js/controllers/controllers.js",
+    "hash": "cbe27a142bfa5e8e5ae9de47d09fd9bd"
+  },
+  {
+    "file": "js/controllers/feedback-about-controllers.js",
+    "hash": "959dbb94e3061fe06d00404d758e4eca"
+  },
+  {
+    "file": "js/controllers/home-item-controller.js",
+    "hash": "15308c3a42fe1472f0de2319cc4c7b1b"
+  },
+  {
+    "file": "js/controllers/my-collection-controllers.js",
+    "hash": "d7b2a50da59ff4a5da8ba360a6392990"
+  },
+  {
+    "file": "js/controllers/my-fabu-controllers.js",
+    "hash": "e30c1db58aef717df3237a785189f136"
+  },
+  {
+    "file": "js/controllers/newJuanController.js",
+    "hash": "1e2e53dd1d9b39de194d75edaa17fffc"
+  },
+  {
+    "file": "js/controllers/personal-info-controller.js",
+    "hash": "a016b0faf537f8fb65f499e98410e2e0"
+  },
+  {
+    "file": "js/controllers/settings-controllers.js",
+    "hash": "f6cd46ddd8afc58c3bd368e9dd30c394"
+  },
+  {
+    "file": "js/controllers/thanks-letter-controllers.js",
+    "hash": "1edd14eaa83027f160581c1cfa4ff639"
+  },
+  {
+    "file": "js/controllers/welcome-controllers.js",
+    "hash": "85f1d54d31c0b8289a8f76f3f27e9bc2"
+  },
+  {
+    "file": "js/directives/directives.js",
+    "hash": "63aaf1ef14d798f754eeeb2e88b22276"
+  },
+  {
+    "file": "js/elastic.js",
+    "hash": "423674001f95c81926594b45f8ed37ad"
+  },
+  {
+    "file": "js/index.js",
+    "hash": "0f0ac625a5813b21b676ee1fb186abb2"
+  },
+  {
+    "file": "js/routes.js",
+    "hash": "fa497039809132aa6a2bed46270cc7ce"
+  },
+  {
+    "file": "js/services/address-service.js",
+    "hash": "ad80f53b158db2442712374b4fc18498"
+  },
+  {
+    "file": "js/services/auth-services.js",
+    "hash": "b267e8dd68883284e78f9c170c209272"
+  },
+  {
+    "file": "js/services/common-service.js",
+    "hash": "70a82d00eca75b96ac10883bb280ad52"
+  },
+  {
+    "file": "js/services/donate-service.js",
+    "hash": "1c9b87aa50c2493f83ddeefc48314ecf"
+  },
+  {
+    "file": "js/services/juan-services.js",
+    "hash": "b11c6674cd2d45ce57403dd313d1ef23"
+  },
+  {
+    "file": "js/services/person-service.js",
+    "hash": "e3eaba4afc3e29ce02c5a7b1f536fd56"
+  },
+  {
+    "file": "js/services/popup-service.js",
+    "hash": "e6e7d9aa6f06558b88efe46f704ce6bb"
+  },
+  {
+    "file": "js/services/recipient-service.js",
+    "hash": "c46813a883b411bf133e1487549a2770"
+  },
+  {
+    "file": "js/services/services.js",
+    "hash": "1c0a9fd71a12a37bf1a3198c6adf9be1"
+  },
+  {
+    "file": "js/services/share-service.js",
+    "hash": "ee1e5ba3a9b21eb0162b08ac8e44c82d"
+  },
+  {
+    "file": "lib/flexible/assets/flexible.less",
+    "hash": "e7ac5c155f7b0fd57dd859ea270cbcbb"
+  },
+  {
+    "file": "lib/flexible/assets/makeGrid.less",
+    "hash": "9838d168a5dcb7cd89c9d4aae6548369"
+  },
+  {
+    "file": "lib/flexible/build/combo.debug.js",
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "file": "lib/flexible/build/combo.js",
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "file": "lib/flexible/build/flexible_css.debug.js",
+    "hash": "4b2e28ae10b55cb1a5a7941978dc85bb"
+  },
+  {
+    "file": "lib/flexible/build/flexible_css.js",
+    "hash": "35c51dcc4877d24bc67ddcc71eabf2f8"
+  },
+  {
+    "file": "lib/flexible/build/flexible.css",
+    "hash": "80be7b47dc4efaac57507e421ab3694e"
+  },
+  {
+    "file": "lib/flexible/build/flexible.debug.css",
+    "hash": "10583aa0620208454b48ac9901d78815"
+  },
+  {
+    "file": "lib/flexible/build/flexible.debug.js",
+    "hash": "e2afd4dadebefa5904252ed74e5003cc"
+  },
+  {
+    "file": "lib/flexible/build/flexible.js",
+    "hash": "8f16100cba812176880b063577711755"
+  },
+  {
+    "file": "lib/flexible/build/makegrid.debug.js",
+    "hash": "a5e84116f92431755cc862f98e380a7c"
+  },
+  {
+    "file": "lib/flexible/build/makegrid.js",
+    "hash": "97450d67f19ef1ffbda32403b7fb30ae"
+  },
+  {
+    "file": "lib/flexible/src/flexible.js",
+    "hash": "e2afd4dadebefa5904252ed74e5003cc"
+  },
+  {
+    "file": "lib/flexible/src/makegrid.js",
+    "hash": "a5e84116f92431755cc862f98e380a7c"
+  },
+  {
+    "file": "lib/imgcache.js",
+    "hash": "f2f0c2c8d55fc6b5c52adbaae0c69973"
+  },
+  {
+    "file": "lib/ionic-citypicker/dist/ionic-citypicker.min.js",
+    "hash": "4bbb9cc040cb3db6d8c7ba615bcfde42"
+  },
+  {
+    "file": "lib/ionic-citypicker/src/js/ionic-citypicker-directive.js",
+    "hash": "48d88365ff59718ab101a1ed595f4e5d"
+  },
+  {
+    "file": "lib/ionic-citypicker/src/js/ionic-citypicker-service.js",
+    "hash": "96d5f20d84da7fc79459ebdd02f997c5"
+  },
+  {
+    "file": "lib/ionic-citypicker/src/js/ionic-citypicker.js",
+    "hash": "784afe5b3bc63bc28f87f1f10cecc5b1"
+  },
+  {
+    "file": "lib/ionic-citypicker/src/style/ionic-citypicker.css",
+    "hash": "77d8d8735abd5b193614c23ee2aa86f4"
+  },
+  {
+    "file": "lib/ionic-citypicker/src/templates/ionic-citypicker.html",
+    "hash": "ed1de6144e19771bb1ac6ba34c3da063"
+  },
+  {
+    "file": "lib/ionic-image-lazy-load.js",
+    "hash": "c34462573b4c9945ade42439df573f7d"
+  },
+  {
+    "file": "lib/ionic-img-cache.min.js",
+    "hash": "87c42af07d6343c153ac8ab1fa3ea914"
+  },
+  {
+    "file": "lib/ionic/css/ionic.css",
+    "hash": "49917d15612fe5ed1905374304cbc9be"
+  },
+  {
+    "file": "lib/ionic/css/ionic.min.css",
+    "hash": "a1cc11bd5deec8fc348298264de7e76f"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.eot",
+    "hash": "2c2ae068be3b089e0a5b59abb1831550"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.svg",
+    "hash": "621bd386841f74e0053cb8e67f8a0604"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.ttf",
+    "hash": "24712f6c47821394fba7942fbb52c3b2"
+  },
+  {
+    "file": "lib/ionic/fonts/ionicons.woff",
+    "hash": "05acfdb568b3df49ad31355b19495d4a"
+  },
+  {
+    "file": "lib/ionic/js/angular-ui/angular-ui-router.js",
+    "hash": "1f7fe3573d463743394e98d8b00eb228"
+  },
+  {
+    "file": "lib/ionic/js/angular-ui/angular-ui-router.min.js",
+    "hash": "83f32131b638a8686a43510fbd645b1b"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-animate.js",
+    "hash": "11974f7151cb3bc9c5d4820756c60d18"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-animate.min.js",
+    "hash": "abf4748a7ef6bb5b610ecb5ab749afae"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-resource.js",
+    "hash": "f9e3e662c0698e830be89599d7620e0f"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-resource.min.js",
+    "hash": "97796a250538882e4d26ddf37e05f208"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-sanitize.js",
+    "hash": "3327cce34c3af9a2088cbc8fa9d62c84"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular-sanitize.min.js",
+    "hash": "bacfe60d661bf26faa119cebc50c6518"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular.js",
+    "hash": "7ee4960c3fdfa8a88b3b540e19fcf7ff"
+  },
+  {
+    "file": "lib/ionic/js/angular/angular.min.js",
+    "hash": "d2342622316f832ef1333c74e41354ca"
+  },
+  {
+    "file": "lib/ionic/js/cookies/angular-cookies.min.js",
+    "hash": "799390358cf1a09e360741e7492e0b12"
+  },
+  {
+    "file": "lib/ionic/js/ionic-angular.js",
+    "hash": "1b755643125c6eeed58f66ae163b6fae"
+  },
+  {
+    "file": "lib/ionic/js/ionic-angular.min.js",
+    "hash": "8fab3594a991b6d269b14a626ef72997"
+  },
+  {
+    "file": "lib/ionic/js/ionic.bundle.js",
+    "hash": "feed750aca70cc1138704e6e96009002"
+  },
+  {
+    "file": "lib/ionic/js/ionic.bundle.min.js",
+    "hash": "fca9ad70ce0da8c67bcfb8102a238cd2"
+  },
+  {
+    "file": "lib/ionic/js/ionic.js",
+    "hash": "9ddd476a83c313cebe079e1dfc2fe660"
+  },
+  {
+    "file": "lib/ionic/js/ionic.min.js",
+    "hash": "09f8bcbef3697cc23b2b7d60269bf95f"
+  },
+  {
+    "file": "lib/ionic/js/ShareSDK.js",
+    "hash": "db003d61f72d8039826030f56555400d"
+  },
+  {
+    "file": "lib/ionic/js/ShareSDK.xml",
+    "hash": "ac5ef5f138badffabe185f8a871bb727"
+  },
+  {
+    "file": "lib/ionic/version.json",
+    "hash": "d099533770093b34fb90d32ca3d273a2"
+  },
+  {
+    "file": "lib/ngcordova/ng-cordova-mocks.js",
+    "hash": "78b636853776e5fa4b9835e150d4311a"
+  },
+  {
+    "file": "lib/ngcordova/ng-cordova-mocks.min.js",
+    "hash": "8429e5e831b6bab77a559b46e66d9af6"
+  },
+  {
+    "file": "lib/ngcordova/ng-cordova.js",
+    "hash": "d95b5124c2c7c49f27e143d41cf8a182"
+  },
+  {
+    "file": "lib/ngcordova/ng-cordova.min.js",
+    "hash": "5c2332c0d6da30e9eaab7f1ab32d46d8"
+  },
+  {
+    "file": "plugins/com.borismus.webintent/www/webintent.js",
+    "hash": "41824c8d9b68fe4b124583f87b6ce7e0"
+  },
+  {
+    "file": "plugins/cordova-hot-code-push-local-dev-addon/www/chcpLocalDev.js",
+    "hash": "e13bcf497fdd0be49aee1bc401c7b635"
+  },
+  {
+    "file": "plugins/cordova-hot-code-push-plugin/www/chcp.js",
+    "hash": "197bb4b37331fd0a8efcd018548a2c74"
+  },
+  {
+    "file": "plugins/cordova-plugin-app-preferences/www/apppreferences.js",
+    "hash": "1b830ecd6300b957eaf9740a203cce8a"
+  },
+  {
+    "file": "plugins/cordova-plugin-app-version/www/AppVersionPlugin.js",
+    "hash": "125e11a08c42e4f5572bc874b00d03ba"
+  },
+  {
+    "file": "plugins/cordova-plugin-battery-status/www/battery.js",
+    "hash": "791890934301fa0ceaed11812f6b73b6"
+  },
+  {
+    "file": "plugins/cordova-plugin-broadcaster/www/broadcaster.js",
+    "hash": "8cb6a8ef2a4b240e5b2902d85ba309bf"
+  },
+  {
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "hash": "33cf02860cfe45c56a43266963c0ed05"
+  },
+  {
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "hash": "ddf134428e76dd0043f5b3bd6fb114cb"
+  },
+  {
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "hash": "01ab9e8d79ab1743e45bacc2e6122a4d"
+  },
+  {
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "hash": "01f149a3112d2d5a4a5df6d424c43a2b"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/Contact.js",
+    "hash": "84d90e65f835ae6d21ff9b6ef7ebd35c"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactAddress.js",
+    "hash": "0dd42cc2855fd938c15a7961308c2ef1"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactError.js",
+    "hash": "4f1e459bd271560bcc4c5fc03e3727f7"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactField.js",
+    "hash": "c0108b78b84f1108be043daba2576a51"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactFieldType.js",
+    "hash": "3565806b43fd1e69bc4ae7b3dbf8969b"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactFindOptions.js",
+    "hash": "a95b3b012b11eaecb2a872da42ff73e9"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactName.js",
+    "hash": "e5ec81296ea41e76091d2d87b4c993cb"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/ContactOrganization.js",
+    "hash": "a1fb3d5ac3008d5620ab234ef62a2c68"
+  },
+  {
+    "file": "plugins/cordova-plugin-contacts/www/contacts.js",
+    "hash": "5c63ef6e43e0c3118764e7b19f040883"
+  },
+  {
+    "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
+    "hash": "981a62d77b3c2abc6118f570325bc1d1"
+  },
+  {
+    "file": "plugins/cordova-plugin-device-motion/www/accelerometer.js",
+    "hash": "a2cab1f077c67f0e73ae407660d1cbcd"
+  },
+  {
+    "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+    "hash": "d91d03d6d18692ed074902762cb56a92"
+  },
+  {
+    "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+    "hash": "2de4b07a43e86b0208292571255f26cb"
+  },
+  {
+    "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+    "hash": "157439aef5c272136549f52bfaa46eec"
+  },
+  {
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "hash": "c0894e131eef8fdfdad7e5015f46202a"
+  },
+  {
+    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+    "hash": "4ea51ad9193acf0b5506fdc6f4b3020c"
+  },
+  {
+    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+    "hash": "f41e45f721e93a9d3968607bca2b3863"
+  },
+  {
+    "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+    "hash": "465698e19d249484b0b8b44f917f57c0"
+  },
+  {
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "hash": "6e17af1de1172085d63d7f0635627b5f"
+  },
+  {
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "hash": "483e3e941dda0f9d98e96464ee2e6798"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/android/FileSystem.js",
+    "hash": "507bd2d0fe6457be2e6b172f5c62a2f4"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/browser/isChrome.js",
+    "hash": "dcc4900513a46524dcb99baf820d1c14"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
+    "hash": "d2d0f70dcc6a1dc82453f477afadbd5f"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/DirectoryReader.js",
+    "hash": "a427e5a575adb5d834f20471f9acc925"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/Entry.js",
+    "hash": "85af6ce71adcb77d5658cee0bdc6c250"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/File.js",
+    "hash": "24c8cb183c37da18cd6e2ef018497557"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileEntry.js",
+    "hash": "4e4a73a5931b83082807b767cc9c9271"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileError.js",
+    "hash": "0ce2028ddca12361f3a71371a97eff59"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileReader.js",
+    "hash": "b2a57059522795184fd93d684aae67ea"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileSystem.js",
+    "hash": "fb6e0cfda21bda49904a31375ae401ef"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/fileSystemPaths.js",
+    "hash": "4ee8b71ffefe2420f1ffb9f3d6c9d64e"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/fileSystems-roots.js",
+    "hash": "5b05791519d436e3658c54102b16f618"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/fileSystems.js",
+    "hash": "034f790c68814853100645cbd46d3321"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileUploadOptions.js",
+    "hash": "c1c5aa68ed17d85b387e0d9c9a594926"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileUploadResult.js",
+    "hash": "d178b0492732c61c7bf3755c0a97d4d2"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/FileWriter.js",
+    "hash": "bf623be93c7d7befc44cfdb36c495d8c"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/Flags.js",
+    "hash": "af9083bf095ff8260ee0879a8f861419"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/LocalFileSystem.js",
+    "hash": "d99ae0b616418bc9ed4fdf7b16c124e8"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/Metadata.js",
+    "hash": "173518914823e68f9e7ab9154ae16e0e"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/ProgressEvent.js",
+    "hash": "5707dfdde0a0fd65c0221c85d5fc8934"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/requestFileSystem.js",
+    "hash": "97006e9ca931196e97a65aa65d12c358"
+  },
+  {
+    "file": "plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js",
+    "hash": "c5bc19fca0f964a61e71880276f5a8f1"
+  },
+  {
+    "file": "plugins/cordova-plugin-fullscreen/www/AndroidFullScreen.js",
+    "hash": "bd16a920aad22d744106c10b6209353e"
+  },
+  {
+    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+    "hash": "0a4e54b475a97a586ee8fd0ef58cd77e"
+  },
+  {
+    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+    "hash": "94c066d78d1daff6395b653635d1a793"
+  },
+  {
+    "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+    "hash": "036074e99560244d8e4fcfcf1ad3cc6a"
+  },
+  {
+    "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+    "hash": "93049612076faad97348f8310afb643a"
+  },
+  {
+    "file": "plugins/cordova-plugin-image-picker/www/imagepicker.js",
+    "hash": "a99fcf49d48a4d538033d7a36838cc77"
+  },
+  {
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "hash": "d3b747a665148fdf3d23a6b8d75426c4"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/capture.js",
+    "hash": "bcfc266abd4099697a16f4f6c8755e4b"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js",
+    "hash": "1ec77999cc72f6bd0df1ddc2c5fd79d0"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/CaptureError.js",
+    "hash": "83628250596577b29388506fb9766c9f"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/CaptureImageOptions.js",
+    "hash": "f935547aac6c9d15e760b3d566595b90"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/CaptureVideoOptions.js",
+    "hash": "8dc6add03f51e6c866b0c57504126cb1"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/MediaFile.js",
+    "hash": "b66612e59e0748ec532ff02763693c74"
+  },
+  {
+    "file": "plugins/cordova-plugin-media-capture/www/MediaFileData.js",
+    "hash": "70cf2842bd46c82c5960980ad3352800"
+  },
+  {
+    "file": "plugins/cordova-plugin-media/www/Media.js",
+    "hash": "f8942086a9655c6e5e37ccd14c7cbac4"
+  },
+  {
+    "file": "plugins/cordova-plugin-media/www/MediaError.js",
+    "hash": "43106d9a004e9523a7c4aacffbb95ace"
+  },
+  {
+    "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+    "hash": "09795adf13b14107984c599d8a65dc13"
+  },
+  {
+    "file": "plugins/cordova-plugin-network-information/www/network.js",
+    "hash": "dd64e282f2eeadd7e56e8d862e19cd00"
+  },
+  {
+    "file": "plugins/cordova-plugin-qqsdk/www/ycqq.js",
+    "hash": "d6d854da3b8da35a900464fe5d6a8c9c"
+  },
+  {
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "hash": "394213a4b732f77f1c911dea25b71020"
+  },
+  {
+    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+    "hash": "0394e866aee05353773171d35eb0cf01"
+  },
+  {
+    "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+    "hash": "fdc80b9658e46491614e25bb73ba9f46"
+  },
+  {
+    "file": "plugins/cordova-plugin-wechat/www/wechat.js",
+    "hash": "d7b8f9c942134e3296a23433a14d00e7"
+  },
+  {
+    "file": "plugins/cordova-plugin-weibosdk/www/ycweibo.js",
+    "hash": "a27342f4bded6b88afc0664f672170cf"
+  },
+  {
+    "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+    "hash": "2c88e35a0f2dfc53fcb6d8b675c7726f"
+  },
+  {
+    "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+    "hash": "e1d9c91e63fd3021b9971d868874184b"
+  },
+  {
+    "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+    "hash": "293f9a56fbd90f8891a4cfcd954f05ed"
+  },
+  {
+    "file": "res/.pgbomit",
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  {
+    "file": "spec.html",
+    "hash": "b6448b0599eff46c1647905bfdef9159"
+  },
+  {
+    "file": "spec/helper.js",
+    "hash": "08e628ba9d1e20d0e7c1b74f3b481c0f"
+  },
+  {
+    "file": "spec/index.js",
+    "hash": "49dab4c4e2749a75bddcdb409d2267b0"
+  },
+  {
+    "file": "spec/lib/jasmine-1.2.0/jasmine-html.js",
+    "hash": "4b49962a205889352a4f1d63d5acf7a0"
+  },
+  {
+    "file": "spec/lib/jasmine-1.2.0/jasmine.css",
+    "hash": "b205b08b5f1c35ebcb9d75e1849a6266"
+  },
+  {
+    "file": "spec/lib/jasmine-1.2.0/jasmine.js",
+    "hash": "30f8bf3c1136ec597b2c41a8acf7de43"
+  },
+  {
+    "file": "spec/lib/jasmine-1.2.0/MIT.LICENSE",
+    "hash": "ee4bc64f30f3e9d1aed570562d8713e7"
+  },
+  {
+    "file": "task/AppPreferences.js",
+    "hash": "ac5f340dd1d172040b5e5aac84a9b794"
+  },
+  {
+    "file": "templates/address.html",
+    "hash": "4470cf5c42b733fea87a5a835c64a5b6"
+  },
+  {
+    "file": "templates/choose-express.html",
+    "hash": "ef8cd5895035469ce3d8ddfc87f67f29"
+  },
+  {
+    "file": "templates/edit-thanks-letter.html",
+    "hash": "c8a115b16fc300b778d3c0f0076bbed2"
+  },
+  {
+    "file": "templates/guide/guide.html",
+    "hash": "deeaa028a72fbd03ccd665b435258515"
+  },
+  {
+    "file": "templates/home-types-downside.html",
+    "hash": "a55a0d5002ff001985bd1ba631fad263"
+  },
+  {
+    "file": "templates/home/certification-popup.html",
+    "hash": "67b430707c5cea4336409a7c52a20510"
+  },
+  {
+    "file": "templates/home/choose-help.html",
+    "hash": "24bcf60f6e2471fc599bd964b8fb0a40"
+  },
+  {
+    "file": "templates/home/create-juan.html",
+    "hash": "a651ea14b1d7110aef20087805e9fe80"
+  },
+  {
+    "file": "templates/home/help-popup.html",
+    "hash": "82c12aac43121058b6c7c544fb054a12"
+  },
+  {
+    "file": "templates/home/home-create-choice.html",
+    "hash": "88425eafe6050464694e3473c33639c1"
+  },
+  {
+    "file": "templates/home/home-search.html",
+    "hash": "57310dc6ddb167617f81658533e8cc60"
+  },
+  {
+    "file": "templates/home/juan-detail.html",
+    "hash": "2c80e2cdd8b344d47473d291c7c8d8a8"
+  },
+  {
+    "file": "templates/home/money-choice.html",
+    "hash": "7c78376a3bc4310538249e39031197ab"
+  },
+  {
+    "file": "templates/home/need-detail.html",
+    "hash": "563d5869efadf3fdd07c986efe4ee47f"
+  },
+  {
+    "file": "templates/home/need-popup.html",
+    "hash": "eb6ecc9a38f82926602b08bcec0c6fed"
+  },
+  {
+    "file": "templates/home/pick-address.html",
+    "hash": "a82837cc2f21b16308476483645ca1b8"
+  },
+  {
+    "file": "templates/home/qiu-detail.html",
+    "hash": "3bd6925fce4748b47f6e61e5474b1b1a"
+  },
+  {
+    "file": "templates/home/tab-home.html",
+    "hash": "bfb7822a350c72a2eee3bca3da93f9ae"
+  },
+  {
+    "file": "templates/home/tab-juan.html",
+    "hash": "2b676155560ac424f1d5524b925ab6b8"
+  },
+  {
+    "file": "templates/home/tab-qiu.html",
+    "hash": "2b069e9a40a0826d45e708f03e254654"
+  },
+  {
+    "file": "templates/login/login.html",
+    "hash": "ed59ef36b047117e9b10da295698195b"
+  },
+  {
+    "file": "templates/login/login2.html",
+    "hash": "df11db819bc0c580abe940ea2e17ea3c"
+  },
+  {
+    "file": "templates/login/polish-info.html",
+    "hash": "13c16baded41ad7cd3079dc46c34ef6b"
+  },
+  {
+    "file": "templates/login/register.html",
+    "hash": "a4c759f2efbc1420b55157b925c17223"
+  },
+  {
+    "file": "templates/login/register2.html",
+    "hash": "4c8b40dd1e9cdbb22368028f14865239"
+  },
+  {
+    "file": "templates/login/reset-password.html",
+    "hash": "304b0024937c22ac5817191e53da21b0"
+  },
+  {
+    "file": "templates/login/resetPassword2.html",
+    "hash": "1fd86c3ce706f0e813c1630edce0d8c6"
+  },
+  {
+    "file": "templates/modal-share-choice.html",
+    "hash": "47ee44443ade8a85a8ae010b104e4526"
+  },
+  {
+    "file": "templates/modal-slide-images.html",
+    "hash": "bbb2d51b1abd1b4fb99192e09891bfad"
+  },
+  {
+    "file": "templates/personal/about-afu.html",
+    "hash": "0de02e270bcf4a03eae71071ab9cf441"
+  },
+  {
+    "file": "templates/personal/certification-example.html",
+    "hash": "befbf5bc2eb44a11c49b88260b36514e"
+  },
+  {
+    "file": "templates/personal/certification-modal-image.html",
+    "hash": "e56eb5c82aa85162c817bf87bb484712"
+  },
+  {
+    "file": "templates/personal/certification.html",
+    "hash": "39e172f57f6162332d3aad682c37521c"
+  },
+  {
+    "file": "templates/personal/change-personal-info.html",
+    "hash": "7cdb02f69189015b5b64a7bdc2851ec4"
+  },
+  {
+    "file": "templates/personal/delete-address-popup.html",
+    "hash": "23a456b82d78412ee35a73816092ea1b"
+  },
+  {
+    "file": "templates/personal/edit-address.html",
+    "hash": "a2059dd125e6375e1e313003fb25b4b2"
+  },
+  {
+    "file": "templates/personal/edit-num.html",
+    "hash": "32bbc47f24ceec7259d3c6168372c934"
+  },
+  {
+    "file": "templates/personal/edit-realname.html",
+    "hash": "b2a6002f0bf69f2b4b96098bdf05789c"
+  },
+  {
+    "file": "templates/personal/feedback.html",
+    "hash": "afe13f8e8f1494b36718454b143a9f79"
+  },
+  {
+    "file": "templates/personal/my-addresses.html",
+    "hash": "9226ec53b6ecfb2d6338c1409e0196cd"
+  },
+  {
+    "file": "templates/personal/my-collection.html",
+    "hash": "4dc4bc086e64afd1d39071b3759fb9e8"
+  },
+  {
+    "file": "templates/personal/my-fabu.html",
+    "hash": "42b5eb8c19e16dab002b2f6aeffec68a"
+  },
+  {
+    "file": "templates/personal/settings.html",
+    "hash": "496ce76893f4b4b995998dd0ad7c5920"
+  },
+  {
+    "file": "templates/personal/tab-personal.html",
+    "hash": "baa75ee22d3955a43077602d40802438"
+  },
+  {
+    "file": "templates/personal/update-my-address.html",
+    "hash": "5809f19ea53d0a315b3076e73321b02a"
+  },
+  {
+    "file": "templates/popup/alert-leftcount-popup.html",
+    "hash": "5206d3725e6d2caae821bf43d1adb0c4"
+  },
+  {
+    "file": "templates/popup/be-rejected-surprise-popup.html",
+    "hash": "3626b8a81ee92201a52ced2d417e1452"
+  },
+  {
+    "file": "templates/popup/check-update-popup.html",
+    "hash": "2e6792b087d80e1fd090ad0c765b4ab6"
+  },
+  {
+    "file": "templates/popup/confirm-help-surprise-popup.html",
+    "hash": "11da4a41d274d07532ea67d99c9a961a"
+  },
+  {
+    "file": "templates/popup/confirm-logout-popup.html",
+    "hash": "236ba5fb2d9c6138c04e0dbc5bfce3df"
+  },
+  {
+    "file": "templates/popup/confirm-receive-surprise-popup.html",
+    "hash": "dfdc325000952476c8b262e6130fb654"
+  },
+  {
+    "file": "templates/popup/confirm-send-out.html",
+    "hash": "17c6961542bfd649b7ffb8247ae89e3f"
+  },
+  {
+    "file": "templates/popup/confirm-sign-popup.html",
+    "hash": "5c22a26a6e29e87d7a0f06cb27f2ee9c"
+  },
+  {
+    "file": "templates/popup/delete-collection-popup.html",
+    "hash": "d87d5daf7dc97f85522e0ebf5566ffe5"
+  },
+  {
+    "file": "templates/popup/delete-my-fabu-popup.html",
+    "hash": "a9875e1d121c66c8146c336e624a5c44"
+  },
+  {
+    "file": "templates/popup/donate-success-surprise-popup.html",
+    "hash": "9e467895cfdd35e269b7ebd8ff5f2efd"
+  },
+  {
+    "file": "templates/popup/go-login-popup.html",
+    "hash": "0099cdc550c518e92ecaaac6ca8ca055"
+  },
+  {
+    "file": "templates/popup/need-detail-popup.html",
+    "hash": "621dd94739bb328a6255fc6323c23863"
+  },
+  {
+    "file": "templates/popup/network-offline-popup.html",
+    "hash": "ce5670b3a5275790d1ee375ae690c494"
+  },
+  {
+    "file": "templates/popup/new-thanks-popup.html",
+    "hash": "99d19b53fa8cf72788d0714cdaa4479f"
+  },
+  {
+    "file": "templates/popup/receive-thanks-popup.html",
+    "hash": "e7ffc6d97d5919973e295c9592510d96"
+  },
+  {
+    "file": "templates/popup/renling-number-full-popup.html",
+    "hash": "91c606ccc76a2e91862ca2da8a785ba9"
+  },
+  {
+    "file": "templates/popup/send-out.html",
+    "hash": "b04a81ab3382511110ea31b46ead9eb4"
+  },
+  {
+    "file": "templates/popup/send-thanks-popup.html",
+    "hash": "967ab306719e45b5db44591610512fef"
+  },
+  {
+    "file": "templates/preview-thanks-letter.html",
+    "hash": "35e347e77a1c410d4e3db0a21949259b"
+  },
+  {
+    "file": "templates/progress/choose-help-who.html",
+    "hash": "3538b5a309f30f99f903cf1a434120c8"
+  },
+  {
+    "file": "templates/progress/express-mailing.html",
+    "hash": "9d43d1f4efe1701c454b1263dd8445a4"
+  },
+  {
+    "file": "templates/progress/myactive-express-mailing.html",
+    "hash": "1160a971443c5b36d93a4eb8a82bc468"
+  },
+  {
+    "file": "templates/progress/tab-my-juan.html",
+    "hash": "d89661e03a135542f0310fc8918e115e"
+  },
+  {
+    "file": "templates/progress/tab-my-qiu.html",
+    "hash": "b5543396daab01ab5d84d22e73668c9b"
+  },
+  {
+    "file": "templates/progress/tab-progress.html",
+    "hash": "6e46d642ba79486ff6f95efa66e651bc"
+  },
+  {
+    "file": "templates/progress/wait-express.html",
+    "hash": "bfae258dccbea89ac9da0c459ff8923b"
+  },
+  {
+    "file": "templates/progress/watch-user.html",
+    "hash": "f95316a13a8c03487cdc729a2309c90b"
+  },
+  {
+    "file": "templates/self-express.html",
+    "hash": "550aa589976196c71ce6968ba6648c25"
+  },
+  {
+    "file": "templates/sex-choice.html",
+    "hash": "16c37753686baf824383bd0d70501691"
+  },
+  {
+    "file": "templates/tabs.html",
+    "hash": "fb7f7409f3380ac220a7a3c62e7b09c5"
+  },
+  {
+    "file": "templates/topmsg.html",
+    "hash": "55506fbeb41f2e933e453cb4e1f1688c"
+  },
+  {
+    "file": "templates/update_transparent.html",
+    "hash": "e9cef4a6d3509f54bb7491d8755870c0"
+  },
+  {
+    "file": "templates/view-thanks-letter.html",
+    "hash": "9da047a0440cedddfff8ad6035367a4e"
+  },
+  {
+    "file": "templates/w-types.html",
+    "hash": "49d37df42b0d3f5e1d3f580295e28d93"
+  },
+  {
+    "file": "templates/welcome.html",
+    "hash": "633d12ef12eb89ff2cbf47e73e8398f5"
+  }
+]

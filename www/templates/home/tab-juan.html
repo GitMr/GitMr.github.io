@@ -1,0 +1,37 @@
+
+<ion-content>
+ <!-- 首页的轮播图 -->    
+		<ion-slide-box active-slide="ImageSlide" style="margin-top:1rem;">
+			<ion-slide>
+			  <div style="width:100%; height:2.773rem;"><img width="100%" height="100%"  src="http://h.hiphotos.baidu.com/zhidao/pic/item/9213b07eca806538fb1afd4392dda144ac3482ea.jpg" /></div>
+			</ion-slide>
+			<ion-slide>
+			  <div style="width:100%; height:2.773rem;"><img width="100%" height="100%" src="http://d.hiphotos.baidu.com/zhidao/pic/item/622762d0f703918f63fd6e9a543d269759eec4b6.jpg" /></div>
+			</ion-slide>
+			<ion-slide>
+			  <div style="width:100%; height:2.773rem;"><img width="100%" height="100%"  src="http://d.hiphotos.baidu.com/zhidao/pic/item/0b55b319ebc4b745c84fef46cafc1e178b821582.jpg" /></div>
+			</ion-slide>
+		</ion-slide-box> <!-- 首页的轮播图 End-->  
+ <ion-refresher
+    pulling-text="下拉刷新..."
+    refreshing-text = "请求中..."
+    on-refresh="doRefreshJuan()">
+  </ion-refresher>
+ <ion-list rj-close-back-drop class="">
+   <ion-item class="item-avatar" rj-hold-active ng-repeat="info in infos" ng-click="goToDetail('{{info.xid}}');">
+       <img ng-src="{{basePicUrl+info.picture_url}}">
+      
+       <h3 class="title-content" ng-bind="info.title"></h3>
+       
+       <p class="rj-list-p" ng-bind="info.content"></p>
+       <span class="rj-push-right" ng-bind="info.create_time | date:'yyyy-MM-dd' "></span>
+   </ion-item>
+
+</ion-list>
+<p style="text-align: center;">{{note}}</p> 
+ <ion-infinite-scroll
+ 	ng-if="moreJuanDataCanBeLoaded()"
+    on-infinite="loadMoreJuan()"
+    distance="1%">
+  </ion-infinite-scroll> 	
+</ion-content>

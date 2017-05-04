@@ -1,0 +1,32 @@
+<!-- 
+File-Name:
+Date:
+Author:
+Function:
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">设置相关</h1>
+    </ion-header-bar>
+<ion-view on-swipe-left="" on-swipe-right="">
+	<ion-content style="background:#fff;">
+		<div class="font-28" style="background:#fff;color:#333;padding-left:0.4rem;padding-right:0.4rem;">
+			<label ng-click="goAboutAFu();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;">
+				<i class="icon afu-about font-36" style="color:#b7b7b7;margin-right:0.2rem;"></i>
+				<input class="font-28"  type="text" value="关于阿福" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+
+			<label ng-click="checkUpdate();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-check-update font-36" style="color:#b7b7b7;margin-right:0.2rem;"></i>
+				<input class="font-28"  type="text" value="检查更新" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+			<button ng-click="popupLogout();" class="button button-full font-32 logout" style="min-height:1.4667rem;color:#fc3942;border:1px solid #ededed;">
+				退出登录
+			</button>
+		</div>
+	</ion-content>
+
+</ion-view>
+

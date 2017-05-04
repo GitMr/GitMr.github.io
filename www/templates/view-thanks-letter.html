@@ -1,0 +1,49 @@
+<!-- 
+File-Name:view-thanks-letter.html
+Date:2016-10-06
+Author:Wangyong
+Function:感谢信
+-->
+<ion-header-bar align-title="center" class="bar-afu">
+ 	<a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+	<div class="h1 title">感谢信</div>	 
+	<div class="buttons">
+       <img ng-click="openModal();" style="width:0.5467rem;height:0.5467rem;margin-top:0.2rem;margin-right: 0.2rem;" ng-src="img/share@{{myImgSize}}x.png">        
+	</div>  
+</ion-header-bar>
+<ion-view >  
+   <ion-content class="thanks-box" style="background:#fff;" scroll="false">
+   		<ion-refresher
+	    pulling-text="下拉刷新..."
+	    refreshing-text = "请求中..."
+	    on-refresh="doRefresh()">
+
+  	</ion-refresher>
+	   <div class="thanks-box-left"></div>
+	   <div class="thanks-box-right"></div>
+		    
+		    <div class="thanks-box-top-center" style="height:90%;overflow-y:auto;">
+				<div class="font-64">感&nbsp;&nbsp;谢</div>
+				<div style="color:#fc3942;margin-top:0.2rem;">______</div>
+		    	<ion-scroll direction="y" style="text-align: center;width:100%;margin-top:0.6rem;">
+		    		<div style="text-align: center;width:100%;background:#fff;margin-left: auto;margin-right: auto;border:none; width: 6.9rem;">
+						{{thanksLetter.thanks_content}}
+		    		</div>
+		    	</ion-scroll>
+		    	<br />
+		    	<div style="text-align: center;margin-left: auto;margin-right: auto;width: 6.9rem;margin-top:0.2rem;margin-bottom:3.5rem;">
+		    		<img ng-src="{{basePicUrl + thanksLetter.thanks_picture}}" width="100%" ng-click="showBig();"  />
+					<!--<div style="width:100%;height:80%;border-radius:1px;" back-img="{{basePicUrl + thanksLetter.thanks_picture}}" ng-click="showBig();" ></div>-->
+
+				</div>
+
+		    </div>
+		    
+   </ion-content>
+	<div class="div_bottom" style="background:#fff;min-height:1.5rem;text-align: center;padding-top:0.1rem;" >
+		<!--<p class="font-20"><span style="color:#ff0000;">—</span>阿福公益<span style="color:#ff0000;">—</span></p>-->
+		<img ng-src="img/thanks_logo@{{myImgSize}}x.png" style="width:2.5rem;" />
+	</div>
+	<div class="thanks-box-left-bottom-view"></div>
+	<div class="thanks-box-right-bottom-view"></div>
+</ion-view>

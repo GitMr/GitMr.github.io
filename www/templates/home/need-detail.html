@@ -1,0 +1,82 @@
+<!-- 
+File-Name:need-detail.html
+Date:2016-08-05
+Author:WangYong
+Function:认领捐助信息填写个人地址
+-->
+
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">填写详细地址</h1>
+       <button class="button juan-cancel" ng-click="openAddressModal()">历史地址</button>
+    </ion-header-bar>
+
+
+	<ion-view>
+	    <ion-content >     	
+		  <div class="" style="background:#fff;">
+			   <div class="item item-input" style="min-height: 2.5867rem;padding:0;">
+			    
+			    <div  style="width:100%;margin-left:0rem;padding:0;">
+			   
+			   <!--<ionic-city-picker ng-if="addressData.address_id == ''" class="font-24" options='vm.CityPickData' style="border:none;"></ionic-city-picker>
+			   <label ng-if="addressData.address_id != ''" class="item item-input" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+		     	<input  type="text" value="{{addressData.province + addressData.city +addressData.county}}" readonly style="background-color:#fff;">
+		      	<i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+		   	   </label>-->
+
+				<label ng-click="pickDetailCity();" class="item item-input" style="background-color:#fff;min-height:1.2rem;border:none;padding-left:0.4rem;">
+					<span ng-bind="globalAddress.totalProCityCounty"></span>
+					<i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+				</label>
+
+			    <label class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;border-bottom:none;border-left:none;border-right:none" >
+			     <input ng-if="addressData.address_id == ''" class="font-28" type="text" placeholder="详细地址"   ng-model="addressData.detail_address" >
+			     <input ng-if="addressData.address_id != ''" readonly style="background-color:#fff;" class="font-28" type="text" placeholder="详细地址"   ng-model="addressData.detail_address" >
+			    </label>
+			    </div>
+			   	<!--<img ng-src="img/location@{{myImgSize}}x.png" style="height: 0.8rem;width:0.8rem;" />-->
+			  </div> 
+		</div>
+	
+		<div class="" style="margin-top: 0.4rem;background:#fff;">
+		
+		  <label class="item item-input font-28" style="padding-left:0.4rem;padding-right: 0.4rem;" >		    
+		    <input ng-if="addressData.address_id == ''" class="font-28" type="text" placeholder="收件人姓名" ng-model="addressData.realname" >
+		    <input ng-if="addressData.address_id != ''" readonly="readonly" style="background-color:#fff;" class="font-28" type="text" placeholder="收件人姓名" ng-model="addressData.realname" >
+		  </label>
+		
+		  <label class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+		   
+		    <input ng-if="addressData.address_id == ''" class="font-28"  type="text"  placeholder="手机号码" ng-model="addressData.phonenum"  >
+		    <input ng-if="addressData.address_id != ''" readonly="readonly" style="background-color:#fff;" class="font-28"  type="text"  placeholder="手机号码" ng-model="addressData.phonenum"  >
+		  </label>
+		  <label class="item item-input" ng-click="openMoney()" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+	     	<input  type="text" ng-model="tempMoney.name" readonly style="background-color:#fff;">
+	      	<i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+	   	  </label>
+	   	  <label class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;border:none;" >
+		    <input class="font-28"  type="text"  placeholder="写下你的备注信息" ng-model="needData.comment"  >
+		  </label>
+		  <label ng-if="addressData.address_id != '' " class="item item-input font-20" style="margin-top: 0.4rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+		   <span>选择历史地址不可修改！可重置地址信息！&nbsp;&nbsp;&nbsp;</span><a class="font-26" on-tap="reset();">重置</a>
+		  </label>
+		   <label class="item item-input font-28" style="min-height:2rem;padding-left:0.4rem;padding-right:0.4rem;border:none;" >
+		    <br />
+		  </label>
+
+		</div>
+		
+		
+	
+	    </ion-content>
+	    <div class="div_bottom">
+		<button style="" class="button button-block button-progroess font-30" ng-click="submit();" >
+			  我需要
+		</button>
+		</div>
+	</ion-view>
+
+	
+<!-- </body>
+</html> -->

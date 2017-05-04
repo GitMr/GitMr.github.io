@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+/* 
+	name:certification.css
+	date:2016-08-06
+	author:yangxaioyu
+	function:实名认证信息界面的CSS
+ */
+/* 类别选择样式 */
+	.radioStyle{
+	display:inline-block;
+	float:right;
+	}
+	.radioList{
+	height:1.2rem;
+	}
+	.btBorder{
+	border:0px;
+	}
+	.headColor{
+	background:#f63840;
+	color:#fff;
+	}
+	.btRight{
+	color:#f63840;
+	width:50px;
+	height:25px;
+	border:0px;
+	}
+	.hintBar1{
+	/* height:1.2rem; */
+	background:#fff0cf;
+	color:#1a26b;
+	}
+	.hintBar2{
+	background: #ededed;
+	}
+	.btQuit{
+	background:#faa;
+	color:#fc3942;
+	border:0px;
+	height:1.467rem;
+	}
+	.listForm{
+	height:1.2rem;
+	}
+	.color333{
+	color:#333333;
+	}
+	.colorb7{
+	color:#b7b7b7;
+	}
+	.colorf3{
+	background:#f3f3f3;
+	}
+	.colorHint1{
+	color:#d1a26b;
+	}
+	.iconSize{
+	width:0.4rem;
+	height:0.4rem;
+	/* width:30px;height:30px; */
+	}
+/*  20号字体 20*1.333 */
+	.font20{
+	font-size:13.333px;
+	}
+	[data-dpr="2"].font20{
+	font-sizze:26.666px;
+	}
+/* 24号字体 24*1.3333 */
+	.font24{
+	font-size:16px;
+	}
+	[data-dpr="2"].font24{
+	font-size:32px;
+	}
+/* 	26号字体  26*1.33333 */
+	.font1{
+	font-size:17.3px;
+	}
+	[data-dpr="2"].font1{
+	font-size:34.7px;
+	}
+/* 	28号字体  28*1.33333 */	
+	.font28{
+	font-size:18.6px;
+	}
+	[data-dpr="2"].font28{
+	font-size:37.3px;
+	}
+/* 	30号字体  30*1.33333 */	
+	.font3{
+	font-size:20px;
+	}
+	[data-dpr="2"].font3{
+	font-size:40px;
+	}
+/* 32号字体 32*1.3333 */
+	.font32{
+	font-size:21.333px;
+	}
+	[data-dpr="2"].font32{
+	font-size:42.667px;
+	}
+	.item-radio input:checked~.radio-icon{visibility:visible;
+	color:#f00;
+	}

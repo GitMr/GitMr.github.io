@@ -1,0 +1,21 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录的初始界面
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="numModal.hide()"></a>
+      <h1 class="title">信息填写</h1>
+      <button class="button  btRight" ng-click="numModal.hide();">提交</button>
+    </ion-header-bar>
+<ion-view>
+    <ion-content class="no-header ">
+        <div class="font-28" style="margin-top:1.5rem;margin-left: 0.4rem;margin-right: 0.4rem;">
+		<label class="item item-input">
+			<textarea class="font-28" style="border:#eee 1px;height:1rem;padding:0.2rem;"  placeholder="请填写身份证号" cols="40" rows="1" style="resize:none" ng-model="certificationInfo.identity_num"></textarea>
+		</label>
+	</div>
+    </ion-content>
+	</ion-view>
+

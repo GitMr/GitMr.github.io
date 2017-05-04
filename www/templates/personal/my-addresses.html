@@ -1,0 +1,47 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录的初始界面
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">我的地址</h1>
+    </ion-header-bar>
+<ion-view >
+    <ion-content on-swipe-left="onSwipeLeft()" >    
+	     
+	<ion-refresher
+	    pulling-text="下拉刷新..."
+	    refreshing-text = "请求中..."
+	    on-refresh="doRefreshAddresses()">
+  	</ion-refresher>
+		
+	 <ion-list rj-close-back-drop class="" style="background-color: #f3f3f3;" >
+	   <ion-item style="background:#f3f3f3;min-height:4rem;" class="item-avatar" rj-hold-active ng-repeat="address in myAddresses" >
+     
+       <div  class=" item-div-list list" style="height: 100%;border-bottom:0.3rem solid #f3f3f3;padding-left:0rem; ">
+		  <a class="item hintBar2" href="#" style="border:none;height:65%" >
+		  	<label class="font-30 colorb7 " ng-bind="address.realname"></label>
+		    <label class="font-30 colorb7 " style="float: right" ng-bind="address.phonenum"></label>
+		    <br /> 
+		    <p class="font24 colorb7" >{{address.province + address.city + address.county + address.detail_address}}</p>
+		  </a>
+		  <div class="item " href="#" style="border-bottom:none;height:35%;text-align: center;">
+		    <label ng-click="deleteAddress('{{address.address_id}}',$index)" class="font-30 colorb7 " style="padding-top:0.15rem; padding-bottom:0.15rem; padding-right: 0.5rem;padding-left: 0.5rem; border:#b7b7b7 solid 1px;" >删除</label>
+		    &nbsp;
+		    <label ng-click="updateAddress(address)" class="font-30 colorb7 " style="padding-top:0.15rem; padding-bottom:0.15rem; padding-right: 0.5rem;padding-left: 0.5rem;border:#b7b7b7 solid 1px;" >编辑</label>
+		  </div>
+		  
+		  
+	</div>
+   </ion-item>
+	</ion-list>
+	<div ng-if="myAddresses.length == 0" class="color-8d font-26" style="text-align: center;margin-top:4rem;" >
+		<img ng-src="img/no_address@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;"  />
+		<p>目前没有地址记录</p>
+	</div>
+    </ion-content>
+	
+</ion-view>
+

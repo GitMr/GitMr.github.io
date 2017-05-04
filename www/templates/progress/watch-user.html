@@ -1,0 +1,68 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:查看某个申请人信息
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">申请人信息</h1>
+    </ion-header-bar>
+<ion-view >
+    <ion-content on-swipe-left="onSwipeLeft()" >    
+		
+	 <div class="" style="margin-top: 0.4rem;margin-left:0.4rem;margin-right:0.4rem;;background:#f3f3f3;">	
+		  <label class="item font-28" style="text-align: center;border:none;background:#f3f3f3;" >
+		    <img style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;border:#e3e3e3 0.5px solid;" ng-src="{{basePicUrl + claimInfo.avatar}}"/>
+		  </label>
+		  <label class="item" style="background:#f3f3f3;text-align: center;margin-top: -0.4rem;border:none;" >
+		    <div class="font-36">{{claimInfo.nick_name}}</div>
+		    <div class="font-24" style="color:#494949">{{claimInfo.signature}}</div>
+		   	<div class="font-20"  ng-if="claimInfo.is_mypay" >
+		        <span  class="font-20" style="background: #b7b7b7;color:#8d8d8d;padding:0.1rem;border-radius:2px;">愿意自行承担运费</span>
+		    </div>
+	     	<p class="font-20"  ng-if="!claimInfo.is_mypay">
+	     		<span  class="font-20" style="background: #b7b7b7;color:#8d8d8d;padding:0.1rem;border-radius:2px;">不愿承担运费</span>
+	     	</p>
+		  </label>
+		  
+		</div>  
+	 <div class="list color333 ">
+			
+	  	<a class="item item-icon-right font-28 " href="#" style="color:#b7b7b7;min-height:1.2rem;padding-top:0.32rem;">
+	  		  姓名
+	    	<span style="color: #494949;">{{claimInfo.real_name}}</span>	    
+	  	</a>
+	  	<a class="item item-icon-right font-28" href="#" style="color:#b7b7b7;min-height:1.2rem;padding-top:0.32rem;">
+	  		 地区
+	    	<span style="color: #494949;">{{claimInfo.province + claimInfo.city + claimInfo.county}}</span>	    
+	  	</a>
+	  	
+	</div>
+	
+	<div class="font-28" style="background:#fff;margin-top: 0.2667rem;">
+	   <label ng-click="watchIdCard('identitycard','{{claimInfo.user_id}}');" class="item item-input" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;">
+	     <input  type="text" value="身份认证" readonly style="background-color:#fff;padding-left:0.4rem;color:#494949">
+	     <i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+	   </label>
+	   <label ng-click="watchOther('identityother','{{claimInfo.user_id}}');" class="item item-input" style="padding-left:0.4rem;background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;">
+	     <input  type="text" value="其他认证" readonly style="background-color:#fff;color:#494949">
+	     <i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+	   </label>
+	</div>
+	<br />
+	 <div class="list color333 ">		
+	  	<a class="item item-icon-right font-28 " href="#" style="color:#b7b7b7;">
+	  		 备注
+	    	<span class="font-26" style="color: #494949;">{{claimInfo.comment}}</span>
+	  	</a>
+	  </div>
+	  
+    </ion-content>
+    <div class="div_bottom" >
+		<button style="" class="button button-block button-progroess font-30" ng-click="passThis('{{claimInfo.donateusers_id}}');" >
+			  通过
+		</button>
+	</div>
+</ion-view>
+

@@ -1,0 +1,55 @@
+<ion-modal-view style="background: rgba(0,0,0,.70);">
+    
+    <ion-content ng-click="modal.hide();" style="text-align:center;background: rgba(0,0,0,.0);">
+     
+
+    </ion-content>
+    
+    <div class="bar bar-footer" style="min-height: 7.2rem; padding:0px;">
+ 
+	 	<ion-header-bar align-title="center" class="bar-stable" style="min-height:1.2rem;">
+		 
+		  <h1 class="title">分享</h1>
+		 
+		</ion-header-bar>
+		<ion-scroll zooming="true" direction="y" style="text-align:center;width:100%; height: 6rem;margin-top:1.5rem;">
+		    <div class="row" style="width:90%; height:2.5rem;margin:0 auto;" >
+		    	<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <img ng-src="img/wechat_session@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(0)"/>
+		    	 <br />
+		    	 <span>微信好友</span>
+		    	</div>
+				<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <img ng-src="img/wechat_timeline@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(1)"/>
+		    	 <br />
+		    	 <span>微信朋友圈</span>
+		    	</div>
+		    	<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <img ng-src="img/QQ@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(2)"/>
+		    	 <br />
+		    	 <span>QQ好友</span>
+		    	</div>
+			</div>
+			<div class="row" style="width:90%; height:2.5rem;margin:0 auto;" >
+		    	<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <img ng-src="img/sina@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(3)"/>
+		    	 <br />
+		    	 <span>新浪微博</span>
+		    	</div>
+				<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <img ng-src="img/Qzone@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(4)"/>
+		    	 <br />
+		    	 <span>QQ空间</span>
+		    	</div>
+		    	<div style="text-align:center; height:2.5rem;"  class="col col-33">
+		    	 <!--<img ng-src="img/Qzone@{{myImgSize}}x.png" style="width:1.5rem; height:1.5rem;"  ng-click="share(5)"/>
+		    	 <br />
+		    	 <span>QQ空间</span>-->
+		    	</div>
+			</div>
+
+		</ion-scroll>
+	</div>
+    
+  </ion-modal-view>
+ 

@@ -1,0 +1,66 @@
+<!-- 
+ <!DOCTYPE html>
+<html ng-app="ionicApp">
+
+<head>
+    <meta charset="utf-8">
+ <script src="lib/flexible/build/flexible_css.debug.js"></script>
+	<script src="lib/flexible/build/flexible.debug.js"></script>
+    
+    <link href="../../css/ionic.app.css" rel="stylesheet"> 
+    <link href="../../css/style.css" rel="stylesheet">
+    <script src="../../lib/ionic/js/ionic.bundle.js"></script>
+    <script>
+    	angular.module('ionicApp', ['ionic']);
+    </script>
+</head>
+<body style="background: rgba(0,0,0,.50)">  -->
+<ion-view>
+<ion-header-bar align-title="center" class="bar-afu">
+  <div class="buttons">
+    <button class="button juan-cancel" ng-click="goBack()">取消</button>
+  </div>
+  <h1 class="title font-34" ng-click="pickCameraPic()">发布捐助需求</h1>
+  <div class="buttons">
+    <button class="button juan-submit" ng-click="pickCamera()">提交</button>
+  </div>
+</ion-header-bar>
+<ion-content style="background-color:#fff;">
+	<div class="list" style="border:none;">
+	   <label class="item item-input" style="min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+	     <input type="text" placeholder="填写标题(15字内)...">
+	   </label>
+	   <label class="item item-input" ng-click="openWtype()" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+	     <input  type="text" ng-model="juanData.w_type.wtype_name" readonly style="background-color:#fff;">
+	      <i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+	   </label>
+	   <label class="item item-input" style="min-height:3.6rem;border-left:none;border-right:none;padding-left:0.4rem;">
+	     <textarea style="min-height:3.6rem;" placeholder="写下你的需求吧"></textarea>
+	   </label>   
+	</div>
+	
+	<!-- images fields -->
+    //每一行有五张缩略图
+	<div class="row" ng-repeat="image in images" ng-if="$index % 5 === 0" style="text-align: center;">
+	      <div class="col col-20" ng-if="$index < images.length">
+            <img ng-click="clickImg(images[$index])" ng-src="{{images[$index]}}" style="height:1.3867rem;width:1.3867rem;" />
+          </div>
+          <div class="col col-20" ng-if="$index + 1< images.length">
+            <img ng-click="clickImg(images[$index+1])" ng-src="{{images[$index + 1]}}" style="height:1.3867rem;width:1.3867rem;"/>
+          </div>
+          <div class="col col-20" ng-if="$index + 2< images.length">
+            <img ng-click="clickImg(images[$index+2])" ng-src="{{images[$index + 2]}}" style="height:1.3867rem;width:1.3867rem;" />
+          </div>
+          <div class="col col-20" ng-if="$index + 3< images.length">
+            <img ng-click="clickImg(images[$index + 3])" ng-src="{{images[$index + 3]}}" style="height:1.3867rem;width:1.3867rem;" />
+          </div>
+	      <div class="col col-20" ng-if="$index + 4< images.length && $index + 4 != 9">
+            <img ng-click="clickImg(images[$index + 4])" ng-src="{{images[$index + 4]}}" style="height:1.3867rem;width:1.3867rem;" />
+          </div>
+	  
+	</div>
+	
+</ion-content>
+</ion-view>
+<!-- </body>
+</html> -->

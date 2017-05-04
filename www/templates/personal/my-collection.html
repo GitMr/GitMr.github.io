@@ -1,0 +1,153 @@
+<!-- 
+File-Name:
+Date:
+Author:
+Function:
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">我的收藏</h1>
+      <button class="button  btRight" style="color:#888991;" ng-if="infos_recipient.length != 0 || infos.length != 0"  ng-click="editOrDone();">{{editOrDoneTitle}}</button>
+
+</ion-header-bar>
+<div class="bar bar-subheader vertical-container" style="text-align: center">
+	<div class="row vertical-container font-24" style="width:40%;margin:0 auto;height:1.1467rem;color:#494949;">
+		<!--<span on-tap="switchSubTab('juan');" style="line-height:1.0267rem;"  class="col col-50 red-line"  ng-class="{true: 'active', false: ''}[isJuanActive]">
+			捐助
+			<hr ng-if="isJuanActive" style="line-height:2px;width:0.4rem;height:0.04rem;background-color:#ff0000;margin:0 auto;border:none;text-align:center;"  align="center" noshade="noshade"/></span>
+		</span>
+		<span on-tap="switchSubTab('qiu');" style="line-height:1.0267rem;"  class="col col-50 red-line" ng-class="{true: 'active', false: ''}[isQiuActive]">
+			求助
+			<hr ng-if="isQiuActive" style="line-height:2px;width:0.4rem;height:0.04rem;background-color:#ff0000;margin:0 auto;border:none;text-align:center;"  align="center" noshade="noshade"/></span>
+		</span>-->
+
+		<span on-tap="switchSubTab('juan');" style="line-height:1.0637rem;min-width:1.3rem;margin-right:0.2933rem;" class="dark-line font-28" ng-class="{true: 'active', false: ''}[isJuanActive]">
+			献爱心
+			<hr ng-if="isJuanActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+		</span>
+		<span on-tap="switchSubTab('qiu');" style="line-height:1.0637rem;min-width:1.3rem;margin-left:0.2933rem;" class="dark-line font-28" ng-class="{true: 'active', false: ''}[isQiuActive]">
+			求帮助
+			<hr ng-if="isQiuActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+		</span>
+	</div>
+</div>
+<ion-view ng-class="{true: '', false: 'gone'}[isJuanActive]">
+    <ion-content on-swipe-left="" style="margin-top:1.06rem;" >
+	    	
+	<ion-refresher
+    pulling-text="下拉刷新..."
+    refreshing-text = "请求中..."
+    on-refresh="doRefreshDonate()">
+  </ion-refresher>
+		<div style="padding-left:0.4rem;padding-right:0.4rem;background-color:#ffffff;">
+			<ion-list show-delete="data.showDelete">
+
+				<ion-item class="item-avatar" style="border-bottom:none;border-top:0.5px solid #f3f3f3;border-left:none;border-right:none;" rj-hold-active ng-repeat="info in infos track by info.xid" ng-click="goToDetail(info,'donate');">
+
+					<img ng-src="{{basePicUrl+info.firstpicture}}" style="border-radius:4px;margin-left:-0.4rem;">
+                    <ion-delete-button class="ion-minus-circled font-20" style="margin-left:-0.3rem;" ng-click="onItemDelete($index,'donate',info.xid)"></ion-delete-button>
+					<span class="multi-line-two font-30"  ng-bind="info.title" style="color:4a4e58;font-weight:bold;height:100%;margin-top:1%;margin-left:-0.4rem;"></span>
+					<span style="color:#8c8d95;" class="wy-push-right font-24" ng-bind="info.nick_name"></span>
+					<span style="color:#8c8d95;margin-left:-0.4rem;" class="time-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+
+				</ion-item>
+
+			</ion-list>
+		</div>
+	<div ng-if="infos.length == 0" class="color-8d font-26" style="text-align: center;margin-top:2.8rem;" >
+		<img ng-src="img/no_collection@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;" />
+		<p>目前没有收藏</p>
+	</div>
+	<p ng-if="infos_recipient.length != 0 || infos.length != 0" class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note}}</p>
+	 <ion-infinite-scroll
+		immediate-check="false"
+	 	ng-if="moreJuanDataCanBeLoaded()"
+	    on-infinite="loadMoreDonate()"
+	    distance="1%">
+	  </ion-infinite-scroll> 	
+	 
+    </ion-content>
+
+</ion-view>
+<ion-view ng-class="{true: '', false: 'gone'}[isQiuActive]">
+	<!--///求助-->
+	<ion-content on-swipe-left="" style="margin-top:1.06rem;" >
+
+		<ion-refresher
+				pulling-text="下拉刷新..."
+				refreshing-text = "请求中..."
+				on-refresh="doRefreshRecipient()">
+		</ion-refresher>
+
+		<!--<ion-list rj-close-back-drop style="background:#ffffff;"  show-delete="data.showDelete">
+
+			<ion-item class="item-avatar" rj-hold-active ng-repeat="info in infos_recipient" ng-click="goToDetail(info,'recipient');">
+				<img ng-src="{{basePicUrl+info.firstpicture}}">
+
+				<span class="color-49 font-26" ng-bind="info.title" style="height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></span>
+				&lt;!&ndash;<h3 class="title-content" ng-bind="info.title" style="font-weight:bold;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></h3>&ndash;&gt;
+				<p class="multi-line"  ng-bind="info.content" style="height:100%;margin-top:0%;"></p>
+				<span style="color:#b7b7b7;" class="rj-push-right" ng-bind="info.user_name"></span>
+				<span style="color:#b7b7b7;" class="rj-push-left"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+				<ion-delete-button class="ion-minus-circled"
+								   ng-click="onItemDelete($index,'recipient',info.xid)">
+				</ion-delete-button>
+			</ion-item>
+		</ion-list>-->
+
+		<!--<ion-list rj-close-back-drop style="background-color:#ffffff;"  show-delete="data.showDelete">
+
+			<ion-item class="item-avatar" style="border:0.5px solid #f3f3f3;" rj-hold-active ng-repeat="info in infos_recipient track by info.xid" ng-click="goToDetail(info,'recipient');">
+				<img image-lazy-src="{{basePicUrl+info.firstpicture}}" style="border-radius:2px;">
+				<span class="color-49 font-32" ng-bind="info.title" style="height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></span>
+				&lt;!&ndash;<h3 class="title-content" ng-bind="info.title" style="font-weight:bold;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></h3>&ndash;&gt;
+				<p class="multi-line"  ng-bind="info.content" style="height:100%;margin-top:1%;"></p>
+				<span style="color:#b7b7b7;" class="rj-push-right font-24" ng-bind="info.user_name"></span>
+				<span style="color:#b7b7b7;" class="rj-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+				<ion-delete-button class="ion-minus-circled"
+								   ng-click="onItemDelete($index,'recipient',info.xid)">
+				</ion-delete-button>
+			</ion-item>
+
+		</ion-list>-->
+
+        <div style="padding-left:0.4rem;padding-right:0.4rem;background-color:#ffffff;">
+            <ion-list show-delete="data.showDelete">
+
+                <!--<ion-item class="item-avatar" style="border-bottom:none;border-top:0.5px solid #f3f3f3;border-left:none;border-right:none;" rj-hold-active ng-repeat="info in infos_recipient track by info.xid" ng-click="goToDetail(info,'donate');">
+
+                    <img image-lazy-src="{{basePicUrl+info.firstpicture}}" style="border-radius:4px;margin-left:-0.4rem;">
+                    <ion-delete-button class="ion-minus-circled font-20" style="margin-left:-0.3rem;" ng-click="onItemDelete($index,'recipient',info.xid)"></ion-delete-button>
+                    <span class="multi-line-two font-30"  ng-bind="info.title" style="color:4a4e58;font-weight:bold;height:100%;margin-top:1%;margin-left:-0.4rem;"></span>
+                    <span style="color:#8c8d95;" class="wy-push-right font-24" ng-bind="info.nick_name"></span>
+                    <span style="color:#8c8d95;margin-left:-0.4rem;" class="time-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+
+                </ion-item>-->
+				<ion-item class="item-avatar" style="border-bottom:none;border-top:0.5px solid #f3f3f3;border-left:none;border-right:none;" rj-hold-active ng-repeat="info in infos_recipient track by info.xid" ng-click="goToDetail(info,'donate');">
+
+					<img ng-src="{{basePicUrl+info.firstpicture}}" style="border-radius:4px;margin-left:-0.4rem;">
+					<ion-delete-button class="ion-minus-circled font-20" style="margin-left:-0.3rem;" ng-click="onItemDelete($index,'donate',info.xid)"></ion-delete-button>
+					<span class="multi-line-two font-30"  ng-bind="info.title" style="color:4a4e58;font-weight:bold;height:100%;margin-top:1%;margin-left:-0.4rem;"></span>
+					<span style="color:#8c8d95;" class="wy-push-right font-24" ng-bind="info.real_name"></span>
+					<span style="color:#8c8d95;margin-left:-0.4rem;" class="time-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+
+				</ion-item>
+
+            </ion-list>
+        </div>
+		<div ng-if="infos_recipient.length == 0" class="color-8d font-26" style="text-align: center;margin-top:2.8rem;" >
+			<img ng-src="img/no_collection@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;"  />
+			<p>目前没有收藏</p>
+		</div>
+		<p ng-if="infos_recipient.length != 0 || infos.length != 0" class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note_recipient}}</p>
+		<ion-infinite-scroll
+				immediate-check="false"
+				ng-if="moreQiuDataCanBeLoaded()"
+				on-infinite="loadMoreRecipient()"
+				distance="1%">
+		</ion-infinite-scroll>
+
+	</ion-content>
+	
+</ion-view>
+

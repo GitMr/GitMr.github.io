@@ -1,0 +1,52 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录的初始界面
+-->
+<!-- <!DOCTYPE html>
+<html ng-app="">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../lib/flexible/build/flexible_css.debug.js"></script>
+	<script src="../../lib/flexible/build/flexible.debug.js"></script>
+	<link href="../../css/icon_style.css" rel="stylesheet" type="text/css"/> 
+	<link href="../../lib/ionic/css/ionic.css" rel="stylesheet"/>
+	<script  src="../../lib/ionic/js/ionic.bundle.js"></script>
+	<link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="../../css/login/login.css" rel="stylesheet" type="text/css"/>
+	<meta charset="UTF-8">
+	<title>完善信息1</title>
+</head>
+<body style="background:#f3f3f3;"> -->
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">完善信息</h1>
+    </ion-header-bar>
+	<ion-view >
+    <ion-content >
+        <div class="" style="margin-top: 0.5333rem;margin-left:0.4rem;margin-right:0.4rem;;background:#f3f3f3;">
+		
+		  <label class="item font-28" style="text-align: center;border:none;background:#f3f3f3;" >
+		    <img on-tap="pickAvatar()" style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;border:#e3e3e3 2px solid;" ng-src="{{avatar}}"/>   
+		  </label>
+		  <label class="item font-28" style="background:#f3f3f3;text-align: center;margin-top: -0.4rem;border:none;" >
+		    <span on-tap="pickAvatar()" style = "color:#b7b7b7">上传头像</span>
+		  </label>
+		  <label class="item item-input font-28" style="margin-top: 0.2667rem;" >
+		    <img ng-src="img/me_unchecked@{{myImgSize}}x.png" />
+		    <input class="font-28"  type="text"  placeholder="请输入昵称" ng-model="register.nick_name"  >
+		  </label>
+		 <label class="item font-20" style="background:#f3f3f3;color:#b7b7b7;text-align: center;margin-top:rem;border:none;" >
+		    <span>昵称请控制在2-20个字符，支持中英文、数字、"-"和"_"</span>
+		  </label>
+		<button ng-click="doneRegister()" style="margin-top: -0.1rem" class="button button-block button-red font-30" ng-disabled="false" >
+		  完成注册
+		</button>
+
+		<div class="error-note font-20">{{error_note}} </div>
+		</div>
+    </ion-content>
+	</ion-view>
+<!-- </body>
+</html> -->

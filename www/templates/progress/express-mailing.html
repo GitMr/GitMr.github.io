@@ -1,0 +1,46 @@
+<!-- 
+File-Name:express-mailing.html
+Date:2016-10-03
+Author:WangYong
+Function:收件人查看邮递信息
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">邮寄中</h1>
+    </ion-header-bar>
+<ion-view >
+    <ion-content on-swipe-left="" style="text-align:center;height:100%;">
+	     
+		<ion-refresher
+		    pulling-text="下拉刷新..."
+		    refreshing-text = "请求中..."
+		    on-refresh="doRefresh()">
+	  	</ion-refresher>
+
+		<div style="min-height:7rem;margin-top:20%;width:80%;height:50%;background:#ffffff;margin-left:auto;margin-right:auto;border-radius:0.1rem;">
+			<img ng-src="{{basePicUrl + expressInfo.shipper_avatar}}" style="width:2.2rem;height:2.2rem;border-radius:2.2rem;margin-top:-1rem;"/>
+			<br />
+			<p class="font-28">{{expressInfo.shipper_nickname}}</p>
+			<p>&nbsp;</p>
+			<p class="font-26">{{expressInfo.shipper_nickname}}&nbsp;接受了您的求助请求</p>
+			<p class="font-24">请等待对方给您邮寄</p>
+			<p class="font-22" style="color:#b7b7b7;">收到物品请点击下方的"我已收到"</p>
+		</div>
+	  	<div style="min-height:3rem;margin-top:3%;width:80%;height:25%;background:#ffffff;margin-left:auto;margin-right:auto;border-radius:0.1rem;">
+			<br />
+			<p class="font-28">物品已寄出</p>
+			<div class="font-24" style="width:75%;text-align:left;background:#ffffff;margin-left:auto;margin-right:auto;">
+				<p><span style="color:#b7b7b7;">快递公司：</span>{{expressInfo.express_name}}</p>
+				<p><span style="color:#b7b7b7;">快递单号：</span>{{expressInfo.express_number}}</p>
+				<p><span style="color:#b7b7b7;">时间：</span>{{expressInfo.send_time | date:'yyyy-MM-dd HH:mm' }}</p>
+				<p><span style="color:#b7b7b7;">备注：</span>{{expressInfo.express_comment}}</p>
+			</div>
+		</div>
+    </ion-content>
+	<div class="div_bottom" ng-if="fromData.from == 'my'">
+		<button style="" class="button button-block button-progroess font-30" ng-click="popupOptions();" >
+			  我已收到
+		</button>
+	</div>
+</ion-view>
+

@@ -1,0 +1,40 @@
+<ion-view style="background: rgba(0,0,0,.00);">
+
+ <ion-header-bar class="item-input-inset bar-afu" style="background: rgba(0,0,0,.00);">
+
+ </ion-header-bar>
+
+<div class="bar bar-subheader vertical-container" style="background: rgba(255,255,255,.99);">
+    <div class="row vertical-container font-28" style="height:1.1rem;">
+        <span class="col col-90" style="text-align:left;color:#888991;">切换类别</span>
+        <span on-tap="closeMoreTypes();" class="col col-10" >
+            <i style='color:#8c8d95;' class='ion-chevron-up font-24' ></i>
+        </span>
+    </div>
+</div>
+<ion-content style="margin-top:1.05rem;text-align:center;background: rgba(255,255,255,.99);border-top:1px solid #eeeeee;">
+    <div class="row font-28" ng-repeat="wtype in wtypes" ng-if=" $index % 4 === 0" style="margin-left:auto;margin-right:auto;margin-top:0rem;width:100%;min-height:1.0666rem;">
+        <div on-tap="switchType($index);" class="col vertical-container"  ng-if="$index < wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;"ng-class="{true: 'red-background', false: 'normal-background'}[wtypes[$index].is_select]">
+            {{wtypes[$index].wtype_name}}
+        </div>
+        <div on-tap="switchType($index+1);" class="col vertical-container"  ng-if="$index+1 < wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;" ng-class="{true: 'red-background', false: 'normal-background'}[wtypes[$index+1].is_select]">
+            {{wtypes[$index+1].wtype_name}}
+        </div>
+         <div on-tap="switchType($index+2);" class="col vertical-container"  ng-if="$index+2 < wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;" ng-class="{true: 'red-background', false: 'normal-background'}[wtypes[$index+2].is_select]">
+            {{wtypes[$index+2].wtype_name}}
+        </div>
+         <div on-tap="switchType($index+3);" class="col vertical-container" ng-if="$index+3 < wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;" ng-class="{true: 'red-background', false: 'normal-background'}[wtypes[$index+3].is_select]">
+            {{wtypes[$index+3].wtype_name}}
+        </div>
+
+        <!----->
+        <div  class="col vertical-container"  ng-if="$index+2 >= wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;" >
+            &nbsp;
+        </div>
+         <div  class="col vertical-container" ng-if="$index+3 >= wtypes.length" style="min-height:100%;border:0px solid #b7b7b7;border-radius:0.5333rem;margin:0.1rem;" >
+             &nbsp;
+        </div>
+
+    </div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-modal-view style="background: rgba(0,0,0,.90);width:100%; height:100%;">
+
+    <div class="div-top vertical-container" style="border:1px #8d8d8d solid;color:#8d8d8d;" ng-click="saveToGallery();">
+        <span class="font-32" >保存</span>
+    </div>
+    <ion-content style="text-align:center;background: rgba(0,0,0,.90);width:100%; height:100%;" scroll="false" >
+		<ion-slide-box delegate-handle="slides" on-slide-changed="slideChanged(index)" active-slide="slideIndex" does-continue="false" style="width:100%; height:100%;">
+          <ion-slide ng-repeat="image in slideImages" ng-if="$index < slideImages.length - 1 || $index == slideImages.length - 1"  style="width:100%;height:100%;">
+              <ion-scroll zooming="true" direction="xy" on-tap="hideAndRemove();" style="width:100%;height:100%;" class="vertical-container" min-zoom="1">
+
+                    <img ng-src="{{image}}" style="width:100%;height:100%;" image-lazy-loader="lines" />
+
+              </ion-scroll>
+          </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+   
+  </ion-modal-view>
+ 

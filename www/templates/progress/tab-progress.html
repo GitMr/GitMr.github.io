@@ -1,0 +1,243 @@
+<ion-header-bar  class="bar-afu row">
+	<div class="topbar" style="width:100%;">
+		<div class="row vertical-container" style="width:4rem;margin:0 auto;height:100%;">
+		   <!--<div ng-click="clickJuanOrQiu('juan')" class="col col-50 vertical-container" ng-class="{true: 'button button-small bar-afu active', false: 'button button-small bar-afu'}[isJuanActive]" style="height:100%;line-height:100%;margin-right:-0.5px;border-top-left-radius:4px;border-bottom-left-radius:4px;border-right:0px;border-bottom-right-radius:0px;border-top-right-radius:0px;padding:0;" >
+			   <div class="font-26">&nbsp;献爱心&nbsp;</div>
+		   </div>
+		   <div ng-click="clickJuanOrQiu('qiu')"  class="col col-50 vertical-container" ng-class="{true: 'button button-small bar-afu active', false: 'button button-small bar-afu'}[isQiuActive]" style="height:100%;line-height:100%;border-left:0px;margin-left:-0.5px ;border-top-right-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:0px;border-bottom-left-radius:0px;padding:0;" >
+			   <div class="font-26">&nbsp;求帮助&nbsp;</div>
+		   </div>-->
+		 <span on-tap="clickJuanOrQiu('juan')" style="line-height:1.1267rem;margin-right:0.2933rem;" class="dark-line font-28" ng-class="{true: 'active font-24', false: 'font-28'}[isJuanActive]">
+			献爱心
+			<hr ng-if="isJuanActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+		</span>
+		<span on-tap="clickJuanOrQiu('qiu')" style="line-height:1.1267rem;margin-left:0.2933rem;" class="dark-line " ng-class="{true: 'active font-24', false: 'font-28'}[isQiuActive]">
+			求帮助
+			<hr ng-if="isQiuActive" class= "font-26" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/>
+		</span>
+		</div>
+    </div>
+
+    <div class="bar bar-subheader vertical-container" style="text-align: center">
+		<div class="row vertical-container" style="width:4.5rem;margin:0 auto;min-height:0.59rem;" ng-if="isJuanActive">
+		  <div on-tap="switchSubTab('fabu_donate');" style="min-width:1.733rem;line-height:0.5867rem;margin-right:0.1733rem;" class="red-line"  ng-class="{true: 'active font-24', false: 'font-28'}[isMyFaBuDonate]">
+			  我发布的
+		  </div>
+	      <div on-tap="switchSubTab('my_juan');" style="min-width:1.733rem;line-height:0.5867rem;margin-left:0.1733rem;" class="red-line" ng-class="{true: 'active font-24', false: 'font-28'}[isMyJuanZhu]">
+			  我捐助的
+		  </div>
+		</div>
+		  
+		<div class="row vertical-container" style="width:4.5rem;margin:0 auto;min-height:0.59rem;" ng-if="isQiuActive">
+		  <div on-tap="switchSubTab('fabu_recipient');" style="min-width:1.733rem;line-height:0.5867rem;margin-right:0.1733rem;" class="red-line"  ng-class="{true: 'active font-24', false: 'font-28'}[isMyFaBuRecipient]">
+			  我发布的
+		  </div>
+	      <div on-tap="switchSubTab('my_ren');" style="min-width:1.733rem;line-height:0.5867rem;margin-left:0.1733rem;" class="red-line" ng-class="{true: 'active font-24', false: 'font-28'}[isMyRenLing]">
+			  我认领的
+
+		  </div>
+		</div>  
+	</div>
+</ion-header-bar>
+
+<ion-view ng-if=" loginState " ng-class="{true: '', false: 'gone'}[isJuanActive]"  animation="slide-left-right" nav-transition="ios" nav-direction="forward">
+    <ion-content on-swipe-left="onSwipeLeft()" style="margin-top:1rem;" ng-class="{true: '', false: 'gone'}[isJuanActive]">
+	     
+	<ion-refresher
+	    pulling-text="下拉刷新..."
+	    refreshing-text = "请求中..."
+	    on-refresh="doRefresh('juan_or_help',isMyFaBuDonate)">
+  	</ion-refresher>
+		<br />
+	 <ion-list rj-close-back-drop class="" style="background-color: #f3f3f3;" ng-if="myDonateInfos.length > 0" >
+	   <ion-item style="border-bottom:0.3rem solid #f3f3f3;border-top:none;min-height:4rem;" class="item-avatar" rj-hold-active ng-repeat="info in myDonateInfos">
+     
+       <div  class="item-div-list" style="height: 100%;border:none;padding:0;padding-top:0.2rem;margin:0; ">
+		  <a ng-click="goToDetail('{{info.info_type}}','{{info.xid}}','{{info.progress_state}}');" class="item" href="#" style="padding-left:0.4rem;padding-right:0.4rem;border:none;border-bottom:1px #f3f3f3 solid;height:63.5%" >
+		    <div class="font-32 color-49" ng-bind="info.title" style="height:35%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></div>
+		    <div ng-if="fromXianAiXin == 'my_juan'" class="font-24 color-b7 multi-line" ng-bind="info.content" style="margin-top:0.2rem;" ></div>
+		    <div ng-if="fromXianAiXin == 'my_help'" class="font-24 color-b7 multi-line" ng-bind="info.real_name" style="margin-top:0.2rem;" ></div>
+		    <div class="font-24 color-b7"  ng-bind="info.create_time | date:'yyyy-MM-dd' " style="margin-top:0.2rem;"></div>
+		  </a>
+		  <a class="vertical-container" style="height:36.5%;padding:0;margin:0;margin-top:0.05rem;border:none;" ng-click="my_juanProgressAction('{{info.progress_state}}','{{info.xid}}');" class="item" ng-if="fromXianAiXin == 'my_juan'" href="#" >
+			<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'wait'">
+				<span class="font-32 color-49" style="line-height:1.46rem;">等待认领</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			</div>
+
+		    <div style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;" ng-if="info.progress_state == 'recipient'">
+				<span class="font-28 color-49" style="float:left;line-height:1.46rem;" >有{{info.recipienting_user_count}}人认领</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+				<span class="font-32 color-49" style="float:right;line-height:1.46rem;" >查看&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+
+			</div>
+		 	<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'before_mail'">
+				 <span class="font-32 color-49" style="line-height:1.46rem;">填写快递信息</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			</div>
+			<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'mail'">
+		    	<span class="font-32 color-49" style="line-height:1.46rem;">爱心邮寄中</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			</div>
+			<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'signfor'">
+		    	<span class="font-32 color-49" style="line-height:1.46rem;">爱心已签收</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+
+			</div>
+			<div style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;" ng-if="info.progress_state == 'thanks'">
+		    	<span class="font-32 color-49" style="float:left;line-height:1.46rem;">爱心已签收</span>
+				<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+				<span class="font-32 color-49" style="float:right;line-height:1.46rem;" >查看感谢信&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+
+			</div>
+		  </a>
+		  
+		  <a class="vertical-container" style="height:36.5%;padding:0;margin:0;margin-top:0.05rem;border:none;" ng-click="my_helpProgressAction('{{info.progress_state}}','{{info.xid}}');" class="item" ng-if="fromXianAiXin == 'my_help'" href="#">
+			  <div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'donate'">
+			  	<span class="font-32 color-49" style="line-height:1.46rem;">查看快递信息</span>
+				  <i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			  </div>
+			  <div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'mail'">
+				  <span class="font-32 color-49" style="line-height:1.46rem;">爱心邮寄中</span>
+				  <i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			  </div>
+			  <div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'signfor'">
+				  <span class="font-32 color-49" style="line-height:1.46rem;">爱心已签收</span>
+				  <i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+			  </div>
+			  <div style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;" ng-if="info.progress_state == 'thanks'">
+				  <span class="font-32 color-49" style="float:left;line-height:1.46rem;">爱心已签收</span>
+				  <i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+				  <span class="font-32 color-49" style="float:right;line-height:1.46rem;" >查看感谢信&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+			  </div>
+		  </a>
+	</div>
+   </ion-item>
+
+
+
+	</ion-list>
+	<p class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note}}</p>
+	<ion-infinite-scroll
+			immediate-check="false"
+			ng-if="canLoadMoreJuan"
+			on-infinite="loadMore('juan_or_help',isMyFaBuDonate)"
+			distance="1%">
+	</ion-infinite-scroll>
+
+	<div ng-if="myDonateInfos.length == 0" class="color-8d font-24" style="text-align: center;margin-top:2.8rem;" >
+   		<img ng-src="img/no_progress@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;"  />
+   		<p>爱心进程列表为空</p>
+   </div>
+    </ion-content>
+
+</ion-view>
+
+<ion-view ng-if=" loginState "  ng-class="{true: '', false: 'gone'}[isQiuActive]">
+
+	<ion-content on-swipe-left="" style="margin-top:1rem;"  ng-class="{true: '', false: 'gone'}[isQiuActive]" >
+
+		<ion-refresher
+				pulling-text="下拉刷新..."
+				refreshing-text = "请求中..."
+				on-refresh="doRefresh('qiu_or_need',isMyFaBuRecipient)">
+		</ion-refresher>
+		<br />
+		<ion-list rj-close-back-drop class="" style="background-color: #f3f3f3;" ng-if="myRecipientInfos.length > 0" >
+			<ion-item style="min-height:4rem;border-bottom:0.3rem solid #f3f3f3;border-top:none" class="item-avatar" rj-hold-active  ng-repeat="info in myRecipientInfos" >
+				<div class="item-div-list" style="height:100%;border:none;padding:0;margin:0;padding-top:0.2rem;">
+					<a ng-click="goToDetail('{{info.info_type}}','{{info.xid}}','{{info.progress_state}}');" class="item" href="#" style="padding-left:0.4rem;padding-right:0.4rem;border:none;border-bottom:1px #f3f3f3 solid;height:63.5%" >
+						<div class="font-32 color-49 " ng-bind="info.title" style="height:35%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></div>
+
+						<!-- </a>
+                        <a class="item hintBar2" href="#"  style="border:none;height:40%"> -->
+						<div ng-if="fromQiuBangZhu == 'my_qiu'" class="font-24 color-b7 multi-line" ng-bind="info.content" style="margin-top:0.2rem;"></div>
+						<div ng-if="fromQiuBangZhu == 'my_renling'" class="font-24 color-b7 multi-line" ng-bind="info.donate_nick_name" style="margin-top:0.2rem;"></div>
+						<div class="font-24 color-b7" ng-bind="info.create_time | date:'yyyy-MM-dd' " style="margin-top:0.2rem;"></div>
+					</a>
+					<a  class="vertical-container" style="height:36.5%;padding:0;margin:0;margin-top:0.05rem;border:none;" ng-click="my_qiuProgressAction('{{info.progress_state}}','{{info.xid}}',info);" href="#" ng-if="fromQiuBangZhu == 'my_qiu'" >
+						<div class="vertical-container" ng-if="info.progress_state == 'wait'" style="text-align:center;min-height:1.46rem;width:100%;">
+							<span class="font-32 color-49"  style="line-height:1.46rem;">等待捐助</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+						</div>
+
+						<div class="" ng-if="info.progress_state == 'donate'" style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;">
+							<span class="font-32 color-49" style="float:left;line-height:1.46rem;">已获捐</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+							<span class="font-32 color-49" style="float:right;line-height:1.46rem;">等待寄出&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+						</div>
+
+						<div class="vertical-container" ng-if="info.progress_state == 'mail'" style="text-align:center;min-height:1.46rem;width:100%;">
+							<span class="font-32 color-49"  style="line-height:1.46rem;">爱心邮寄中</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;"></i>
+						</div>
+
+						<div class="" ng-if="info.progress_state == 'signfor'" style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;">
+							<span class="font-32 color-49" style="float:left;line-height:1.46rem;" >已签收</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;float:left;line-height:1.46rem;"></i>
+							<span class="font-32 color-49" style="float:right;line-height:1.46rem;">填写感谢信&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+						</div>
+
+						<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'thanks'">
+							<span class="font-32 color-49" style="line-height:1.46rem;">已完成</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;"></i>
+
+						</div>
+
+					</a>
+
+					<a class="vertical-container" ng-click="my_renProgressAction('{{info.progress_state}}','{{info.xid}}',info);" class="item hintBar2" href="#" ng-if="fromQiuBangZhu == 'my_renling'"  style="height:36.5%;padding:0;margin:0;margin-top:0.05rem;border:none;">
+						<!--<label class="font24 colorb7" ng-if="info.progress_state == 'wait'">我要认领</label>&lt;!&ndash; 爱心进展我的认领不会出现此状态 &ndash;&gt;-->
+						<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'recipient'">
+							<span class="font-32 color-49" style="line-height:1.46rem;">等待通过</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+						</div>
+						<div ng-if="info.progress_state == 'before_mail'" style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;">
+							<span class="font-32 color-49" style="float:left;line-height:1.46rem;">已通过</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+							<span class="font-32 color-49" style="float:right;line-height:1.46rem;">等待邮寄&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+						</div>
+						<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'mail'">
+							<span class="font-32 color-49" style="line-height:1.46rem;">爱心邮寄中</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+						</div>
+						<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'refuse'">
+							<span class="font-32 color-49" style="line-height:1.46rem;">申请未被通过</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+						</div>
+						<div ng-if="info.progress_state == 'signfor'" style="height:1.46rem;width:100%;padding-left:0.4rem;padding-right:0.4rem;">
+							<span class="font-32 color-49" style="float:left;line-height:1.46rem;">爱心已签收</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="line-height:1.46rem;color:#ff0000;margin-top:-0.2rem;float:left;"></i>
+							<span class="font-32 color-49" style="float:right;line-height:1.46rem;">填写感谢信&nbsp;<i style="color:#b7b7b7" class="ion-chevron-right"></i></span>
+						</div>
+						<div class="vertical-container" style="text-align:center;min-height:1.46rem;width:100%;" ng-if="info.progress_state == 'thanks'">
+							<span class="font-32 color-49" style="line-height:1.46rem;">已完成</span>
+							<i ng-if="!info.is_read" class="ion-record font-18" style="color:#ff0000;margin-top:-0.2rem;line-height:1.46rem;"></i>
+						</div>
+					</a>
+				</div>
+			</ion-item>
+		</ion-list>
+		<p class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{note}}</p>
+		<ion-infinite-scroll
+				immediate-check="false"
+				ng-if="canLoadMoreQiu"
+				on-infinite="loadMore('qiu_or_need',isMyFaBuRecipient)"
+				distance="1%">
+		</ion-infinite-scroll>
+		<div ng-if="myRecipientInfos.length == 0"  class="color-8d font-24" style="text-align: center;margin-top:2.8rem;">
+			<img ng-src="img/no_progress@{{myImgSize}}x.png" style="width:2.667rem;height:2.667rem;" />
+			<p>爱心进程列表为空</p>
+		</div>
+	</ion-content>
+
+</ion-view>
+
+<ion-view ng-if=" !loginState ">
+	<div style="margin-top:40%;text-align:center;">
+		<p class="font-32" style="color:#494949;">请先登录！</p><br />
+		<button ng-click="goToLogin();" style="width:30%;margin:0 auto;" class="button button-block button-red font-30" ng-disabled="false" >
+			去登录
+		</button>
+	</div>
+</ion-view>

@@ -1,0 +1,638 @@
+/* 
+name:login.css
+date:2016-08-04
+author:yangxaioyu
+function:登录注册重置密码部分界面所需的CSS都在这里
+ */
+@CHARSET "UTF-8";
+   
+	div{
+	 
+	}
+	/* 输入框高度  */
+	.formLayout{
+	height:1.2rem;
+	}
+	/* 输入框边框颜色和圆角化 */
+	.inputBorder{
+	border-radius:6px;
+	border:1px solid #ededed;
+	}
+	/* 输入框内字体颜色  */
+	.formFont{
+	color:#b7b7b7;
+	}
+	/* 图标与左侧边框之间的距离1:25px */
+	.hGap1{
+	padding-left: 0.333rem;
+	}
+	/* 输入 文本框与左侧图标之间的距离2:14px */
+	.hGap2{
+	padding-left: 0.187rem;
+	height:1.2rem;
+	}
+	/* 输入框上下边距1  */
+	.gap1{
+	margin-top:0.4rem;
+/* 	margin-top:30px; */
+	}
+	/* 输入框上下边距2  */
+	.gap2{
+	margin-top:0.27rem;
+/* 	margin-top:20px; */
+	}
+	/* 登录、下一步以及其他大按钮的样式  */
+	.padding1{
+	height:1.35rem;
+	border-radius:6px;
+	border:0px;
+	}
+	/* 标题栏左右导航按钮的边框设置：无 */
+	.btBorder{
+	border:0px;
+	}
+	/* header和登录按 钮配色   */
+	.color1{
+	background:#f63840;
+	color:#fff;
+	}
+	/* 注册标签  */
+	#aRegister{
+	color:#494949;
+	display:block; 
+	float:left;
+	}
+	/* 
+	*todo:忘记密码a标签 
+	 */
+	#aForget{
+	color:#494949;
+	display:block; 
+	float:right;
+	}
+	/* 提示部分样式，比如：两次密码输入不同 */
+	.hintForm{
+	border:0px;
+	color:#b7b7b7;
+	font-size:13px;
+	background:#fff;
+	}
+	/*
+	手机号输入框 边框样式 
+	 */
+	.phoneLength{
+	border:1px solid #ddd;
+	background:#fff;
+	}
+	/* 获取验证码 按钮样式  */
+	.btForm{
+	color:#f63840;
+	border:1px solid #f63840;
+	height:1.2rem;
+	}
+	
+	/* 上传头像部分布局 */
+		.imgtest{
+/* 	margin:10px 5px; */
+	margin:0.533rem auto;
+/* 	background: yellow; */
+	overflow:hidden;
+	}
+	.list_ul figcaption p{
+	font-size:12px;
+	color:#aaa;
+	}
+	.imgtest figure .divImg{
+	/*display:inline-block;*/
+	margin:5px auto 20px auto;
+	/* width:134px;
+	height:134px;
+	border-radius:134px; */
+	width:1.787rem;
+	height:1.787rem;
+	/* margin:0 auto; */
+	border-radius:1.787rem;
+	border:2px solid #fff;
+	overflow:hidden;
+	-webkit-box-shadow:0 0 3px #ccc;
+	box-shadow:0 0 3px #ccc;
+	}
+	.imgtest figure .divFont{
+	margin:0 auto;
+	width:90px;
+	overflow:hidden;
+	}
+	[data-dpr="2"].imgtest figure .divFont{
+	margin:0 auto;
+	width:150px;
+	overflow:hidden;
+	}
+	.imgtest img{
+	width:100%;
+	min-height:100%;
+	text-align:center;
+	}
+	.iconSize{
+	width:0.48rem;
+	height:0.48rem;
+/* 	width:36px;height:36px; */
+	}
+	
+/*  20号字体 20*1.333 */
+	.font0{
+	font-size:13.333px;
+	}
+	[data-dpr="2"].font0{
+	font-sizze:26.666px;
+	}
+/* 	26号字体  26*1.33333 */
+	.font1{
+	font-size:17.3px;
+	}
+	[data-dpr="2"].font1{
+	font-size:34.7px;
+	}
+/* 	28号字体  28*1.33333 */	
+	.font2{
+	font-size:18.6px;
+	}
+	[data-dpr="2"].font2{
+	font-size:37.3px;
+	}
+/* 	30号字体  30*1.33333 */	
+	.font3{
+	font-size:20px;
+	}
+	[data-dpr="2"].font3{
+	font-size:40px;
+	}
+	
+	/******************/
+	.item-input{
+		padding:0;
+		border-radius:0.08rem;
+		border:1px solid #ededed;
+	}
+	.item-input img{
+		height:0.48rem;
+		width:0.48rem;
+		margin-left:0.3333rem;
+		margin-top:0rem;
+		margin-right:0.18667rem;
+	}
+	[data-dpr="2"].item-input img{
+		height:0.48rem;
+		width:0.48rem;
+		margin-left:0.48rem;
+		margin-top:0rem;
+		margin-right:0.18667rem;
+	}
+	[data-dpr="3"].item-input img{
+		height:0.72rem;
+		width:0.72rem;
+		margin-left:0.48rem;
+		margin-top:0rem;
+		margin-right:0.18667rem;
+	}
+	
+	.item-input input{
+	  display: block;
+	  padding-top: 0px;
+	  padding-left: 0;
+	  height: 1.2rem;
+	  color: #111;
+	  vertical-align: middle;
+	  background-color:#fff;
+	 
+	}
+	
+	.button-red {
+		height:1.3333rem;
+		width:100%;
+		margin-top: 0.4rem;
+		color:#fff;
+		border:none;
+		background-color:#f3434b;
+	}
+	
+
+	.button-red:focus {
+		color:#fff;
+		background-color:#f3434b;
+	} 
+	.button-red:active {
+		color:#fff;
+		background-color:#f6c0c2;
+	} 
+	.button-red.diasbled {
+		color:#fff;
+		background-color:#f6c0c2;
+	}
+	
+	.register{
+		color:#494949;
+		display:block; 
+		float:left;
+	}
+	.forget{
+		color:#494949;
+		display:block; 
+		float:right;
+	}
+	.error-note{
+		color:#b7b7b7;
+		display:block; 
+		text-align:center;
+		margin-top:1.5rem;
+	}
+	
+	/*********/
+	.item-input-wrapper{
+		padding-right: 0px;
+  		padding-left: 0px;
+  		background: #f3f3f3;
+  		border:none;
+	}
+	.item-input-wrapper ~ .button {
+  		margin-left: 0px; }
+  		
+  	.button-vcode{
+  		margin-left:0.26667rem;
+  		margin-right:0px;
+  		color:#f63840;
+  		border:1px solid #f63840;
+  		height:1.2rem;
+  		width:2.4133rem;
+  		border-radius:0.08rem;
+  		padding:0px;
+  	}
+	.button-vcode.disabled{
+		color:#f6c0c2;
+		border:1px solid #f6c0c2;
+		color:#f63840;
+		padding:0px;
+	}
+
+    /*  14号字体 14 */
+    .font-14{
+    font-size:7px;
+    line-height:9px;
+    }
+    [data-dpr="2"].font-14{
+    font-size:14px;
+    line-height:16px;
+    }
+    [data-dpr="3"].font-14{
+    font-size:21px;
+    line-height:23px;
+    }
+	/*  18号字体 18 */
+    .font-18{
+    font-size:9px;
+    line-height:11px;
+    }
+    [data-dpr="2"].font-18{
+    font-size:18px;
+    line-height:20px;
+    }
+    [data-dpr="3"].font-18{
+    font-size:27px;
+    line-height:29px;
+    }
+	/*  20号字体 20 */
+	.font-20{
+	font-size:10px;
+	line-height:12px;
+	}
+	[data-dpr="2"].font-20{
+	font-size:20px;
+	line-height:22px;
+	}
+	[data-dpr="3"].font-20{
+	font-size:30px;
+	line-height:32px;
+	}
+
+	/*  22号字体 22 */
+    .font-22{
+    font-size:11px;
+    line-height:13px;
+    }
+    [data-dpr="2"].font-20{
+    font-size:20px;
+    line-height:22px;
+    }
+    [data-dpr="3"].font-20{
+    font-size:33px;
+    line-height:35px;
+    }
+
+	/*  24号字体 24 */
+	.font-24{
+	font-size:12px;
+	line-height:14px;
+	}
+	[data-dpr="2"].font-24{
+	font-size:24px;
+	line-height:26px;
+	}
+	[data-dpr="3"].font-24{
+	font-size:36px;
+	line-height:38px;
+	}
+
+	/* 	26号字体  26 */
+	.font-26{
+	font-size:13px;
+	line-height:15px;
+	}
+	[data-dpr="2"].font-26{
+	font-size:26px;
+	line-height:28px;
+	}
+	[data-dpr="3"].font-26{
+	font-size:39px;
+	line-height:41px;
+	}
+
+	/* 	28号字体  28 */
+	.font-28{
+	font-size:14px;
+	line-height: 16px;
+	}
+	[data-dpr="2"].font-28{
+	font-size:28px;
+	 line-height: 30px;
+	}
+	[data-dpr="3"].font-28{
+	font-size:42px;
+	 line-height: 44px;
+	}
+
+	/* 	30号字体  30 */
+	.font-30{
+	font-size:15px;
+	line-height:17px;
+	}
+	[data-dpr="2"].font-30{
+	font-size:30px;
+	line-height:32px;
+	}
+
+	[data-dpr="3"].font-30{
+	font-size:45px;
+	line-height:47px;
+	}
+
+	/* 	32号字体  32 */
+	.font-32{
+	font-size:16px;
+	line-height:18px;
+	}
+	[data-dpr="2"].font-32{
+	font-size:32px;
+	line-height:34px;
+	}
+
+	[data-dpr="3"].font-32{
+	font-size:48px;
+	line-height:50px;
+	}
+
+	/* 34号字体  34*/
+	.font-34{
+    	font-size:17px;
+    	line-height:19px;
+    	}
+    	[data-dpr="2"].font-34{
+    	font-size:34px;
+    	line-height:36px;
+    	}
+    	[data-dpr="3"].font-34{
+    	font-size:51px;
+    	line-height:53px;
+    }
+
+    /* 36号字体 36*/
+    .font-36{
+    font-size:18px;
+    line-hight:20px;
+    }
+    [data-dpr = "2"].font-36{
+    font-size:36px;
+    line-height:38px;
+    }
+    [data-dpr = "3"].font-36{
+    font-size:54px;
+    line-height:56px;
+    }
+    /* 38号字体 38*/
+    .font-38{
+    font-size:19px;
+    line-hight:21px;
+    }
+    [data-dpr = "2"].font-38{
+    font-size:38px;
+    line-height:40px;
+    }
+    [data-dpr = "3"].font-38{
+    font-size:57px;
+    line-height:59px;
+    }
+    /* 44号字体 44*/
+    .font-44{
+    font-size:22px;
+    line-hight:24px;
+    }
+    [data-dpr = "2"].font-44{
+    font-size:44px;
+    line-height:46px;
+    }
+    [data-dpr = "3"].font-44{
+    font-size:66px;
+    line-height:68px;
+    }
+    /* 46号字体 46*/
+    .font-46{
+    font-size:23px;
+    line-hight:25px;
+    }
+    [data-dpr = "2"].font-46{
+    font-size:46px;
+    line-height:48px;
+    }
+    [data-dpr = "3"].font-46{
+    font-size:69px;
+    line-height:71px;
+    }
+    /* 64号字体 64*/
+    .font-64{
+    font-size:32px;
+    line-hight:34px;
+    }
+    [data-dpr = "2"].font-64{
+    font-size:64px;
+    line-height:66px;
+    }
+    [data-dpr = "3"].font-64{
+    font-size:96px;
+    line-height:98px;
+    }
+
+	/*  18号字体 18*1.333 */
+   /* .font-18{
+    font-size:12px;
+    line-height:14px;
+    }
+    [data-dpr="2"].font-18{
+    font-size:24px;
+    line-height:26px;
+    }
+    [data-dpr="3"].font-18{
+    font-size:36px;
+    line-height:38px;
+    }*/
+	/*  20号字体 20*1.333 */
+/*	.font-20{
+	font-size:13.333px;
+	line-height:15.333px;
+	}
+	[data-dpr="2"].font-20{
+	font-size:26.666px;
+	line-height:28.666px;
+	}
+	[data-dpr="3"].font-20{
+	font-size:39.999px;
+	line-height:41.999px;
+	}*/
+
+	/*  22号字体 22*1.333 */
+   /* .font-22{
+    font-size:14.663px;
+    line-height:16.663px;
+    }
+    [data-dpr="2"].font-20{
+    font-size:29.326px;
+    line-height:31.326px;
+    }
+    [data-dpr="3"].font-20{
+    font-size:43.989px;
+    line-height:45.989px;
+    }*/
+
+	/*  24号字体 24*1.333 */
+	/*.font-24{
+	font-size:16px;
+	line-height:18px;
+	}
+	[data-dpr="2"].font-24{
+	font-size:32px;
+	line-height:34px;
+	}
+	[data-dpr="3"].font-24{
+	font-size:48px;
+	line-height:50px;
+	}*/
+
+	/* 	26号字体  26*1.33333 */
+	/*.font-26{
+	font-size:17.3px;
+	line-height:19.3px;
+	}
+	[data-dpr="2"].font-26{
+	font-size:34.7px;
+	line-height:36.7px;
+	}
+	[data-dpr="3"].font-26{
+	font-size:51.9px;
+	line-height:53.9px;
+	}*/
+
+	 /*	28号字体  28*1.33333 	*/
+	/*.font-28{
+	font-size:18.6px;
+	line-height: 20.6px;
+	}
+	[data-dpr="2"].font-28{
+	font-size:37.3px;
+	 line-height: 39.3px;
+	}
+	[data-dpr="3"].font-28{
+	font-size:55.8px;
+	 line-height: 57.8px;
+	}
+	*/
+	/* 	30号字体  30*1.33333 */
+	/*.font-30{
+	font-size:20px;
+	line-height:22px;
+	}
+	[data-dpr="2"].font-30{
+	font-size:40px;
+	line-height:42px;
+	}
+
+	[data-dpr="3"].font-30{
+	font-size:60px;
+	line-height:62px;
+	}*/
+
+	/* 	32号字体  32*1.33333 */
+/*	.font-32{
+	font-size:21.3328px;
+	line-height:23.3328px;
+	}
+	[data-dpr="2"].font-32{
+	font-size:42.6656px;
+	line-height:44.6656px;
+	}
+
+	[data-dpr="3"].font-32{
+	font-size:63.9984px;
+	line-height:65.9984px;
+	}*/
+
+	/* 34号字体  34*1.33333*/
+	/*.font-34{
+    	font-size:22.6661px;
+    	line-height:24.6661px;
+    	}
+    	[data-dpr="2"].font-32{
+    	font-size:45.3322px;
+    	line-height:47.3322px;
+    	}
+    	[data-dpr="3"].font-32{
+    	font-size:67.9983px;
+    	line-height:67.9983px;
+    }*/
+
+    /* 36号字体 36*1.33333*/
+   /* .font-36{
+    font-size:24px;
+    line-hight:26px;
+    }
+    [data-dpr = "2"].font-36{
+    font-size:48px;
+    line-height:50px;
+    }
+    [data-dpr = "3"].font-36{
+    font-size:72px;
+    line-height:74px;
+    }*/
+
+	.color-b7{
+	    color:#b7b7b7;
+	}
+
+	.color-49{
+	    color:#494949;
+	}
+	.color-8d{
+        color:#8d8d8d;
+    }
+    .title-color{
+        color:4a4e58;!important
+    }
+    .color-white{
+        color:#fff;
+    }

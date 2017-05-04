@@ -1,0 +1,63 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:需求详情界面
+Updated by WangYong 2016-08-05
+-->
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left" ng-click="goBack()"></a>
+      <h1 class="title font-34">需求详情</h1>
+      <div class="buttons">
+        <img ng-if="collection_src == 'collection_checked' " ng-click="addCollection();" style="width:0.5467rem;height:0.5467rem;margin-top:0.2rem;" ng-src="img/collection_checked@{{myImgSize}}x.png">
+        <img ng-if="collection_src == 'collection_unchecked' " ng-click="addCollection();" style="width:0.5467rem;height:0.5467rem;margin-top:0.2rem;" ng-src="img/collection_unchecked@{{myImgSize}}x.png">
+        
+        <img ng-click="openModal();" style="width:0.5467rem;height:0.5467rem;margin-top:0.2rem;margin-right:0.2rem;" ng-src="img/share@{{myImgSize}}x.png">
+	  </div>
+    </ion-header-bar>
+	<ion-view style="background:#fff;" on-swipe-left="" on-swipe-right="goBack();">
+    <ion-content style="background:#fff;" lazy-scroll>
+    	 <ion-refresher
+		    pulling-text="下拉刷新..."
+		    refreshing-text = "请求中..."
+		    on-refresh="doRefreshJuanDetail()">
+		 </ion-refresher>
+		<div class="" style="background:#fff;">
+		  <label class="item item-input" style="min-height: 2.5867rem; border:none;">
+		    <img ng-src="{{basePicUrl+info_detail.avatar}}" style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;" />
+		    <div  style="width:6.733rem;margin-left:0.2rem;">
+				<p><span class="font-30 color-49">{{info_detail.nick_name}}</span></p>
+				<p><span class="font-24 color-b7">{{info_detail.create_time | date:'yyyy.MM.dd  HH:mm'}}</span></p>
+			</div>
+			<div ng-if="isMyFaBu"on-tap="onItemDelete('donate','{{info_detail.xid}}');"  style="color:#4a4e58;border:1px #dbdcde solid;min-height:0.4267rem;min-width:0.88rem;border-radius:0.08rem;text-align:center;margin-right:0.4rem;" class="vertical-container font-24">删除</div>
+		  </label>
+		
+		  <label class="item item-input" style="width:100%;border:none;padding:0;margin-top:0.2rem;">
+		    <div style="width:100%;padding-left:0.4rem;padding-right:0.4rem;padding-top:0rem;">
+				<div class="font-46" style="color:#4a4e58;">{{info_detail.title}}</div>
+				<div class="font-32" style="color:#4a4e58;margin-top:0.4rem;">{{info_detail.content}}</div>
+		    </div>
+		    
+		  </label>
+		  <div style="width: 100%;padding-left:0.4rem;padding-right:0.4rem;margin-top:0.4rem;">
+		  	<img style="width: 100%;" ng-click="viewBigImage($index);"  ng-repeat="info_image in info_detail.picture" image-lazy-src="{{basePicUrl+info_image}}" image-lazy-loader="lines" />
+		  	<div style="width: 100%;height: 1rem;text-align:center;">
+		  	<!--<span style="color: #b7b7b7;text-align: center;">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</span><br />
+		  	<span style="color: #b7b7b7;text-align: center;">没有了~</span>-->
+				<p></p><p></p>
+		  	<br /><br /><br />
+		  	</div>
+		  </div>
+		  
+		</div>
+		
+	</ion-content>
+	<div class="div_bottom" >
+		<button ng-if="progress_state != '我需要'" style="" class="button button-block button-progroess font-30" ng-click="needThis();" >
+			  {{progress_state}}
+		</button>
+		<button ng-if="progress_state == '我需要'" style="" class="button button-block button-red font-30" ng-click="needThis();" >
+			{{progress_state}}
+		</button>
+	</div>
+	</ion-view>

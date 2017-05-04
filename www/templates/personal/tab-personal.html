@@ -1,0 +1,131 @@
+<!--<ion-header-bar align-title="center" class="bar-afu" style="background:#f3434b;">
+	<div class="h1 title" style="color:#ffffff;">个人中心</div>
+	<div class="buttons color-white" >
+		<button style="color:#ffffff;" class="button no-animation button-icon icon">
+		</button>
+		&lt;!&ndash; <button class="button no-animation button-icon icon ion-android-add">
+        </button> &ndash;&gt;
+	</div>
+	</ion-header-bar>-->
+<ion-view on-swipe-left="" on-swipe-right="" animation="slide-left-right" nav-transition="ios" nav-direction="forward">
+    <ion-content style="margin-top:0rem;background:#fff;padding:0;" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+
+    <ion-refresher
+			ng-if=" loginState "
+	    pulling-text="下拉刷新..."
+	    refreshing-text = "请求中..."
+	    on-refresh="doRefresh()">
+  	</ion-refresher>
+    <div class="" style="background-image:url(img/personal_background@{{myImgSize}}x.png);background-size: cover;background-repeat:no-repeat;background-position:center;border-radius:0px;border:none;">
+		<div class="vertical-container font-34" style="color:#ffffff;height:1.2rem;border:none;margin:0;padding:0;text-align:center;">
+			个人中心
+		</div>
+	  <label ng-if=" loginState "  ng-click="changePersonal();" class="item item-input" style="min-height: 2.5867rem;background: rgba(0,0,0,.00);border-radius:0px;border:none;">
+	    <img ion-img-cache ng-src="{{basePicUrl+userInfo.avatar}}" style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;" />
+	    <div  style="width:6.733rem;margin-left:0.2rem;color:#fff;">
+	    <p><span class="font-32 color-white" >{{userInfo.nick_name}}</span></p>
+	    <p ng-if="userInfo.signature != '' && userInfo.signature != null "><span class="font-24 color-white multi-line-two" >{{userInfo.signature}}</span></p>
+	    <p ng-if="userInfo.signature == '' || userInfo.signature == null "><span class="font-24 color-white" >还没有个性签名哦~~</span></p>
+	    </div>
+	    <i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;color:#fff;"></i>
+	  </label>
+		<label ng-if=" !loginState "  ng-click="goToLogin();" class="item item-input" style="min-height: 2.5867rem;background: rgba(0,0,0,.00);border-radius:0px;border:none;">
+			<img ng-src="img/edit_avatar@{{myImgSize}}x.png" style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;" />
+			<div  style="width:6.733rem;margin-left:0.2rem;color:#fff;">
+				<p><span ng-click="" class="font-32 color-white" >请登录账号</span></p>
+			</div>
+			<!--<i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;color:#fff;"></i>-->
+		</label>
+	</div>
+	
+    <div ng-if=" loginState "  class="font-28" style="background:#fff;color:#333;padding-left:0.4rem;padding-right:0.4rem;">
+
+		<label ng-click="goMyFabu();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+			<i class="icon afu-my-fabu" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+			<input class="font-28"  type="text" value="我的发布" readonly style="background: rgba(0,0,0,.0);">
+			<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+		</label>
+	   <label ng-click="goCertification();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;" >
+		   <i class="icon afu-certification" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+	     <input  class="font-28"  type="text" value="实名认证" readonly style="background: rgba(0,0,0,.0);">
+	     <i ng-if="personalActive" class="rj-sm-red-icon" style="margin-left:1.3rem;margin-top: 0.4rem;width: 0.2rem;height:0.2rem;border-radius:0.2rem;"></i>
+	     <div class="font-24 color-b7">{{identityState}}</div>
+	     <i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+	   </label>
+	   <label ng-click="goCollection();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+		   <i class="icon afu-heart2" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+	     <input  class="font-28"  type="text" value="我的收藏" readonly style="background: rgba(0,0,0,.0);">
+	     <i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+	   </label>
+	   
+	   <label ng-click="goMyAddresses();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+	     <i class="icon afu-location" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.5rem;"></i>
+	     <input  class="font-28"  type="text" value="我的地址" readonly style="background: rgba(0,0,0,.0);">
+	     <i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+	   </label>
+	   
+	   <label ng-click="goFeedback();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+	     <i class="icon afu-feedback" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+	     <input  class="font-28"  type="text" value="反馈建议" readonly style="background: rgba(0,0,0,.0);">
+	     <i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+	   </label>
+
+		<label ng-click="goSettings();" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+			<i class="icon afu-setting" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.5rem;"></i>
+			<input class="font-28"  type="text" value="设置相关" readonly style="background: rgba(0,0,0,.0);">
+			<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+		</label>
+
+	</div>
+		<!--未登录-->
+		<div ng-if=" !loginState "  class="font-28" style="background:#fff;color:#333;padding-left:0.4rem;padding-right:0.4rem;">
+
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-my-fabu" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+				<input class="font-28"  type="text" value="我的发布" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;" >
+
+				<i class="icon afu-certification" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+				<input  class="font-28"  type="text" value="实名认证" readonly style="background: rgba(0,0,0,.0);">
+				<i ng-if="personalActive" class="rj-sm-red-icon" style="margin-left: 3rem;margin-top: 0.3rem;width: 0.3rem;height:0.3rem;display:none;"></i>
+				<div class="font-24 color-b7">{{identityState}}</div>
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-heart2" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+				<input  class="font-28"  type="text" value="我的收藏" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-location" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.5rem;"></i>
+				<input  class="font-28"  type="text" value="我的地址" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-feedback" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.4rem;"></i>
+				<input  class="font-28"  type="text" value="反馈建议" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+
+			<label ng-click="" class="item item-input" style="min-height:1.44rem;border-left:none;border-right:none;border-radius:0;">
+				<i class="icon afu-setting font-34" style="color:#b7b7b7;margin-right:0.2rem;font-size:0.5rem;"></i>
+				<input class="font-28"  type="text" value="设置相关" readonly style="background: rgba(0,0,0,.0);">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0rem;"></i>
+			</label>
+
+		</div>
+    </ion-content>
+
+</ion-view>
+<!--<ion-view ng-if=" !loginState ">
+	<div style="margin-top:40%;text-align:center;">
+		<p class="font-32" style="color:#494949;">请先登录！</p><br />
+		<button ng-click="goToLogin();" style="width:30%;margin:0 auto;" class="button button-block button-red font-30" ng-disabled="false" >
+			去登录
+		</button>
+	</div>
+</ion-view>-->

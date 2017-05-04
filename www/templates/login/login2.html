@@ -1,0 +1,61 @@
+<!-- 
+File-Name:login2.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录时密码输入错误提示界面
+-->
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="../../lib/flexible/build/flexible_css.debug.js"></script>
+	<script src="../../lib/flexible/build/flexible.debug.js"></script>
+	
+	<link href="../../lib/ionic/css/ionic.css" rel="stylesheet"/>
+	<script  src="../../lib/ionic/js/ionic.bundle.js"></script>
+	<link href="../../css/login/login.css" rel="stylesheet" type="text/css"/>
+	<meta charset="UTF-8">
+	<title>登录2</title>
+
+</head>
+<body>
+	<ion-view>
+    <ion-content class="no-header ">
+        <div class="bar bar-header color1">
+            <a  class="button btBorder icon ion-chevron-left color1"></a>
+            <h1 class="title color1">登录</h1>
+        </div>
+    </ion-content>
+	</ion-view>
+	<br><br>
+	
+	<div class="list list-inset">
+	  <label class="item item-input formLayout formFont font2 hGap1">
+	    <i class="button-icon icon ion-android-phone-portrait placeholder-icon"></i>
+	    <input type="number" class="hGap2" placeholder="输入已经注册的手机号" style="padding-left:0.187rem">
+	  </label>
+	</div>
+	
+	<div class="list list-inset">
+	  <label class="item item-input formLayout formFont font2 hGap1">
+	    <i class="button-icon icon ion-ios-locked placeholder-icon"></i>
+	    <input type="password" class="hGap2" placeholder="输入密码" style="padding-left:0.187rem">
+	  </label>
+	</div>
+	
+	<div class="list list-inset">
+		<button class="button button-block color1 padding1 font3">
+		  登录
+		</button>
+	</div>
+	<div class="list list-inset font1" >
+			<a id="aRegister">注册</a>
+			<a id="aForget">忘记密码？</a>
+	</div>
+	<div class="list list-inset " >
+	<button class="button button-block font1 hintForm" disabled="disabled">
+		密码错误，请重新输入
+		</button>
+	</div>
+</body>
+</html>

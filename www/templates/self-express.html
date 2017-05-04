@@ -1,0 +1,86 @@
+<!-- 
+File-Name:self-express.html
+Date:2016-08-05
+Author:WangYong
+Function:自助邮寄
+-->
+
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">自行邮寄</h1>  
+    </ion-header-bar>
+	<ion-view>
+	    <ion-content >     	
+	   <div class="font-24" style="background:#fff0cf;min-height:1.2rem;color:d1a26b;">
+		   <label class="item item-input" style="background-color:#fff0cf;min-height:1.2rem;border-left:none;border-right:none;">
+		     <img ng-src="img/info@{{myImgSize}}x.png" style="margin-top: 0rem;"/>
+		     <div class="font-22" style="background-color:#fff0cf; width:90%;color:#d1a26b;" >
+		    	 你可以自行选择其他快递方式，快递送出后在下方填写快递公司和快递单号，点击‘我已寄出’反馈给受捐者
+		   	 </div>
+		   </label>
+	   </div>
+	
+		<div class="list color333 ">
+			<a class="item item-icon-right font-22" href="#" style="background: #f3f3f3;color:#b7b7b7;">
+		  		  收件人信息
+		    	<span class="item-note"></span>	    
+		    	
+		  	</a>
+		  	<a class="item item-icon-right font-26 " href="#" style="border:none;color:#b7b7b7;">
+		  		  姓名&nbsp;
+		    	<span style="color: #494949;">{{expressAddress.real_name}}</span>	    
+		    	
+		  	</a>
+		 	<a class="item  item-icon-right font-26 color333" href="#" style="border:none;color:#b7b7b7;">
+		   		 电话&nbsp;
+		   		<span style="color: #494949;" class="">{{expressAddress.phone_num}}</span>
+		    	
+		  	</a>
+		  	
+		  	<a class="item  item-icon-right font-26 color333" href="#" style="border:none;color:#b7b7b7;">
+				    地址&nbsp;
+			 	<span style="color: #494949;">{{expressAddress.province + expressAddress.city +expressAddress.county + expressAddress.detail_address}} </span>	    
+		    	
+		  	</a>
+		   <!--	<a class="item  item-icon-right  color333" href="#" style="border:none;color:#b7b7b7;">
+				    邮编
+		 		<span style="color: #494949;">{{expressAddress.postcode}}</span>
+		    	
+		  	</a>-->
+		  	<a class="item item-icon-right font-22 color333" href="#" style="background: #f3f3f3;color:#b7b7b7;">
+		  		  快递信息
+		    	<span class="item-note"></span>	    
+		    	
+		  	</a>
+		  	<label class="item item-icon-right font28 color333" href="#">
+
+		    	<input style="width: 90%;" class="font-26"  type="text"  placeholder="快递公司" ng-model="expressInfo.express_name"  >
+		    	
+		  	</label>
+		  	<label class="item item-icon-right font-26 color-49" href="#">
+		  		  
+		    	<input style="width: 90%;" class="font-26"  type="text"  placeholder="快递单号" ng-model="expressInfo.express_number"  >
+		    	
+		  	</label>
+		  	<label class="item item-icon-right font-26 color-49" href="#" style="background-color: #f3f3f3;" >
+		    
+		    	
+		  	</label>
+		  	<label class="item item-icon-right font-26 color333" href="#" style="border:none;background-color: #f3f3f3;">
+		    
+		    	
+		  	</label>
+		  	<label class="item item-icon-right font-26 color333" href="#" style="border:none;background-color: #f3f3f3;">
+		    
+		    	
+		  	</label>
+		  	
+		</div>
+		
+	    </ion-content>
+	    <div class="div_bottom" >
+			<button style="" class="button button-block button-red font-30" ng-click="confirmPopupOptions();" >
+				 我已寄出
+			</button>
+		</div>
+	</ion-view>

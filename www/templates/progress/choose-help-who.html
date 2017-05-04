@@ -1,0 +1,52 @@
+<!-- 
+File-Name:login1.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:登录的初始界面
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title font-34">查看申请人</h1>
+    </ion-header-bar>
+<ion-view >
+    <ion-content on-swipe-left="onSwipeLeft()" >    
+	<div class="" style="background:#fff0cf;min-height:1.2rem;color:d1a26b;">
+		   <label class="item item-input" style="background-color:#fff0cf;min-height:1.2rem;border-left:none;border-right:none;">
+		     <img ng-src="img/info@{{myImgSize}}x.png" style="margin-top: 0rem;"/>
+		     <div class="font-22" style="background-color:#fff0cf; width:90%;color:#d1a26b;" >
+		    	前三名申请的申请人有机会得到您的捐助，请选择一人进行捐助！
+		   	 </div>
+		   </label>
+	   </div>     
+	<ion-refresher
+	    pulling-text="下拉刷新..."
+	    refreshing-text = "请求中..."
+	    on-refresh="doRefresh()">
+  	</ion-refresher>
+		
+	 <ion-list rj-close-back-drop class="" style="background-color: #f3f3f3;" >
+	    <ion-item style="background:#f3f3f3;min-height:4.3rem;border:none;" class="item-avatar" rj-hold-active ng-repeat="claim in claims" >
+     		<div  class=" item-div-list list" style="height: 100%;border-bottom:0.3rem solid #f3f3f3;padding-left:0rem; ">
+	     		<label ng-click="watch(claim);" class="item item-input" style="min-height: 2.5867rem;">
+			    <img ng-src="{{basePicUrl+claim.avatar}}" style="height: 1.79rem;width:1.79rem;border-radius:1.79rem;" />
+			    <div  style="width:6.733rem;margin-left:0.2rem;">
+			    <div class="font-32">{{claim.nick_name}} -- {{claim.province + claim.city + claim.county}}</div>
+			    <div class="font-20"  ng-if="claim.is_mypay" >
+			        <span class="font-20" style="background: #f3f3f3;color:#b7b7b7;border-radius:2px;margin-top:0.1rem;">愿意自行承担运费</span>
+			    </div>
+		     	<div class="font-20"  ng-if="!claim.is_mypay">
+		     		<span class="font-20" style="background: #f3f3f3;color:#b7b7b7;border-radius:2px;margin-top:0.1rem;">不愿承担运费</span>
+		     	</div>
+			    </div>
+			    <i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>
+			  </label>
+		     	<a ng-click="passThis('{{claim.donateusers_id}}','{{claim.xid}}');" class="item" href="#" style="text-align: center;">
+		     		 <label class="font-32 colorb7" >通过</label>
+		     	</a> 
+	     	</div>
+		</ion-item>
+	</ion-list> 
+	 
+    </ion-content>
+</ion-view>
+

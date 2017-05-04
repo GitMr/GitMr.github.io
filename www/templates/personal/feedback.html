@@ -1,0 +1,29 @@
+<!-- 
+File-Name:
+Date:
+Author:
+Function:
+-->
+<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">意见反馈</h1>
+	<button class="button  btRight" ng-click="submit();" style="color:#888991;">提交</button>
+
+</ion-header-bar>
+<ion-view >
+    <ion-content on-swipe-left="onSwipeLeft()" >    
+	  
+	    <div class="list list-inset">
+		    <textarea ng-model="feedback.content" placeholder="说点啥吧" style="height:5rem;width:100%;padding: 0.2rem;"></textarea>
+	    </div>
+		
+		
+   </ion-content>
+	<!--<div class="div_bottom" >
+		<button style="" class="button button-block button-progroess font-32" ng-click="submit();" >
+			  写好了
+		</button>
+	</div> -->
+</ion-view>
+
+

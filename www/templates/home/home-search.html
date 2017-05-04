@@ -1,0 +1,69 @@
+<ion-view>
+<form ng-submit="startSearch();">
+ <!--<ion-header-bar class="item-input-inset bar-afu">
+     <label class="item-input-wrapper label-search">
+         &lt;!&ndash; <i class="icon ion-ios-search placeholder-icon"></i> &ndash;&gt;
+         <input type="search" placeholder="请输入搜索内容..." ng-model="searchInfo.search_info">
+     </label>
+     <img ng-src="img/search_close@2x.png" ng-click="closeSearchModal()" />
+     <button class="button button-clear" style="display:none;" ng-click="startSearch();" type="submit">Search</button>
+ </ion-header-bar>-->
+    <button class="button button-clear" style="display:none;" ng-click="startSearch();" type="submit">Search</button>
+    <ion-header-bar class="item-input-inset bar-afu">
+        <label class="item-input-wrapper label-search">
+            <!-- <i class="icon ion-ios-search placeholder-icon"></i> -->
+            <input style="background:#ededed;border-radius:4px;" class="font-28" type="search" placeholder="请输入搜索内容..." ng-model="searchInfo.search_info">
+        </label>
+
+        <div ng-click="closeSearchModal();" class="vertical-container" style="height:100%;">
+            <img ng-src="img/search_close@{{myImgSize}}x.png" width=100%;height=100%;/>
+        </div>
+    </ion-header-bar>
+
+
+</form>
+<div class="bar bar-subheader vertical-container">
+	<div class="row vertical-container font-28" style="line-height:1.0637rem;color:#494949;">
+      <span on-tap="switchSearchField('all');" class="col col-15 dark-line" ng-class="{true: 'active', false: ''}[field.all]">
+          全部内容
+          <hr ng-if="field.all" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/></span>
+        </span>
+      <span on-tap="switchSearchField('juan');" class="col col-15 dark-line" ng-class="{true: 'active', false: ''}[field.juan]">
+          捐助信息
+          <hr ng-if="field.juan" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/></span>
+      </span>
+      <span on-tap="switchSearchField('qiu');" class="col col-15 dark-line" ng-class="{true: 'active', false: ''}[field.qiu]">
+          求助信息
+          <hr ng-if="field.qiu" style="border:none;border-radius:0.0415rem;width:0.7rem;height:0.083rem;background-color:#5c5f68;margin:0 auto;text-align:center;"  align="center" noshade="noshade"/></span>
+      </span>
+	</div>  
+	</div>
+<ion-content style="margin-top:1.0667rem;">
+
+    <ion-list rj-close-back-drop class="" style="background:#ffffff;" ng-if="searchInfos.length > 0">
+
+
+        <ion-item class="item-avatar" style="border:0.5px solid #f3f3f3;" rj-hold-active ng-repeat="info in searchInfos" ng-click="goToDetail('{{info.info_type}}','{{info.xid}}');">
+            <img ng-src="{{basePicUrl+info.picture_url}}" style="border-radius:2px;">
+            <span class="color-49 font-32" ng-bind="info.title" style="height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></span>
+
+            <!--<h3 class="title-content" ng-bind="info.title" style="font-weight:bold;height:18%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"></h3>-->
+            <p class="multi-line"  ng-bind="info.content" style="height:100%;margin-top:1%;"></p>
+            <span style="color:#b7b7b7;" class="rj-push-right font-24" ng-bind="info.user_name"></span>
+            <span style="color:#b7b7b7;" class="rj-push-left font-24"  ng-bind="info.create_time | date:'yyyy-MM-dd HH:mm' "></span>
+        </ion-item>
+    </ion-list>
+    <p class="font-22" style="text-align: center;color:#888991;margin-top:0.4rem;">{{searchNote}}</p>
+
+    <div ng-if="searchInfos.length == 0" class="color-8d font-24" style="text-align: center;margin-top:2.8rem;" >
+   		<img ng-src="img/no_search@{{myImgSize}}x.png" class="color-8d" style="width:2.667rem;height:2.667rem;" />
+   		<p>未找到相关内容</p>
+   </div>
+    <ion-infinite-scroll
+    immediate-check="false"
+ 	ng-if="isMoreSearchDataCanBeLoaded"
+    on-infinite="loadMoreSearch()"
+    distance="1%">
+  </ion-infinite-scroll> 
+</ion-content>
+</ion-view>

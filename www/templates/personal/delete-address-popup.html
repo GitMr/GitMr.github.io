@@ -1,0 +1,17 @@
+
+<div style="background: #ffffff;text-align:center;height:100%;width:100%;border-radius:5px;">
+ <img ng-src="img/delete_address@{{myImgSize}}x.png" width="45%" height="40%" style="margin-top: 0.45rem;"/>
+ <div style="background: #ffffff;.text-align:center;height:75%;width:100%;">
+ 	<span class="font-24"  style="color: #494949;">&nbsp</span>
+ 	<p class="font-32"  style="color: #494949;">确认删除该地址？</p>
+ 	<span class="font-24" style="color: #b7b7b7;">&nbsp</span>
+ </div>
+ <div class="row font-24 popup_bottom_menu" style="min-height:1.2rem;padding:0;text-align:center;height:20%;width:100%;border-top:solid 1px #ededed;border-bottom-radius:5px;">
+ 	<div ng-click="cancel();" class="col col-50" style="border-bottom-left-radius:5px;margin:0rem;background: #ffffff;">
+		<span style="color: #b7b7b7;line-height: 1.2rem;border-bottom-left-radius:5px;background: #ffffff;">取消</span>
+	</div>
+ 	<div ng-click="confirm('{{deleteAddressId}}',deleteIndex);" class="col col-50" style="border-bottom-right-radius:5px;margin:0rem;background: #fc3942;" >
+		<span style="color: #ffffff;line-height: 1.2rem;border-bottom-right-radius:5px;background: #fc3942;">确认删除</span>
+	</div>
+</div>
+</div>

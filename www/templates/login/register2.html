@@ -1,0 +1,34 @@
+<!-- 
+File-Name:register2.html
+Date:2016-08-03
+Author:yangxiaoyu
+Function:注册界面2 设置密码
+-->
+
+	<ion-header-bar align-title="center" class="bar bar-afu">
+	  <a  class="button icon ion-chevron-left btBorder" ng-click="goBack()"></a>
+      <h1 class="title">注册</h1>
+    </ion-header-bar>
+	<ion-view >
+    <ion-content>
+		<div class="" style="margin: 0.4rem;background:#f3f3f3;">
+		
+		  <label class="item item-input font-28" >
+		    <img ng-src="img/password@{{myImgSize}}x.png" />
+		    <input class="font-28" type="password"  placeholder="请设置登录密码，至少6位" ng-model="temp.password" >
+		  </label>
+		
+		  <label class="item item-input font-28" style="margin-top: 0.2667rem" >
+		    <img ng-src="img/password@{{myImgSize}}x.png" />
+		    <input class="font-28"  type="password"  placeholder="再次输入密码" ng-model="temp.repassword"  >
+		  </label>
+		
+			<button ng-click="checkTwoPwds()" class="button button-block button-red font-30" ng-disabled="isPasswordDisabled" >
+			  下一步
+			</button>
+
+			
+			<div class="error-note font-20">{{error_note}} </div>
+		</div>
+	</ion-content>
+	</ion-view>

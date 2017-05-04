@@ -1,0 +1,143 @@
+<!-- 
+File-Name:certification.html
+Date:2016-08-05
+Author:WangYong
+Function:实名认证
+-->
+
+<ion-header-bar align-title="center" class="bar bar-afu">
+	<a  class="button icon ion-chevron-left btBorder font-24" ng-click="saveAndBack('系统已保存您填写的内容！')"></a>
+	<h1 class="title">实名认证</h1>
+	<!--<button class="button juan-submit" ng-click="submitCertification();">提交</button>-->
+</ion-header-bar>
+
+
+<ion-view>
+	<ion-content >
+		<div class="font-24" style="background:#fff0cf;min-height:1.2rem;color:d1a26b;">
+			<label class="item item-input" style="background-color:#fff0cf;min-height:1.2rem;border-left:none;border-right:none;">
+				<img ng-src="img/info@{{myImgSize}}x.png" style="margin-top: 0rem;"/>
+				<div class="font-22" style="background-color:#fff0cf; width:90%;color:#d1a26b;" >实名认证信息用于平台审核,不会透露给任何第三方！</div>
+			</label>
+		</div>
+
+		<div class="list color333 ">
+			<!--<a ng-click="realnameModal.show();" class="item item-icon-right font28 color333" href="#">
+				真实姓名
+				<span class="item-note">{{certificationInfo.identity_realname}}</span>
+				<i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+			</a>-->
+
+			<label ng-if="identity_state == 'none' || identity_state == 'refuse'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="真实姓名" ng-model="certificationInfo.identity_realname"  >
+			</label>
+			<label ng-if="identity_state == 'checking' || identity_state == 'pass'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="真实姓名" readonly ng-model="certificationInfo.identity_realname"  style="background-color:#fff;">
+			</label>
+
+
+			<label ng-if="identity_state == 'none' || identity_state == 'refuse'" class="item item-input" ng-click="openSex();" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input  type="text" ng-model="tempGender.name" readonly style="background-color:#fff;">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0.4rem;"></i>
+			</label>
+			<label ng-if="identity_state == 'checking' || identity_state == 'pass'" class="item item-input" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input  type="text" ng-model="tempGender.name" readonly style="background-color:#fff;">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0.4rem;"></i>
+			</label>
+			<!--<a ng-click="openSex();" class="item  item-icon-right font28 color333" href="#">
+				性别
+				<span class="item-note">{{tempGender.name}}</span>
+				<i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+			</a>-->
+			<!-- <a class="item  item-icon-right font28 color333" href="#">
+                  地区
+              <span class="item-note">湖南省常德市 </span>
+              <i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+            </a> -->
+
+			<!--<ionic-city-picker class="font-24" options='vm.CityPickData'></ionic-city-picker>-->
+
+			<!--<a ng-click="pickCity();" class="item  item-icon-right font28 color333" href="#">
+				地区
+				<span class="item-note" ng-bind="globalAddress.totalProCityCounty"></span>
+				<i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+			</a>-->
+			<label ng-if="identity_state == 'none' || identity_state == 'refuse'" class="item item-input" ng-click="pickCity();" style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input  type="text" ng-model="globalAddress.totalProCityCounty" readonly style="background-color:#fff;">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0.4rem;"></i>
+			</label>
+			<label ng-if="identity_state == 'checking' || identity_state == 'pass'" class="item item-input"  style="background-color:#fff;min-height:1.2rem;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input  type="text" ng-model="globalAddress.totalProCityCounty" readonly style="background-color:#fff;">
+				<i class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0.4rem;"></i>
+			</label>
+			<!--<a ng-click="addressModal.show();" class="item  item-icon-right font28 color333" href="#">
+				详细地址
+				<span class="item-note">{{certificationInfo.identity_address}} </span>
+				<i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+			</a>
+			<a ng-click="numModal.show();" class="item  item-icon-right  color333" href="#">
+				身份证号
+				<span class="item-note">{{certificationInfo.identity_num}}</span>
+				<i style="color: #b7b7b7;font-size: 18px;" class="icon ion-chevron-right placeholder-icon"></i>
+			</a>-->
+			<label ng-if="identity_state == 'none' || identity_state == 'refuse'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="详细地址" ng-model="certificationInfo.identity_address"  >
+			</label>
+			<label ng-if="identity_state == 'checking' || identity_state == 'pass'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="详细地址" readonly ng-model="certificationInfo.identity_address" style="background-color:#fff;"  >
+			</label>
+
+
+			<label ng-if="identity_state == 'none' || identity_state == 'refuse'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="身份证号" ng-model="certificationInfo.identity_num"  >
+			</label>
+			<label ng-if="identity_state == 'checking' || identity_state == 'pass'" class="item item-input font-28" style="margin-top: 0.01rem;padding-left:0.4rem;padding-right: 0.4rem;" >
+				<input class="font-28"  type="text"  placeholder="身份证号" readonly ng-model="certificationInfo.identity_num" style="background-color:#fff;" >
+			</label>
+
+			<label class="item item-input" style="height:0.827rem;background:#f3f3f3;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input class="font-24 color-b7" type="text" placeholder="身份证照片" readonly style="background:#f3f3f3;width:80%;">
+				<div class="font-20 color-49" on-tap="openDemoModal();">图例示范</div>
+				<i on-tap="openDemoModal();" class="icon ion-chevron-right placeholder-icon font-24" style="margin-right:0.4rem;"></i>
+			</label>
+
+
+			<div ng-if="identity_state == 'none' || identity_state == 'refuse'" ng-click="pickIdImage();" style="padding: 0.4rem;width:100%;height:7rem;background:#ffffff;">
+				<!--<img width="100%" height="100%" ng-src="{{id_image}}" style="position:absolute;clip:rect(0rem,9.2rem,6.2rem,0rem);"/>-->
+				<div ng-if="id_image != 'img/card.png'" style="width:100%;height:100%;" back-img="{{id_image}}" ></div>
+				<img ng-if="id_image == 'img/card.png'" width="100%" height="100%" ng-src="{{id_image}}" />
+			</div>
+			<div ng-if="identity_state == 'checking' || identity_state == 'pass'" ng-click="viewIdImage();" style="padding: 0.4rem;width:100%;height:7rem;background:#ffffff;">
+				<!--<img width="100%" height="100%" ng-src="{{id_image}}" style="position:absolute;clip:rect(0rem,9.2rem,6.2rem,0rem);"/>-->
+				<div ng-if="id_image != 'img/card.png'" style="width:100%;height:100%;" back-img="{{id_image}}" ></div>
+				<img ng-if="id_image == 'img/card.png'" width="100%" height="100%" ng-src="{{id_image}}" />
+			</div>
+			<!--<a class="item hintBar2" href="#">
+				<label class="font24 colorb7">其他证明</label>
+			</a>-->
+			<label class="item item-input font-24" style="height:0.827rem;background:#f3f3f3;border-left:none;border-right:none;padding-left:0.4rem;">
+				<input class="color-b7" type="text" placeholder="其他证明照片" readonly style="background:#f3f3f3;width:80%;">
+				<!--<div class="font-20 color-49">图例示范</div>-->
+				<!--<i class="icon ion-chevron-right placeholder-icon" style="margin-right:0.4rem;"></i>-->
+			</label>
+			<div ng-if="identity_state == 'none' || identity_state == 'refuse'" ng-click="pickOtherImage();" style="padding: 0.4rem;width: 100%;height: 7rem;background:#ffffff;">
+				<!--<img width="100%" height="100%" ng-src="{{other_image}}" style="position:absolute;clip:rect(0rem,9.2rem,6.2rem,0rem);"/>-->
+				<div ng-if="other_image != 'img/other.png'" style="width:100%;height:100%;" back-img="{{other_image}}" ></div>
+				<img ng-if="other_image == 'img/other.png'" width="100%" height="100%" ng-src="{{other_image}}" />
+			</div>
+			<div ng-if="identity_state == 'checking' || identity_state == 'pass'" ng-click="viewOtherImage();" style="padding: 0.4rem;width: 100%;height: 7rem;background:#ffffff;">
+				<div ng-if="other_image != 'img/other.png'" style="width:100%;height:100%;" back-img="{{other_image}}" ></div>
+				<img ng-if="other_image == 'img/other.png'" width="100%" height="100%" ng-src="{{other_image}}" />
+			</div>
+
+			<!--<div style="padding: 0.4rem;width: 100%;height: 7rem;" ng-style="{'background-image':'url({{other_image}})'}"></div>-->
+		</div>
+
+		<br /><br /><br />
+	</ion-content>
+	<div class="div_bottom" >
+		<button style="" class="button button-block button-progroess font-30" ng-click="submitCertification();" >
+			{{btn_string}}
+		</button>
+	</div>
+</ion-view>

@@ -1,0 +1,18 @@
+
+<div class="font-20">
+<ion-tabs class="tabs-icon-top tabs-color-active-assertive">
+
+    <ion-tab title="首页" class="font-14"  icon-on="afu-home color-yes" icon-off="afu-home color-no" ui-sref="tab.home" style="text-decoration: none;" >
+        <ion-nav-view animation="slide-left-right" nav-transition="ios" nav-direction="forward" name="tab-home">
+        
+        </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="爱心进展"   class="font-14" icon-on="afu-heart color-yes" icon-off="afu-heart color-no" ui-sref="tab.progress" ng-class="{true:'tab-progress-red-point',false:''}[progressActive]">
+        <ion-nav-view animation="slide-left-right"  nav-transition="ios" nav-direction="forward" name="tab-progress"></ion-nav-view>
+    </ion-tab>
+     <ion-tab title="个人中心" class="font-14" icon-off="afu-me color-no" icon-on="afu-me color-yes" ui-sref="tab.personal" ng-class="{true:'tab-personal-red-point',false:''}[personalActive]" >
+        <ion-nav-view animation="slide-left-right" nav-transition="ios" nav-direction="forward" name="tab-personal"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>
+</div>
